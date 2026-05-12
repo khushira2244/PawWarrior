@@ -1,0 +1,124 @@
+[
+  {
+    "id": "log_001",
+    "animalId": "dog_001",
+    "userId": "field_collector_001",
+    "actionType": "food_given",
+    "notes": "Food given during first PawWarrior field collection near Teapical, Masjid Banda.",
+    "photoProof": true,
+    "location": {
+      "lat": 17.4646,
+      "lng": 78.3551,
+      "label": "Teapical, near Masjid Banda, Kondapur"
+    },
+    "createdAt": "2026-05-12T09:42:00Z",
+    "source": "field_collection"
+  },
+  {
+    "id": "log_002",
+    "animalId": "dog_002",
+    "userId": "field_collector_001",
+    "actionType": "food_given",
+    "notes": "Food given during PawWarrior field collection near Teapical, Masjid Banda.",
+    "photoProof": true,
+    "location": {
+      "lat": 17.4646,
+      "lng": 78.3551,
+      "label": "Teapical, near Masjid Banda, Kondapur"
+    },
+    "createdAt": "2026-05-12T09:44:00Z",
+    "source": "field_collection"
+  },
+  {
+    "id": "log_003",
+    "animalId": "dog_003",
+    "userId": "field_collector_001",
+    "actionType": "food_offered_refused",
+    "notes": "Food was offered during PawWarrior field collection near Teapical, Masjid Banda, but the dog did not eat.",
+    "photoProof": true,
+    "location": {
+      "lat": 17.4646,
+      "lng": 78.3551,
+      "label": "Teapical, near Masjid Banda, Kondapur"
+    },
+    "createdAt": "2026-05-12T09:47:00Z",
+    "source": "field_collection"
+  },
+  {
+    "id": "log_004",
+    "animalId": "dog_004",
+    "userId": "field_collector_001",
+    "actionType": "observed_only",
+    "notes": "Dog observed near DLF Road eateries. Reported risk: drinking gutter water and minimal food access due to roadwork/construction displacement.",
+    "photoProof": true,
+    "location": {
+      "lat": 17.4474,
+      "lng": 78.3582,
+      "label": "DLF Road Eateries, Gachibowli / Kondapur"
+    },
+    "createdAt": "2026-05-12T09:49:00Z",
+    "source": "field_collection"
+  },
+  {
+    "id": "log_005",
+    "animalId": "dog_005",
+    "userId": "field_collector_001",
+    "actionType": "observed_only",
+    "notes": "Dog observed near Tech Mahindra / Aparna Celestia. Appeared underweight and very lethargic with no food and minimal water access.",
+    "photoProof": true,
+    "location": {
+      "lat": 17.4194,
+      "lng": 78.3421,
+      "label": "Near Tech Mahindra / Aparna Celestia, Financial District / Nanakramguda"
+    },
+    "createdAt": "2026-05-12T09:55:00Z",
+    "source": "field_collection"
+  },
+  {
+    "id": "log_006",
+    "animalId": "dog_006",
+    "userId": "field_collector_001",
+    "actionType": "food_given",
+    "quantityNote": "two meals",
+    "notes": "Two meals were provided during PawWarrior field collection near DLF Road.",
+    "photoProof": true,
+    "location": {
+      "lat": 17.4474,
+      "lng": 78.3582,
+      "label": "DLF Road, Gachibowli / Kondapur"
+    },
+    "createdAt": "2026-05-12T10:10:00Z",
+    "source": "field_collection"
+  },
+  {
+    "id": "log_007",
+    "animalId": "dog_006",
+    "userId": "field_collector_001",
+    "actionType": "water_given",
+    "quantityNote": "one time",
+    "notes": "Water was provided once during PawWarrior field collection near DLF Road.",
+    "photoProof": true,
+    "location": {
+      "lat": 17.4474,
+      "lng": 78.3582,
+      "label": "DLF Road, Gachibowli / Kondapur"
+    },
+    "createdAt": "2026-05-12T10:10:00Z",
+    "source": "field_collection"
+  },
+  {
+    "id": "log_008",
+    "animalId": "dog_007",
+    "userId": "field_collector_001",
+    "actionType": "observed_only",
+    "notes": "Dog observed near Tech Mahindra. Appeared severely malnourished with visible ribs and no stable water access.",
+    "photoProof": true,
+    "location": {
+      "lat": 17.4194,
+      "lng": 78.3421,
+      "label": "Near Tech Mahindra, Financial District"
+    },
+    "createdAt": "2026-05-12T10:15:00Z",
+    "source": "field_collection"
+  }
+]

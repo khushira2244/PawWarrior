@@ -1,0 +1,200 @@
+[
+  {
+    "id": "vet_001",
+    "clinicName": "Paws Vet Clinic",
+    "doctorName": "Unknown / Public Listing",
+    "clusterId": "cluster_001",
+    "servesDogIds": ["dog_001", "dog_002", "dog_003"],
+    "area": "Kondapur",
+    "addressHint": "Sree Prabhupada Township, Kondapur",
+    "location": {
+      "lat": 17.4703,
+      "lng": 78.3409
+    },
+    "rating": 4.8,
+    "hours": "9:00 AM - 9:00 PM",
+    "availableForGuidance": true,
+    "emergencySupport": false,
+    "lowCostGuidance": "unknown",
+    "streetAnimalSupport": "unknown",
+    "source": "Google Maps public listing",
+    "partnershipStatus": "not_contacted_yet",
+    "notes": "General pet care and hygiene clinic near Kondapur dog cluster."
+  },
+  {
+    "id": "vet_002",
+    "clinicName": "Happy Pet Clinic - Kondapur",
+    "doctorName": "Unknown / Public Listing",
+    "clusterId": "cluster_001",
+    "servesDogIds": ["dog_001", "dog_002", "dog_003"],
+    "area": "Kondapur",
+    "addressHint": "Raja Rajeshwara Nagar, Kondapur",
+    "location": {
+      "lat": 17.4697,
+      "lng": 78.3559
+    },
+    "rating": 4.8,
+    "hours": "10:30 AM - 1:30 PM",
+    "availableForGuidance": true,
+    "emergencySupport": false,
+    "lowCostGuidance": "unknown",
+    "streetAnimalSupport": "unknown",
+    "source": "Google Maps public listing",
+    "partnershipStatus": "not_contacted_yet",
+    "notes": "Limited morning hours. Useful for non-emergency guidance near Kondapur."
+  },
+  {
+    "id": "vet_003",
+    "clinicName": "Snoot Pet Clinic",
+    "doctorName": "Unknown / Public Listing",
+    "clusterId": "cluster_001",
+    "servesDogIds": ["dog_001", "dog_002", "dog_003"],
+    "area": "Shilpa Hills / Kondapur",
+    "addressHint": "Near Hitex Road",
+    "location": {
+      "lat": 17.4685,
+      "lng": 78.3758
+    },
+    "rating": 5.0,
+    "hours": "10:00 AM - 8:00 PM",
+    "availableForGuidance": true,
+    "emergencySupport": false,
+    "lowCostGuidance": "unknown",
+    "streetAnimalSupport": "unknown",
+    "source": "Google Maps public listing",
+    "partnershipStatus": "not_contacted_yet",
+    "notes": "Highly rated clinic near Hitex Road."
+  },
+  {
+    "id": "vet_004",
+    "clinicName": "PULPA'S VETERINARY CLINIC",
+    "doctorName": "Unknown / Public Listing",
+    "clusterId": "cluster_001",
+    "servesDogIds": ["dog_001", "dog_002", "dog_003"],
+    "area": "Hafeezpet / Kondapur",
+    "addressHint": "Hafeezpet / Kondapur",
+    "location": {
+      "lat": 17.4743,
+      "lng": 78.3639
+    },
+    "rating": 4.7,
+    "hours": "10:00 AM - 10:00 PM",
+    "availableForGuidance": true,
+    "emergencySupport": false,
+    "lowCostGuidance": "unknown",
+    "streetAnimalSupport": "unknown",
+    "source": "Google Maps public listing",
+    "partnershipStatus": "not_contacted_yet",
+    "notes": "Longer evening availability. Useful for follow-up cases near Kondapur."
+  },
+  {
+    "id": "vet_005",
+    "clinicName": "Mr.VET Animal Hospital, 24/7 Emergency - Gachibowli",
+    "doctorName": "Unknown / Public Listing",
+    "clusterId": "cluster_002",
+    "servesDogIds": ["dog_004", "dog_006"],
+    "area": "DLF Road, Gachibowli",
+    "addressHint": "DLF Road, Gachibowli",
+    "location": {
+      "lat": 17.4487,
+      "lng": 78.3614
+    },
+    "rating": 4.5,
+    "hours": "24/7",
+    "availableForGuidance": true,
+    "emergencySupport": true,
+    "lowCostGuidance": "unknown",
+    "streetAnimalSupport": "unknown",
+    "source": "Google Maps public listing",
+    "partnershipStatus": "not_contacted_yet",
+    "notes": "24/7 emergency hospital. Strong option for urgent escalation near DLF Road."
+  },
+  {
+    "id": "vet_006",
+    "clinicName": "Caesar Pet Hospital",
+    "doctorName": "Unknown / Public Listing",
+    "clusterId": "cluster_002",
+    "servesDogIds": ["dog_004", "dog_006"],
+    "area": "Gachibowli",
+    "addressHint": "Near Himagiri Hospital",
+    "location": {
+      "lat": 17.4417,
+      "lng": 78.3593
+    },
+    "rating": 4.7,
+    "hours": "unknown",
+    "availableForGuidance": true,
+    "emergencySupport": "unknown",
+    "lowCostGuidance": "unknown",
+    "streetAnimalSupport": "unknown",
+    "source": "Google Maps public listing",
+    "partnershipStatus": "not_contacted_yet",
+    "notes": "Nearby clinic option for DLF Road / Gachibowli dog cluster."
+  },
+  {
+    "id": "vet_007",
+    "clinicName": "Cornerstone Pet Clinic",
+    "doctorName": "Unknown / Public Listing",
+    "clusterId": "cluster_002",
+    "servesDogIds": ["dog_004", "dog_006"],
+    "area": "Gachibowli / Khajaguda",
+    "addressHint": "Near Khajaguda",
+    "location": {
+      "lat": 17.4196,
+      "lng": 78.3749
+    },
+    "rating": 4.3,
+    "hours": "9:30 AM - 12:00 AM",
+    "availableForGuidance": true,
+    "emergencySupport": false,
+    "lowCostGuidance": "unknown",
+    "streetAnimalSupport": "unknown",
+    "source": "Google Maps public listing",
+    "partnershipStatus": "not_contacted_yet",
+    "notes": "Late-night clinic option for non-24/7 but extended-hour support."
+  },
+  {
+    "id": "vet_008",
+    "clinicName": "Bhairava Pet Hospital",
+    "doctorName": "Unknown / Public Listing",
+    "clusterId": "cluster_003",
+    "servesDogIds": ["dog_005", "dog_007"],
+    "area": "Nanakramguda / Financial District",
+    "addressHint": "Near TNGO Colony",
+    "location": {
+      "lat": 17.4287,
+      "lng": 78.3324
+    },
+    "rating": 4.9,
+    "hours": "unknown",
+    "availableForGuidance": true,
+    "emergencySupport": "unknown",
+    "lowCostGuidance": "unknown",
+    "streetAnimalSupport": "unknown",
+    "source": "Google Maps public listing",
+    "partnershipStatus": "not_contacted_yet",
+    "notes": "Nearby hospital option for Financial District / Nanakramguda dog cluster."
+  },
+  {
+    "id": "vet_009",
+    "clinicName": "Healthy Pet Hospital",
+    "doctorName": "Unknown / Public Listing",
+    "clusterId": "cluster_003",
+    "servesDogIds": ["dog_005", "dog_007"],
+    "area": "Manikonda / Near Financial District",
+    "addressHint": "Manikonda, near Financial District",
+    "location": {
+      "lat": 17.4013,
+      "lng": 78.3670
+    },
+    "rating": 4.5,
+    "hours": "24/7",
+    "availableForGuidance": true,
+    "emergencySupport": true,
+    "lowCostGuidance": "unknown",
+    "streetAnimalSupport": "unknown",
+    "source": "Google Maps public listing",
+    "partnershipStatus": "not_contacted_yet",
+    "notes": "24-hour facility. Useful for late-night or high-priority escalation cases."
+  }
+]

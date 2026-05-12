@@ -1,0 +1,135 @@
+[
+  {
+    "id": "cluster_001",
+    "name": "Kondapur / Masjid Banda",
+    "primaryLandmark": "Teapical, near Masjid Banda",
+    "center": {
+      "lat": 17.4646,
+      "lng": 78.3551
+    },
+    "areas": [
+      "Kondapur",
+      "Masjid Banda",
+      "Teapical"
+    ],
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "country": "India",
+    "dogIds": [
+      "dog_001",
+      "dog_002",
+      "dog_003"
+    ],
+    "vetIds": [
+      "vet_001",
+      "vet_002",
+      "vet_003",
+      "vet_004"
+    ],
+    "riskTags": [
+      "summer_care_needed",
+      "food_irregular",
+      "needs_water",
+      "possible_skin_condition",
+      "urgent_vet_guidance"
+    ],
+    "clusterSummary": "Kondapur / Masjid Banda cluster contains three known community dogs. Main risks include food-water irregularity, skin follow-up, severe thinness, and urgent vet/NGO guidance for one dog.",
+    "careNeeds": {
+      "needsFoodSupport": true,
+      "needsWaterSupport": true,
+      "needsVetGuidance": true,
+      "needsMissingWatch": false
+    },
+    "mapMarkerStatus": "mixed_priority",
+    "createdAt": "2026-05-12T10:30:00Z",
+    "updatedAt": "2026-05-12T10:30:00Z"
+  },
+  {
+    "id": "cluster_002",
+    "name": "DLF Road / Gachibowli",
+    "primaryLandmark": "DLF Road / DLF Road Eateries",
+    "center": {
+      "lat": 17.4474,
+      "lng": 78.3582
+    },
+    "areas": [
+      "DLF Road",
+      "DLF Road Eateries",
+      "Gachibowli",
+      "Kondapur"
+    ],
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "country": "India",
+    "dogIds": [
+      "dog_004",
+      "dog_006"
+    ],
+    "vetIds": [
+      "vet_005",
+      "vet_006",
+      "vet_007"
+    ],
+    "riskTags": [
+      "environment_risk",
+      "construction_displacement_risk",
+      "drinking_gutter_water",
+      "high_traffic_area",
+      "followup_observation"
+    ],
+    "clusterSummary": "DLF Road / Gachibowli cluster contains dogs affected by traffic, construction displacement, unsafe water source, and follow-up observation needs.",
+    "careNeeds": {
+      "needsFoodSupport": true,
+      "needsWaterSupport": true,
+      "needsVetGuidance": false,
+      "needsMissingWatch": false
+    },
+    "mapMarkerStatus": "medium_priority",
+    "createdAt": "2026-05-12T10:30:00Z",
+    "updatedAt": "2026-05-12T10:30:00Z"
+  },
+  {
+    "id": "cluster_003",
+    "name": "Financial District / Nanakramguda",
+    "primaryLandmark": "Tech Mahindra / Aparna Celestia",
+    "center": {
+      "lat": 17.4194,
+      "lng": 78.3421
+    },
+    "areas": [
+      "Financial District",
+      "Nanakramguda",
+      "Tech Mahindra",
+      "Aparna Celestia"
+    ],
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "country": "India",
+    "dogIds": [
+      "dog_005",
+      "dog_007"
+    ],
+    "vetIds": [
+      "vet_008",
+      "vet_009"
+    ],
+    "riskTags": [
+      "heat_exposure_risk",
+      "severe_malnutrition",
+      "visible_ribs",
+      "limited_water_access",
+      "urgent_followup_needed",
+      "urgent_vet_escalation"
+    ],
+    "clusterSummary": "Financial District / Nanakramguda cluster contains high-priority dogs with severe malnutrition, heat exposure risk, low-energy behaviour, and unstable water access.",
+    "careNeeds": {
+      "needsFoodSupport": true,
+      "needsWaterSupport": true,
+      "needsVetGuidance": true,
+      "needsMissingWatch": false
+    },
+    "mapMarkerStatus": "high_priority",
+    "createdAt": "2026-05-12T10:30:00Z",
+    "updatedAt": "2026-05-12T10:30:00Z"
+  }
+]

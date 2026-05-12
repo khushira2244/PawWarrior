@@ -1,0 +1,109 @@
+[
+  {
+    "id": "case_001",
+    "animalId": "dog_001",
+    "caseType": "possible_skin_condition",
+    "priority": "medium",
+    "status": "open",
+    "summary": "Kaalu is a black medium dog near Teapical, Masjid Banda. Visible patchy hair loss and skin irritation-like areas were observed. Food was given, but water was not updated.",
+    "createdBy": "field_collector_001",
+    "createdAt": "2026-05-12T09:42:00Z",
+    "requiredActions": [
+      "provide_clean_water_if_safe",
+      "upload_followup_photo",
+      "request_vet_or_ngo_guidance",
+      "observe_skin_condition_again"
+    ],
+    "safetyNote": "PawWarrior does not diagnose skin disease or prescribe medicine. Avoid self-medication, scrubbing, or applying random creams. Use educational references only and request vet/NGO guidance."
+  },
+  {
+    "id": "case_002",
+    "animalId": "dog_003",
+    "caseType": "urgent_vet_guidance",
+    "priority": "high",
+    "status": "open",
+    "summary": "Raja is a cream/off-white medium-large dog near Teapical, Masjid Banda. He appears very thin and low-energy. Food was offered but refused. Needs follow-up observation, water support, and vet/NGO guidance.",
+    "createdBy": "field_collector_001",
+    "createdAt": "2026-05-12T09:47:00Z",
+    "requiredActions": [
+      "upload_followup_photo",
+      "check_water_access",
+      "request_vet_or_ngo_guidance",
+      "observe_eating_status_again"
+    ],
+    "safetyNote": "No medicine or treatment should be suggested by AI. Escalate to vet/NGO guidance because the dog appears very thin and refused food."
+  },
+  {
+    "id": "case_003",
+    "animalId": "dog_004",
+    "caseType": "environment_care_gap",
+    "priority": "medium",
+    "status": "open",
+    "summary": "Sona is a golden/light brown medium dog near DLF Road eateries. Main risks are unsafe water source, minimal food, and construction/roadwork displacement.",
+    "createdBy": "field_collector_001",
+    "createdAt": "2026-05-12T09:49:00Z",
+    "requiredActions": [
+      "provide_clean_water",
+      "provide_food_if_safe",
+      "upload_followup_photo",
+      "observe_skin_irritation",
+      "check_if_dog_returns_to_same_location"
+    ],
+    "safetyNote": "No medicine or treatment should be suggested by AI. Vet/NGO guidance should be requested if skin irritation worsens or the dog becomes weak."
+  },
+  {
+    "id": "case_004",
+    "animalId": "dog_005",
+    "caseType": "heat_exposure_and_lethargy",
+    "priority": "high",
+    "status": "open",
+    "summary": "Bholu is a tan and white medium dog near Tech Mahindra / Aparna Celestia. He appears underweight and very lethargic, with minimal water access and high heat exposure risk.",
+    "createdBy": "field_collector_001",
+    "createdAt": "2026-05-12T09:55:00Z",
+    "requiredActions": [
+      "provide_clean_water_if_safe",
+      "provide_food_if_safe",
+      "upload_followup_photo",
+      "check_if_dog_is_eating_or_drinking",
+      "request_vet_or_ngo_guidance",
+      "observe_again_within_24_hours"
+    ],
+    "safetyNote": "No medicine or treatment should be suggested by AI. Because the dog appears very lethargic and underweight with heat exposure risk, vet/NGO guidance is recommended."
+  },
+  {
+    "id": "case_005",
+    "animalId": "dog_006",
+    "caseType": "traffic_risk_and_followup_observation",
+    "priority": "low_to_medium",
+    "status": "open",
+    "summary": "Rocky is a brindle medium dog near DLF Road. He is lean and was observed in a high-traffic area. Food and water were provided, but follow-up observation is needed.",
+    "createdBy": "field_collector_001",
+    "createdAt": "2026-05-12T10:10:00Z",
+    "requiredActions": [
+      "observe_again",
+      "check_if_dog_remains_near_traffic",
+      "upload_followup_photo",
+      "continue_food_water_support_if_needed"
+    ],
+    "safetyNote": "No medicine or treatment should be suggested by AI. Escalate only if the dog becomes severely weak, injured, stops eating/drinking, or shows visible emergency signs."
+  },
+  {
+    "id": "case_006",
+    "animalId": "dog_007",
+    "caseType": "severe_malnutrition_and_water_gap",
+    "priority": "high",
+    "status": "open",
+    "summary": "Moti is a white/cream medium dog near Tech Mahindra. He appears severely malnourished with visible ribs and no stable water access. Needs food support, clean water support, follow-up observation, and vet/NGO guidance.",
+    "createdBy": "field_collector_001",
+    "createdAt": "2026-05-12T10:15:00Z",
+    "requiredActions": [
+      "provide_clean_water_if_safe",
+      "provide_food_if_safe",
+      "upload_followup_photo",
+      "check_if_dog_is_eating_or_drinking",
+      "request_vet_or_ngo_guidance",
+      "observe_again_within_24_hours"
+    ],
+    "safetyNote": "No medicine or treatment should be suggested by AI. Because the dog appears severely malnourished and possibly lethargic, vet/NGO guidance is recommended."
+  }
+]
