@@ -2,7 +2,7 @@
   {
     "id": "cluster_001",
     "name": "Kondapur / Masjid Banda",
-    "primaryLandmark": "Teapical, near Masjid Banda",
+    "primaryLandmark": "Teapical / Masjid Banda / Burfi Ghar / Subway area",
     "center": {
       "lat": 17.4646,
       "lng": 78.3551
@@ -10,7 +10,10 @@
     "areas": [
       "Kondapur",
       "Masjid Banda",
-      "Teapical"
+      "Teapical",
+      "Burfi Ghar",
+      "Kondapur Road",
+      "Subway / Yellow Leaf Designer Studio"
     ],
     "city": "Hyderabad",
     "state": "Telangana",
@@ -18,7 +21,9 @@
     "dogIds": [
       "dog_001",
       "dog_002",
-      "dog_003"
+      "dog_003",
+      "dog_008",
+      "dog_013"
     ],
     "vetIds": [
       "vet_001",
@@ -30,19 +35,25 @@
       "summer_care_needed",
       "food_irregular",
       "needs_water",
+      "needs_food",
       "possible_skin_condition",
-      "urgent_vet_guidance"
+      "urgent_vet_guidance",
+      "severe_malnutrition",
+      "visible_ribs",
+      "heat_exposure_risk",
+      "traffic_risk",
+      "food_searching"
     ],
-    "clusterSummary": "Kondapur / Masjid Banda cluster contains three known community dogs. Main risks include food-water irregularity, skin follow-up, severe thinness, and urgent vet/NGO guidance for one dog.",
+    "clusterSummary": "Kondapur / Masjid Banda cluster contains five known community dogs. Main risks include food-water irregularity, possible skin conditions, severe thinness, visible ribs, food searching, heat exposure, traffic risk, and urgent vet/NGO guidance for high-priority dogs.",
     "careNeeds": {
       "needsFoodSupport": true,
       "needsWaterSupport": true,
       "needsVetGuidance": true,
       "needsMissingWatch": false
     },
-    "mapMarkerStatus": "mixed_priority",
+    "mapMarkerStatus": "high_priority",
     "createdAt": "2026-05-12T10:30:00Z",
-    "updatedAt": "2026-05-12T10:30:00Z"
+    "updatedAt": "2026-05-15T10:00:00Z"
   },
   {
     "id": "cluster_002",
@@ -86,12 +97,12 @@
     },
     "mapMarkerStatus": "medium_priority",
     "createdAt": "2026-05-12T10:30:00Z",
-    "updatedAt": "2026-05-12T10:30:00Z"
+    "updatedAt": "2026-05-15T10:00:00Z"
   },
   {
     "id": "cluster_003",
     "name": "Financial District / Nanakramguda",
-    "primaryLandmark": "Tech Mahindra / Aparna Celestia",
+    "primaryLandmark": "Tech Mahindra / Aparna Celestia / Prism Cafe / Sri Ranganathaswamy Temple",
     "center": {
       "lat": 17.4194,
       "lng": 78.3421
@@ -100,14 +111,19 @@
       "Financial District",
       "Nanakramguda",
       "Tech Mahindra",
-      "Aparna Celestia"
+      "Aparna Celestia",
+      "Prism Cafe",
+      "Nanakramguda Road",
+      "Sri Ranganathaswamy Temple"
     ],
     "city": "Hyderabad",
     "state": "Telangana",
     "country": "India",
     "dogIds": [
       "dog_005",
-      "dog_007"
+      "dog_007",
+      "dog_011",
+      "dog_012"
     ],
     "vetIds": [
       "vet_008",
@@ -119,9 +135,13 @@
       "visible_ribs",
       "limited_water_access",
       "urgent_followup_needed",
-      "urgent_vet_escalation"
+      "urgent_vet_escalation",
+      "malnourishment_risk",
+      "possible_skin_condition",
+      "roadside_abandon_risk",
+      "lethargy_risk"
     ],
-    "clusterSummary": "Financial District / Nanakramguda cluster contains high-priority dogs with severe malnutrition, heat exposure risk, low-energy behaviour, and unstable water access.",
+    "clusterSummary": "Financial District / Nanakramguda cluster contains high-priority dogs with severe malnutrition, heat exposure risk, low-energy behaviour, unstable water access, possible skin conditions, and roadside abandonment risk.",
     "careNeeds": {
       "needsFoodSupport": true,
       "needsWaterSupport": true,
@@ -130,6 +150,90 @@
     },
     "mapMarkerStatus": "high_priority",
     "createdAt": "2026-05-12T10:30:00Z",
-    "updatedAt": "2026-05-12T10:30:00Z"
+    "updatedAt": "2026-05-15T10:00:00Z"
+  },
+  {
+    "id": "cluster_004",
+    "name": "Gopanpalle / Nallagandla",
+    "primaryLandmark": "Aparna Sarovar Road / HUDA Layout / GRANDE",
+    "center": {
+      "lat": 17.4578,
+      "lng": 78.3032
+    },
+    "areas": [
+      "Gopanpalle",
+      "Nallagandla",
+      "Aparna Sarovar Road",
+      "HUDA Layout",
+      "GRANDE"
+    ],
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "country": "India",
+    "dogIds": [
+      "dog_010"
+    ],
+    "vetIds": [],
+    "riskTags": [
+      "needs_food",
+      "needs_water",
+      "heat_exposure_risk",
+      "no_food_no_water",
+      "possible_abandoned_case",
+      "followup_observation"
+    ],
+    "clusterSummary": "Gopanpalle / Nallagandla cluster currently contains one known community dog with food-water gap, heat exposure risk, and possible abandoned-case indicators. Vet profiles for this new cluster still need to be added.",
+    "careNeeds": {
+      "needsFoodSupport": true,
+      "needsWaterSupport": true,
+      "needsVetGuidance": false,
+      "needsMissingWatch": false
+    },
+    "mapMarkerStatus": "medium_priority",
+    "createdAt": "2026-05-15T10:00:00Z",
+    "updatedAt": "2026-05-15T10:00:00Z"
+  },
+  {
+    "id": "cluster_005",
+    "name": "Lingampally / Serilingampalle",
+    "primaryLandmark": "Gulmohar Park Colony / Subway / Yellow Leaf Designer Studio",
+    "center": {
+      "lat": 17.4795,
+      "lng": 78.3324
+    },
+    "areas": [
+      "Lingampally",
+      "Serilingampalle",
+      "Gulmohar Park Colony",
+      "Survey No 104",
+      "Subway / Yellow Leaf Designer Studio"
+    ],
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "country": "India",
+    "dogIds": [
+      "dog_009"
+    ],
+    "vetIds": [],
+    "riskTags": [
+      "needs_food",
+      "needs_water",
+      "severe_malnutrition",
+      "visible_ribs",
+      "visible_spine",
+      "possible_skin_condition",
+      "heat_exposure_risk",
+      "urgent_vet_guidance"
+    ],
+    "clusterSummary": "Lingampally / Serilingampalle cluster currently contains one high-priority dog with extreme malnutrition, visible ribcage/spine, no food-water access, heat exposure risk, and possible skin concern. Vet profiles for this new cluster still need to be added.",
+    "careNeeds": {
+      "needsFoodSupport": true,
+      "needsWaterSupport": true,
+      "needsVetGuidance": true,
+      "needsMissingWatch": false
+    },
+    "mapMarkerStatus": "high_priority",
+    "createdAt": "2026-05-15T10:00:00Z",
+    "updatedAt": "2026-05-15T10:00:00Z"
   }
 ]

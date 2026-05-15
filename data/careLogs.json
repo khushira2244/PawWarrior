@@ -120,5 +120,96 @@
     },
     "createdAt": "2026-05-12T10:15:00Z",
     "source": "field_collection"
-  }
+  },
+  
+{
+  "id": "log_009",
+  "animalId": "dog_008",
+  "userId": "field_collector_001",
+  "actionType": "observed_only",
+  "notes": "Dog observed near Subway / Yellow Leaf Designer Studio, Masjid Banda. Appeared very thin with visible ribs and was searching for food.",
+  "photoProof": true,
+  "location": {
+    "lat": 17.4651,
+    "lng": 78.3562,
+    "label": "Subway / Yellow Leaf Designer Studio, Masjid Banda, Kondapur"
+  },
+  "createdAt": "2026-05-15T09:00:45Z",
+  "source": "field_collection"
+},
+{
+  "id": "log_010",
+  "animalId": "dog_009",
+  "userId": "field_collector_001",
+  "actionType": "observed_only",
+  "notes": "Dog observed near Subway / Yellow Leaf Designer Studio area. Appeared extremely thin with visible ribcage/spine and no food/water access.",
+  "photoProof": true,
+  "location": {
+    "lat": 17.4795,
+    "lng": 78.3324,
+    "label": "Subway / Yellow Leaf Designer Studio, Gulmohar Park Colony, Lingampally / Serilingampalle"
+  },
+  "createdAt": "2026-05-15T09:04:00Z",
+  "source": "field_collection"
+},
+{
+  "id": "log_011",
+  "animalId": "dog_010",
+  "userId": "field_collector_001",
+  "actionType": "observed_only",
+  "notes": "Dog observed near Aparna Sarovar Road, HUDA Layout, GRANDE. Seen lying down with low-energy posture and reported no food/water access.",
+  "photoProof": true,
+  "location": {
+    "lat": 17.4578,
+    "lng": 78.3032,
+    "label": "Aparna Sarovar Road, HUDA Layout, GRANDE, Gopanpalle / Nallagandla"
+  },
+  "createdAt": "2026-05-15T09:08:00Z",
+  "source": "field_collection"
+},
+{
+  "id": "log_012",
+  "animalId": "dog_011",
+  "userId": "field_collector_001",
+  "actionType": "observed_only",
+  "notes": "Dog observed near Prism Cafe / Nanakramguda Road. Seen lying flat on dirt with dusty/matted fur and no food/water access.",
+  "photoProof": true,
+  "location": {
+    "lat": 17.4198,
+    "lng": 78.3421,
+    "label": "Nearby Prism Cafe, Nanakramguda Road"
+  },
+  "createdAt": "2026-05-15T09:12:00Z",
+  "source": "field_collection"
+},
+{
+  "id": "log_013",
+  "animalId": "dog_012",
+  "userId": "field_collector_001",
+  "actionType": "food_water_present_observed",
+  "notes": "Dog observed near Sri Ranganathaswamy Temple. Food and water were present, but dog appeared thin, low-energy, and had visible skin patches.",
+  "photoProof": true,
+  "location": {
+    "lat": 17.4172,
+    "lng": 78.3414,
+    "label": "Sri Ranganathaswamy Temple, Financial District"
+  },
+  "createdAt": "2026-05-15T09:20:00Z",
+  "source": "field_collection"
+},
+{
+  "id": "log_014",
+  "animalId": "dog_013",
+  "userId": "field_collector_001",
+  "actionType": "water_available_observed",
+  "notes": "Dog observed near Burfi Ghar, Kondapur Road. Dog was searching for food, water was available, and the dog appeared thin with low-energy posture.",
+  "photoProof": true,
+  "location": {
+    "lat": 17.4622,
+    "lng": 78.3614,
+    "label": "Burfi Ghar, Kondapur Road, Kondapur"
+  },
+  "createdAt": "2026-05-15T09:17:35Z",
+  "source": "field_collection"
+}
 ]

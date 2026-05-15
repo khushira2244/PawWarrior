@@ -2,9 +2,9 @@
   {
     "id": "vet_001",
     "clinicName": "Paws Vet Clinic",
-    "doctorName": "Unknown / Public Listing",
+    "doctorName": "Dr. Navya",
     "clusterId": "cluster_001",
-    "servesDogIds": ["dog_001", "dog_002", "dog_003"],
+    "servesDogIds": ["dog_001", "dog_002", "dog_003", "dog_008", "dog_013"],
     "area": "Kondapur",
     "addressHint": "Sree Prabhupada Township, Kondapur",
     "location": {
@@ -15,18 +15,18 @@
     "hours": "9:00 AM - 9:00 PM",
     "availableForGuidance": true,
     "emergencySupport": false,
-    "lowCostGuidance": "unknown",
+    "lowCostGuidance": "likely",
     "streetAnimalSupport": "unknown",
-    "source": "Google Maps public listing",
+    "source": "Google Maps public listing / Gemini-assisted vet list",
     "partnershipStatus": "not_contacted_yet",
-    "notes": "General pet care and hygiene clinic near Kondapur dog cluster."
+    "notes": "Highly rated and described as approachable and reasonably priced. Good first option for Kondapur / Masjid Banda cases."
   },
   {
     "id": "vet_002",
     "clinicName": "Happy Pet Clinic - Kondapur",
     "doctorName": "Unknown / Public Listing",
     "clusterId": "cluster_001",
-    "servesDogIds": ["dog_001", "dog_002", "dog_003"],
+    "servesDogIds": ["dog_001", "dog_002", "dog_003", "dog_008", "dog_013"],
     "area": "Kondapur",
     "addressHint": "Raja Rajeshwara Nagar, Kondapur",
     "location": {
@@ -48,7 +48,7 @@
     "clinicName": "Snoot Pet Clinic",
     "doctorName": "Unknown / Public Listing",
     "clusterId": "cluster_001",
-    "servesDogIds": ["dog_001", "dog_002", "dog_003"],
+    "servesDogIds": ["dog_001", "dog_002", "dog_003", "dog_008", "dog_013"],
     "area": "Shilpa Hills / Kondapur",
     "addressHint": "Near Hitex Road",
     "location": {
@@ -70,7 +70,7 @@
     "clinicName": "PULPA'S VETERINARY CLINIC",
     "doctorName": "Unknown / Public Listing",
     "clusterId": "cluster_001",
-    "servesDogIds": ["dog_001", "dog_002", "dog_003"],
+    "servesDogIds": ["dog_001", "dog_002", "dog_003", "dog_008", "dog_013"],
     "area": "Hafeezpet / Kondapur",
     "addressHint": "Hafeezpet / Kondapur",
     "location": {
@@ -134,7 +134,7 @@
   {
     "id": "vet_007",
     "clinicName": "Cornerstone Pet Clinic",
-    "doctorName": "Unknown / Public Listing",
+    "doctorName": "Dr. Abhishek Kalundia",
     "clusterId": "cluster_002",
     "servesDogIds": ["dog_004", "dog_006"],
     "area": "Gachibowli / Khajaguda",
@@ -149,18 +149,18 @@
     "emergencySupport": false,
     "lowCostGuidance": "unknown",
     "streetAnimalSupport": "unknown",
-    "source": "Google Maps public listing",
+    "source": "Google Maps public listing / Gemini-assisted vet list",
     "partnershipStatus": "not_contacted_yet",
-    "notes": "Late-night clinic option for non-24/7 but extended-hour support."
+    "notes": "Late-night clinic option. Also relevant for Nallagandla / Gopanpalle support if closer options are unavailable."
   },
   {
     "id": "vet_008",
     "clinicName": "Bhairava Pet Hospital",
     "doctorName": "Unknown / Public Listing",
     "clusterId": "cluster_003",
-    "servesDogIds": ["dog_005", "dog_007"],
+    "servesDogIds": ["dog_005", "dog_007", "dog_011", "dog_012"],
     "area": "Nanakramguda / Financial District",
-    "addressHint": "Near TNGO Colony",
+    "addressHint": "Near TNGO Colony / Beside Delhi Sweet House",
     "location": {
       "lat": 17.4287,
       "lng": 78.3324
@@ -170,17 +170,17 @@
     "availableForGuidance": true,
     "emergencySupport": "unknown",
     "lowCostGuidance": "unknown",
-    "streetAnimalSupport": "unknown",
-    "source": "Google Maps public listing",
+    "streetAnimalSupport": "likely",
+    "source": "Google Maps public listing / Gemini-assisted vet list",
     "partnershipStatus": "not_contacted_yet",
-    "notes": "Nearby hospital option for Financial District / Nanakramguda dog cluster."
+    "notes": "Close to Prism Cafe / Financial District cases. Good option for gentle care and high-priority follow-up."
   },
   {
     "id": "vet_009",
     "clinicName": "Healthy Pet Hospital",
     "doctorName": "Unknown / Public Listing",
     "clusterId": "cluster_003",
-    "servesDogIds": ["dog_005", "dog_007"],
+    "servesDogIds": ["dog_005", "dog_007", "dog_011", "dog_012"],
     "area": "Manikonda / Near Financial District",
     "addressHint": "Manikonda, near Financial District",
     "location": {
@@ -196,5 +196,203 @@
     "source": "Google Maps public listing",
     "partnershipStatus": "not_contacted_yet",
     "notes": "24-hour facility. Useful for late-night or high-priority escalation cases."
+  },
+  {
+    "id": "vet_010",
+    "clinicName": "Claws and Paws Pet Clinic",
+    "doctorName": "Dr. M. S. Krishnakanth",
+    "clusterId": "cluster_001",
+    "servesDogIds": ["dog_001", "dog_002", "dog_003", "dog_008", "dog_013"],
+    "area": "Madhapur / Kondapur",
+    "addressHint": "Madhapur / Kondapur area",
+    "location": {
+      "lat": null,
+      "lng": null
+    },
+    "rating": "unknown",
+    "hours": "unknown",
+    "availableForGuidance": true,
+    "emergencySupport": "unknown",
+    "lowCostGuidance": "unknown",
+    "streetAnimalSupport": "unknown",
+    "source": "Gemini-assisted vet list; verify on Google Maps",
+    "partnershipStatus": "not_contacted_yet",
+    "notes": "Doctor listed with 22+ years experience. Needs Google Maps verification for exact coordinates."
+  },
+  {
+    "id": "vet_011",
+    "clinicName": "Vety Dog Clinic",
+    "doctorName": "Dr. Santosh Reddy",
+    "clusterId": "cluster_001",
+    "servesDogIds": ["dog_001", "dog_002", "dog_003", "dog_008", "dog_013"],
+    "area": "Kondapur / nearby",
+    "addressHint": "Kondapur area",
+    "location": {
+      "lat": null,
+      "lng": null
+    },
+    "rating": "unknown",
+    "hours": "unknown",
+    "availableForGuidance": true,
+    "emergencySupport": "unknown",
+    "lowCostGuidance": "unknown",
+    "streetAnimalSupport": "unknown",
+    "source": "Gemini-assisted vet list; verify on Google Maps",
+    "partnershipStatus": "not_contacted_yet",
+    "notes": "Potential option for Kondapur cluster. Exact listing and coordinates need verification."
+  },
+  {
+    "id": "vet_012",
+    "clinicName": "Animal Health Vet Clinic",
+    "doctorName": "Unknown / Public Listing",
+    "clusterId": "cluster_005",
+    "servesDogIds": ["dog_009"],
+    "area": "Lingampally / Gulmohar Park",
+    "addressHint": "Lingampally / Gulmohar Park area",
+    "location": {
+      "lat": null,
+      "lng": null
+    },
+    "rating": "unknown",
+    "hours": "unknown",
+    "availableForGuidance": true,
+    "emergencySupport": true,
+    "lowCostGuidance": "unknown",
+    "streetAnimalSupport": "likely",
+    "source": "Gemini-assisted vet list; verify on Google Maps",
+    "partnershipStatus": "not_contacted_yet",
+    "notes": "Suggested for serious infection/emergency recovery cases. Strong option for Safedi if verified."
+  },
+  {
+    "id": "vet_013",
+    "clinicName": "Dr. Rao's Pet Clinic",
+    "doctorName": "Dr. Janardhan Rao",
+    "clusterId": "cluster_005",
+    "servesDogIds": ["dog_009"],
+    "area": "Lingampally / Gulmohar Park",
+    "addressHint": "Lingampally / Gulmohar Park area",
+    "location": {
+      "lat": null,
+      "lng": null
+    },
+    "rating": "unknown",
+    "hours": "unknown",
+    "availableForGuidance": true,
+    "emergencySupport": "unknown",
+    "lowCostGuidance": "unknown",
+    "streetAnimalSupport": "unknown",
+    "source": "Gemini-assisted vet list; verify on Google Maps",
+    "partnershipStatus": "not_contacted_yet",
+    "notes": "Suggested for skin allergies and hair-loss related concerns. Useful for possible skin-condition cases if verified."
+  },
+  {
+    "id": "vet_014",
+    "clinicName": "BG Pet Clinic & Pet Store",
+    "doctorName": "Unknown / Public Listing",
+    "clusterId": "cluster_005",
+    "servesDogIds": ["dog_009"],
+    "area": "Chanda Nagar / Lingampally",
+    "addressHint": "Chanda Nagar / Lingampally area",
+    "location": {
+      "lat": null,
+      "lng": null
+    },
+    "rating": "unknown",
+    "hours": "unknown",
+    "availableForGuidance": true,
+    "emergencySupport": "unknown",
+    "lowCostGuidance": "unknown",
+    "streetAnimalSupport": "unknown",
+    "source": "Gemini-assisted vet list; verify on Google Maps",
+    "partnershipStatus": "not_contacted_yet",
+    "notes": "Potential clinic/store option for Lingampally cluster. Exact coordinates need verification."
+  },
+  {
+    "id": "vet_015",
+    "clinicName": "Dr. Dolittle Pet Clinic",
+    "doctorName": "Unknown / Public Listing",
+    "clusterId": "cluster_004",
+    "servesDogIds": ["dog_010"],
+    "area": "Nallagandla / Gopanpalle",
+    "addressHint": "Nallagandla / Gopanpalle area",
+    "location": {
+      "lat": null,
+      "lng": null
+    },
+    "rating": "unknown",
+    "hours": "unknown",
+    "availableForGuidance": true,
+    "emergencySupport": "unknown",
+    "lowCostGuidance": "unknown",
+    "streetAnimalSupport": "unknown",
+    "source": "Gemini-assisted vet list; verify on Google Maps",
+    "partnershipStatus": "not_contacted_yet",
+    "notes": "Suggested for quick response and certified professionals. Verify exact listing and coordinates."
+  },
+  {
+    "id": "vet_016",
+    "clinicName": "Fido Pet Clinic",
+    "doctorName": "Unknown / Public Listing",
+    "clusterId": "cluster_004",
+    "servesDogIds": ["dog_010"],
+    "area": "Nallagandla / Gopanpalle",
+    "addressHint": "Nallagandla / Gopanpalle area",
+    "location": {
+      "lat": null,
+      "lng": null
+    },
+    "rating": "unknown",
+    "hours": "unknown",
+    "availableForGuidance": true,
+    "emergencySupport": "unknown",
+    "lowCostGuidance": "unknown",
+    "streetAnimalSupport": "likely",
+    "source": "Gemini-assisted vet list; verify on Google Maps",
+    "partnershipStatus": "not_contacted_yet",
+    "notes": "Suggested as approachable and rescue-friendly. Verify exact listing and coordinates."
+  },
+  {
+    "id": "vet_017",
+    "clinicName": "Pet Choice Animal Hospital",
+    "doctorName": "Dr. Tejasree",
+    "clusterId": "cluster_003",
+    "servesDogIds": ["dog_005", "dog_007", "dog_011", "dog_012"],
+    "area": "Nanakramguda / Financial District",
+    "addressHint": "Financial District / Nanakramguda area",
+    "location": {
+      "lat": null,
+      "lng": null
+    },
+    "rating": "unknown",
+    "hours": "unknown",
+    "availableForGuidance": true,
+    "emergencySupport": "unknown",
+    "lowCostGuidance": "unknown",
+    "streetAnimalSupport": "unknown",
+    "source": "Gemini-assisted vet list; verify on Google Maps",
+    "partnershipStatus": "not_contacted_yet",
+    "notes": "Additional Financial District vet option. Exact coordinates need Google Maps verification."
+  },
+  {
+    "id": "vet_018",
+    "clinicName": "Omega's Vet Hospital",
+    "doctorName": "Unknown / Public Listing",
+    "clusterId": "cluster_003",
+    "servesDogIds": ["dog_005", "dog_007", "dog_011", "dog_012"],
+    "area": "Financial District",
+    "addressHint": "Financial District area",
+    "location": {
+      "lat": null,
+      "lng": null
+    },
+    "rating": "unknown",
+    "hours": "unknown",
+    "availableForGuidance": true,
+    "emergencySupport": "unknown",
+    "lowCostGuidance": "unknown",
+    "streetAnimalSupport": "unknown",
+    "source": "Gemini-assisted vet list; verify on Google Maps",
+    "partnershipStatus": "not_contacted_yet",
+    "notes": "Known for being well-sanitized and efficient according to Gemini-assisted notes. Verify exact listing and coordinates."
   }
 ]
