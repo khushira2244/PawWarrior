@@ -1003,5 +1003,912 @@
   "seenByCommunityCount": 1,
   "createdBy": "field_collector_001",
   "notes": "Dog observed near Burfi Ghar, Kondapur Road. Main concern is thin body condition, low-energy posture, food searching, possible skin concern, and traffic risk. Water was available, but food support and follow-up observation are needed."
+},
+{
+  "id": "dog_014",
+  "sourceId": "dog_raw_007",
+  "name": "Garden",
+  "species": "dog",
+  "relationship": "known_community_dog",
+  "profileStatus": "active",
+  "createdAt": "2026-05-23T16:26:00Z",
+  "lastSeenAt": "2026-05-23T16:26:00Z",
+  "breed": {
+    "aiEstimate": "unknown / indie-type dog",
+    "communityLabel": "Indie",
+    "verifiedBreed": null,
+    "confidence": "low",
+    "status": "unverified"
+  },
+  "identityFeatures": {
+    "color": "light brown / tan with white chest",
+    "size": "medium",
+    "uniqueMarks": [
+      "fluffy or longer coat texture",
+      "darker coloration around the muzzle",
+      "floppy ears"
+    ],
+    "furCondition": "possible skin condition",
+    "bodyCondition": "thin / curled / depressed posture"
+  },
+  "photos": [
+    "images/dogs/dog_014_garden.jpg"
+  ],
+  "usualLocations": [
+    {
+      "label": "Near Botanical Garden",
+      "area": "Kondapur",
+      "city": "Hyderabad",
+      "state": "Telangana",
+      "country": "India",
+      "lat": 17.4564,
+      "lng": 78.3643,
+      "source": "manual_google_maps_pin"
+    }
+  ],
+  "normalBehaviour": "Seen curled in a depressed posture near Botanical Garden; behaviour needs follow-up confirmation.",
+  "currentCondition": "serious_issue",
+  "careTags": [
+    "needs_food",
+    "needs_water",
+    "summer_care_needed",
+    "heat_exposure_risk",
+    "urgent_followup_needed",
+    "observe_again",
+    "followup_photo_needed"
+  ],
+  "healthTags": [
+    "malnourishment_risk",
+    "lethargy_risk",
+    "possible_skin_condition",
+    "needs_vet_guidance",
+    "urgent_vet_escalation",
+    "avoid_self_medication"
+  ],
+  "environmentTags": [
+    "heat_exposure_risk",
+    "no_food_no_water",
+    "botanical_garden_area"
+  ],
+  "aiObservation": {
+    "visibleConcern": true,
+    "conditionHint": "malnourishment_and_lethargy_risk",
+    "diagnosis": "not_provided",
+    "notes": "Dog appears thin with curled/depressed posture and reported no food or water access. PawWarrior does not diagnose from image or behaviour; vet/NGO guidance is recommended."
+  },
+  "missingStatus": "active",
+  "foodCountThisWeek": 0,
+  "waterCountThisWeek": 0,
+  "lastFoodAt": null,
+  "lastWaterAt": null,
+  "seenByCommunityCount": 1,
+  "createdBy": "field_collector_001",
+  "notes": "Dog observed near Botanical Garden, Kondapur. Main concern is thin body condition, depressed posture, no food/water access, heat exposure risk, and possible skin condition. Needs food support, clean water, follow-up observation, and vet/NGO guidance."
+},
+{
+  "id": "dog_015",
+  "sourceId": "dog_raw_008",
+  "name": "Windsor",
+  "species": "dog",
+  "relationship": "known_community_dog",
+  "profileStatus": "active",
+  "createdAt": "2026-05-23T16:34:00Z",
+  "lastSeenAt": "2026-05-23T16:34:00Z",
+  "breed": {
+    "aiEstimate": "unknown / indie-type dog",
+    "communityLabel": "Indie",
+    "verifiedBreed": null,
+    "confidence": "low",
+    "status": "unverified"
+  },
+  "identityFeatures": {
+    "color": "black and light tan / cream",
+    "size": "medium",
+    "uniqueMarks": [
+      "dark saddle blanket marking on back",
+      "light tan head, legs, and underbelly",
+      "longer coarse coat texture"
+    ],
+    "furCondition": "possible skin condition",
+    "bodyCondition": "curled / depressed posture / lying on ground"
+  },
+  "photos": [
+    "images/dogs/dog_015_windsor.jpg"
+  ],
+  "usualLocations": [
+    {
+      "label": "Near Aditya Windsor",
+      "area": "Whitefields, Kondapur",
+      "city": "Hyderabad",
+      "state": "Telangana",
+      "country": "India",
+      "lat": 17.4619,
+      "lng": 78.3541,
+      "source": "manual_google_maps_pin"
+    }
+  ],
+  "normalBehaviour": "Seen curled and lying on the ground near Aditya Windsor; behaviour needs follow-up confirmation.",
+  "currentCondition": "mild_issue",
+  "careTags": [
+    "food_available",
+    "needs_water_check",
+    "summer_care_needed",
+    "heat_exposure_risk",
+    "observe_again",
+    "followup_photo_needed"
+  ],
+  "healthTags": [
+    "possible_skin_condition",
+    "low_mood_observation",
+    "needs_vet_guidance_if_worsens",
+    "avoid_self_medication"
+  ],
+  "environmentTags": [
+    "heat_exposure_risk",
+    "whitefields_kondapur_area"
+  ],
+  "aiObservation": {
+    "visibleConcern": true,
+    "conditionHint": "possible_skin_condition",
+    "diagnosis": "not_provided",
+    "notes": "Dog was seen curled and lying on the ground with possible skin/fur concern. Food was available, but the dog appeared depressed. PawWarrior does not diagnose from image or behaviour; follow-up observation is recommended."
+  },
+  "missingStatus": "active",
+  "foodCountThisWeek": 1,
+  "waterCountThisWeek": 0,
+  "lastFoodAt": "2026-05-23T16:34:00Z",
+  "lastWaterAt": null,
+  "seenByCommunityCount": 1,
+  "createdBy": "field_collector_001",
+  "notes": "Dog observed near Aditya Windsor, Whitefields, Kondapur. Food was available, but the dog appeared curled/depressed with possible skin condition and heat exposure risk. Needs water check, follow-up photo, and vet/NGO guidance if condition worsens."
+},
+{
+  "id": "dog_016",
+  "sourceId": "dog_raw_009",
+  "name": "Google",
+  "species": "dog",
+  "relationship": "known_community_dog",
+  "profileStatus": "active",
+  "createdAt": "2026-05-23T16:38:00Z",
+  "lastSeenAt": "2026-05-23T16:38:00Z",
+  "breed": {
+    "aiEstimate": "unknown / indie-type dog",
+    "communityLabel": "Indie",
+    "verifiedBreed": null,
+    "confidence": "low",
+    "status": "unverified"
+  },
+  "identityFeatures": {
+    "color": "white and light brown",
+    "size": "medium",
+    "uniqueMarks": [
+      "white patches on legs and face",
+      "light brown saddle area",
+      "pointed ears"
+    ],
+    "furCondition": "possible skin condition",
+    "bodyCondition": "thin / resting on gravel"
+  },
+  "photos": [
+    "images/dogs/dog_016_google.jpg"
+  ],
+  "usualLocations": [
+    {
+      "label": "Near Google Office",
+      "area": "Kothaguda",
+      "city": "Hyderabad",
+      "state": "Telangana",
+      "country": "India",
+      "lat": 17.4611,
+      "lng": 78.3692,
+      "source": "manual_google_maps_pin"
+    }
+  ],
+  "normalBehaviour": "Seen resting on gravel near Google Office, Kothaguda; behaviour needs follow-up confirmation.",
+  "currentCondition": "mild_issue",
+  "careTags": [
+    "food_available",
+    "needs_water",
+    "summer_care_needed",
+    "heat_exposure_risk",
+    "observe_again",
+    "followup_photo_needed"
+  ],
+  "healthTags": [
+    "possible_skin_condition",
+    "thin_body_condition",
+    "needs_vet_guidance_if_worsens",
+    "avoid_self_medication"
+  ],
+  "environmentTags": [
+    "heat_exposure_risk",
+    "resting_on_gravel",
+    "kothaguda_area",
+    "no_water"
+  ],
+  "aiObservation": {
+    "visibleConcern": true,
+    "conditionHint": "possible_skin_condition",
+    "diagnosis": "not_provided",
+    "notes": "Dog was seen resting on gravel, appears thin, and may have a visible skin/fur concern. Food was available but water was not available. PawWarrior does not diagnose from image or behaviour; follow-up observation is recommended."
+  },
+  "missingStatus": "active",
+  "foodCountThisWeek": 1,
+  "waterCountThisWeek": 0,
+  "lastFoodAt": "2026-05-23T16:38:00Z",
+  "lastWaterAt": null,
+  "seenByCommunityCount": 1,
+  "createdBy": "field_collector_001",
+  "notes": "Dog observed near Google Office, Kothaguda. Food was available, but no water was present. Main concern is thin body condition, possible skin condition, and heat exposure risk. Needs clean water, follow-up photo, and vet/NGO guidance if condition worsens."
+},
+{
+  "id": "dog_017",
+  "sourceId": "dog_raw_010",
+  "name": "Langdu",
+  "species": "dog",
+  "relationship": "known_community_dog",
+  "profileStatus": "active",
+  "createdAt": "2026-05-23T16:44:00Z",
+  "lastSeenAt": "2026-05-23T16:44:00Z",
+  "breed": {
+    "aiEstimate": "unknown / indie-type dog",
+    "communityLabel": "Indie",
+    "verifiedBreed": null,
+    "confidence": "low",
+    "status": "unverified"
+  },
+  "identityFeatures": {
+    "color": "light brown and white",
+    "size": "medium",
+    "uniqueMarks": [
+      "white underbelly and legs",
+      "light brown/tan saddle and back",
+      "curled tail",
+      "impaired right hind leg posture"
+    ],
+    "furCondition": "normal",
+    "bodyCondition": "thin / walking on road with impaired right hind leg posture"
+  },
+  "photos": [
+    "images/dogs/dog_017_langdu.jpg"
+  ],
+  "usualLocations": [
+    {
+      "label": "Near Google Office",
+      "area": "Kothaguda",
+      "city": "Hyderabad",
+      "state": "Telangana",
+      "country": "India",
+      "lat": 17.4611,
+      "lng": 78.3692,
+      "source": "manual_google_maps_pin"
+    }
+  ],
+  "normalBehaviour": "Seen wandering on road near Google Office with impaired right hind leg posture; behaviour needs urgent follow-up confirmation.",
+  "currentCondition": "serious_issue",
+  "careTags": [
+    "needs_food",
+    "needs_water",
+    "traffic_risk",
+    "urgent_followup_needed",
+    "observe_again",
+    "followup_photo_needed",
+    "needs_rescue_attention"
+  ],
+  "healthTags": [
+    "suspected_leg_injury",
+    "impaired_hind_leg_posture",
+    "thin_body_condition",
+    "lethargy_risk",
+    "needs_vet_guidance",
+    "urgent_vet_escalation",
+    "avoid_self_medication"
+  ],
+  "environmentTags": [
+    "traffic_risk",
+    "wandering_on_road",
+    "no_food_no_water",
+    "kothaguda_area"
+  ],
+  "aiObservation": {
+    "visibleConcern": true,
+    "conditionHint": "serious_issue",
+    "diagnosis": "not_provided",
+    "notes": "Dog was seen walking on the road with impaired right hind leg posture and reported no food or water access. PawWarrior does not diagnose injury severity from image or behaviour; urgent vet/NGO guidance is recommended."
+  },
+  "missingStatus": "active",
+  "foodCountThisWeek": 0,
+  "waterCountThisWeek": 0,
+  "lastFoodAt": null,
+  "lastWaterAt": null,
+  "seenByCommunityCount": 1,
+  "createdBy": "field_collector_001",
+  "notes": "Dog observed near Google Office, Kothaguda. Main concern is impaired right hind leg posture, thin body condition, road wandering, traffic risk, and no food/water access. Needs urgent follow-up, safe food/water support, and vet/NGO guidance."
+},
+{
+  "id": "dog_019",
+  "sourceId": "dog_raw_013",
+  "name": "Tiny Squad",
+  "species": "dog",
+  "profileType": "puppy_group",
+  "relationship": "known_community_group",
+  "profileStatus": "active",
+  "createdAt": "2026-05-25T17:53:00Z",
+  "lastSeenAt": "2026-05-25T17:53:00Z",
+  "breed": {
+    "aiEstimate": "unknown / indie-type puppies",
+    "communityLabel": "Indie puppy group",
+    "verifiedBreed": null,
+    "confidence": "low",
+    "status": "unverified"
+  },
+  "identityFeatures": {
+    "color": "mixed group: three white, one black and tan, one dark brown/black",
+    "size": "small puppies",
+    "uniqueMarks": [
+      "group of 5 sibling puppies",
+      "sleeping clustered together along wall baseline and gutter line"
+    ],
+    "furCondition": "normal",
+    "bodyCondition": "extremely thin / low energy / lethargic postures"
+  },
+  "photos": [
+    "images/dogs/dog_019_tiny_squad.jpeg"
+  ],
+  "usualLocations": [
+    {
+      "label": "SK Car Lounge",
+      "area": "Gachibowli",
+      "city": "Hyderabad",
+      "state": "Telangana",
+      "country": "India",
+      "lat": 17.4428,
+      "lng": 78.3574,
+      "source": "manual_google_maps_pin"
+    }
+  ],
+  "normalBehaviour": "Seen as a clustered group of sibling puppies near SK Car Lounge; lethargic resting posture needs follow-up confirmation.",
+  "currentCondition": "serious_issue",
+  "careTags": [
+    "needs_food",
+    "needs_water",
+    "puppy_group",
+    "summer_care_needed",
+    "heat_exposure_risk",
+    "urgent_followup_needed",
+    "observe_again",
+    "followup_photo_needed",
+    "check_for_mother_nearby"
+  ],
+  "healthTags": [
+    "puppy_group",
+    "malnourishment_risk",
+    "lethargy_risk",
+    "possible_heat_exhaustion",
+    "needs_vet_guidance",
+    "urgent_vet_escalation",
+    "avoid_self_medication"
+  ],
+  "environmentTags": [
+    "environment_risk",
+    "gutter_line_area",
+    "no_water",
+    "limited_food_access",
+    "gachibowli_area",
+    "sk_car_lounge_area"
+  ],
+  "aiObservation": {
+    "visibleConcern": true,
+    "conditionHint": "malnourishment_and_lethargy_risk",
+    "diagnosis": "not_provided",
+    "notes": "Group of 5 puppies observed sleeping together with extreme thinness, low energy, limited food access, no water, and possible heat exhaustion risk. PawWarrior does not diagnose; clean water, food support, mother-dog check, and vet/NGO guidance are recommended."
+  },
+  "missingStatus": "active",
+  "foodCountThisWeek": 0,
+  "waterCountThisWeek": 0,
+  "lastFoodAt": null,
+  "lastWaterAt": null,
+  "seenByCommunityCount": 1,
+  "createdBy": "field_collector_001",
+  "notes": "Puppy group observed near SK Car Lounge, Gachibowli. Main concern is extreme thinness, lethargy, no water, limited food access, and heat/environment risk. Needs urgent follow-up, food/water support, and mother-dog/vet/NGO guidance."
+},
+{
+  "id": "dog_020",
+  "sourceId": "dog_raw_014",
+  "name": "Masky",
+  "species": "dog",
+  "relationship": "known_community_dog",
+  "profileStatus": "active",
+  "createdAt": "2026-05-25T17:56:00Z",
+  "lastSeenAt": "2026-05-25T17:56:00Z",
+  "breed": {
+    "aiEstimate": "unknown / indie-type dog",
+    "communityLabel": "Indie",
+    "verifiedBreed": null,
+    "confidence": "low",
+    "status": "unverified"
+  },
+  "identityFeatures": {
+    "color": "tan / light brown",
+    "size": "medium",
+    "uniqueMarks": [
+      "darker muzzle / mask on face",
+      "panting with tongue out",
+      "walking near a parked motorcycle"
+    ],
+    "furCondition": "normal",
+    "bodyCondition": "thin frame / active but searching"
+  },
+  "photos": [
+    "images/dogs/dog_020_masky.jpeg"
+  ],
+  "usualLocations": [
+    {
+      "label": "SK Car Lounge",
+      "area": "Gachibowli",
+      "city": "Hyderabad",
+      "state": "Telangana",
+      "country": "India",
+      "lat": 17.4428,
+      "lng": 78.3574,
+      "source": "manual_google_maps_pin"
+    }
+  ],
+  "normalBehaviour": "Seen walking near parked motorcycle around SK Car Lounge; active but searching for food.",
+  "currentCondition": "serious_issue",
+  "careTags": [
+    "needs_food",
+    "needs_water",
+    "summer_care_needed",
+    "traffic_risk",
+    "heat_exposure_risk",
+    "urgent_followup_needed",
+    "observe_again",
+    "followup_photo_needed"
+  ],
+  "healthTags": [
+    "thin_body_condition",
+    "panting_observed",
+    "possible_heat_exhaustion",
+    "needs_vet_guidance_if_worsens",
+    "avoid_self_medication"
+  ],
+  "environmentTags": [
+    "traffic_risk",
+    "gachibowli_area",
+    "sk_car_lounge_area",
+    "no_water",
+    "food_searching",
+    "near_parked_motorcycle"
+  ],
+  "aiObservation": {
+    "visibleConcern": true,
+    "conditionHint": "thin_but_active",
+    "diagnosis": "not_provided",
+    "notes": "Dog appears thin but active, panting, searching for food, and with no water available. PawWarrior does not diagnose; clean water, food support, follow-up observation, and vet/NGO guidance if symptoms worsen are recommended."
+  },
+  "missingStatus": "active",
+  "foodCountThisWeek": 0,
+  "waterCountThisWeek": 0,
+  "lastFoodAt": null,
+  "lastWaterAt": null,
+  "seenByCommunityCount": 1,
+  "createdBy": "field_collector_001",
+  "notes": "Dog observed near SK Car Lounge, Gachibowli. Main concern is thin body condition, panting/heat risk, searching for food, no water, and traffic exposure."
+},
+{
+  "id": "dog_021",
+  "sourceId": "dog_raw_015",
+  "name": "Tea Amma",
+  "species": "dog",
+  "relationship": "known_community_dog",
+  "profileStatus": "active",
+  "createdAt": "2026-05-25T18:11:00Z",
+  "lastSeenAt": "2026-05-25T18:11:00Z",
+  "breed": {
+    "aiEstimate": "unknown / indie-type dog",
+    "communityLabel": "Indie",
+    "verifiedBreed": null,
+    "confidence": "low",
+    "status": "unverified"
+  },
+  "identityFeatures": {
+    "color": "brindle / dark brown and black",
+    "size": "medium",
+    "uniqueMarks": [
+      "elongated teats indicating nursing mother",
+      "visible ribcage and prominent spine line",
+      "seen near large transparent water bottles with Tea Time 999 label"
+    ],
+    "furCondition": "possible skin condition",
+    "bodyCondition": "extremely thin / foraging posture"
+  },
+  "photos": [
+    "images/dogs/dog_021_tea_amma.jpeg"
+  ],
+  "usualLocations": [
+    {
+      "label": "Khajaguda Lake Point, Tea Time",
+      "area": "Khajaguda",
+      "city": "Hyderabad",
+      "state": "Telangana",
+      "country": "India",
+      "lat": 17.4194,
+      "lng": 78.3619,
+      "source": "manual_google_maps_pin"
+    }
+  ],
+  "normalBehaviour": "Seen foraging near Tea Time / Khajaguda Lake Point; appears to be a nursing mother and needs urgent follow-up confirmation.",
+  "currentCondition": "serious_issue",
+  "careTags": [
+    "needs_food",
+    "needs_water",
+    "nursing_mother",
+    "summer_care_needed",
+    "heat_exposure_risk",
+    "urgent_followup_needed",
+    "observe_again",
+    "followup_photo_needed",
+    "check_for_puppies_nearby"
+  ],
+  "healthTags": [
+    "nursing_mother",
+    "severe_malnutrition",
+    "visible_ribs",
+    "visible_spine",
+    "possible_skin_condition",
+    "heat_stress_risk",
+    "needs_vet_guidance",
+    "urgent_vet_escalation",
+    "avoid_self_medication"
+  ],
+  "environmentTags": [
+    "heat_exposure_risk",
+    "food_searching",
+    "water_searching",
+    "khajaguda_area",
+    "khajaguda_lake_point",
+    "tea_time_area"
+  ],
+  "aiObservation": {
+    "visibleConcern": true,
+    "conditionHint": "serious_issue",
+    "diagnosis": "not_provided",
+    "notes": "Dog appears to be a nursing mother with extreme thinness, visible ribs/spine, possible skin concern, and food/water searching behaviour. PawWarrior does not diagnose; food/water support, puppy check, and vet/NGO guidance are recommended."
+  },
+  "missingStatus": "active",
+  "foodCountThisWeek": 0,
+  "waterCountThisWeek": 0,
+  "lastFoodAt": null,
+  "lastWaterAt": null,
+  "seenByCommunityCount": 1,
+  "createdBy": "field_collector_001",
+  "notes": "Nursing mother dog observed near Khajaguda Lake Point, Tea Time. Main concern is extreme thinness, visible ribcage/spine, possible skin condition, food/water searching, and heat exposure risk. Needs urgent food/water support, puppy-location follow-up, and vet/NGO guidance."
+},
+{
+  "id": "dog_022",
+  "sourceId": "dog_raw_016",
+  "name": "Stripe",
+  "species": "dog",
+  "relationship": "known_community_dog",
+  "profileStatus": "active",
+  "createdAt": "2026-05-25T18:20:00Z",
+  "lastSeenAt": "2026-05-25T18:20:00Z",
+  "breed": {
+    "aiEstimate": "unknown / indie-type dog",
+    "communityLabel": "Indie",
+    "verifiedBreed": null,
+    "confidence": "low",
+    "status": "unverified"
+  },
+  "identityFeatures": {
+    "color": "brindle / dark brown striped",
+    "size": "medium",
+    "uniqueMarks": [
+      "dark tiger-stripe brindle coat pattern",
+      "lying flat on loose gravel or dirt",
+      "visible skin patches near the base of the tail"
+    ],
+    "furCondition": "possible skin condition",
+    "bodyCondition": "thin / low energy / resting posture"
+  },
+  "photos": [
+    "images/dogs/dog_022_stripe.jpeg"
+  ],
+  "usualLocations": [
+    {
+      "label": "Engineering Staff College of India (ESCI)",
+      "area": "Gachibowli",
+      "city": "Hyderabad",
+      "state": "Telangana",
+      "country": "India",
+      "lat": 17.4348,
+      "lng": 78.3671,
+      "source": "manual_google_maps_pin"
+    }
+  ],
+  "normalBehaviour": "Seen lying flat on loose gravel/dirt near ESCI, Gachibowli; low-energy resting posture needs follow-up confirmation.",
+  "currentCondition": "serious_issue",
+  "careTags": [
+    "needs_food",
+    "needs_water",
+    "summer_care_needed",
+    "heat_exposure_risk",
+    "urgent_followup_needed",
+    "observe_again",
+    "followup_photo_needed"
+  ],
+  "healthTags": [
+    "possible_skin_condition",
+    "thin_body_condition",
+    "lethargy_risk",
+    "skin_patches_near_tail_base",
+    "needs_vet_guidance",
+    "avoid_self_medication"
+  ],
+  "environmentTags": [
+    "heat_exposure_risk",
+    "loose_gravel_area",
+    "no_food_no_water",
+    "gachibowli_area",
+    "esci_area"
+  ],
+  "aiObservation": {
+    "visibleConcern": true,
+    "conditionHint": "possible_skin_condition",
+    "diagnosis": "not_provided",
+    "notes": "Dog was seen lying flat on loose gravel/dirt with thin body condition, low energy, no food/water access, and visible skin patches near the base of the tail. PawWarrior does not diagnose; food/water support, follow-up photo, and vet/NGO guidance are recommended."
+  },
+  "missingStatus": "active",
+  "foodCountThisWeek": 0,
+  "waterCountThisWeek": 0,
+  "lastFoodAt": null,
+  "lastWaterAt": null,
+  "seenByCommunityCount": 1,
+  "createdBy": "field_collector_001",
+  "notes": "Dog observed near ESCI, Gachibowli. Main concern is thin body condition, low-energy posture, possible skin condition near tail base, no food/water access, and heat exposure risk."
+},
+{
+  "id": "dog_023",
+  "sourceId": "dog_raw_017",
+  "name": "Collar",
+  "species": "dog",
+  "relationship": "known_community_dog",
+  "profileStatus": "active",
+  "createdAt": "2026-05-25T18:34:00Z",
+  "lastSeenAt": "2026-05-25T18:34:00Z",
+  "breed": {
+    "aiEstimate": "unknown / indie-type dog",
+    "communityLabel": "Indie",
+    "verifiedBreed": null,
+    "confidence": "low",
+    "status": "unverified"
+  },
+  "identityFeatures": {
+    "color": "white / off-white",
+    "size": "medium",
+    "uniqueMarks": [
+      "severe dark spotted skin patches on lower belly and flank",
+      "wearing a dark collar",
+      "lying flat on side on tiled pavement"
+    ],
+    "furCondition": "possible skin condition",
+    "bodyCondition": "thin / lethargic / sleeping posture"
+  },
+  "photos": [
+    "images/dogs/dog_023_collar.jpeg"
+  ],
+  "usualLocations": [
+    {
+      "label": "Bus station on road towards Hyderabad University, opposite Gachibowli Stadium road division",
+      "area": "Nallagandla / Gachibowli junction area",
+      "city": "Hyderabad",
+      "state": "Telangana",
+      "country": "India",
+      "lat": 17.4522,
+      "lng": 78.3298,
+      "source": "manual_google_maps_pin"
+    }
+  ],
+  "normalBehaviour": "Seen lying flat on tiled pavement near bus station road towards Hyderabad University; lethargic posture needs follow-up confirmation.",
+  "currentCondition": "serious_issue",
+  "careTags": [
+    "needs_food",
+    "needs_water",
+    "summer_care_needed",
+    "traffic_risk",
+    "urgent_followup_needed",
+    "observe_again",
+    "followup_photo_needed"
+  ],
+  "healthTags": [
+    "possible_skin_condition",
+    "severe_skin_patches",
+    "thin_body_condition",
+    "lethargy_risk",
+    "needs_vet_guidance",
+    "urgent_vet_escalation",
+    "avoid_self_medication"
+  ],
+  "environmentTags": [
+    "traffic_risk",
+    "bus_station_area",
+    "tiled_pavement_resting",
+    "no_food_no_water",
+    "nallagandla_gachibowli_junction_area"
+  ],
+  "aiObservation": {
+    "visibleConcern": true,
+    "conditionHint": "possible_skin_condition",
+    "diagnosis": "not_provided",
+    "notes": "Dog was seen lying flat with thin body condition, lethargic posture, severe dark spotted skin patches on lower belly/flank, and no food/water access. PawWarrior does not diagnose; food/water support, follow-up photo, and vet/NGO guidance are recommended."
+  },
+  "missingStatus": "active",
+  "foodCountThisWeek": 0,
+  "waterCountThisWeek": 0,
+  "lastFoodAt": null,
+  "lastWaterAt": null,
+  "seenByCommunityCount": 1,
+  "createdBy": "field_collector_001",
+  "notes": "Dog observed near bus station on road towards Hyderabad University, opposite Gachibowli Stadium road division. Main concern is possible severe skin condition, thin/lethargic posture, no food/water access, and traffic exposure."
+},
+{
+  "id": "dog_024",
+  "sourceId": "dog_raw_018",
+  "name": "Foodie",
+  "species": "dog",
+  "relationship": "known_community_dog",
+  "profileStatus": "active",
+  "createdAt": "2026-05-25T18:38:00Z",
+  "lastSeenAt": "2026-05-25T18:38:00Z",
+  "breed": {
+    "aiEstimate": "unknown / indie-type dog",
+    "communityLabel": "Indie",
+    "verifiedBreed": null,
+    "confidence": "low",
+    "status": "unverified"
+  },
+  "identityFeatures": {
+    "color": "grey and tan / agouti",
+    "size": "medium",
+    "uniqueMarks": [
+      "dark grey or sable coat pattern with tan legs",
+      "seen walking near black plastic stools",
+      "standing in front of Harihara Foodtruck"
+    ],
+    "furCondition": "normal",
+    "bodyCondition": "healthy / active posture"
+  },
+  "photos": [
+    "images/dogs/dog_024_foodie.jpeg"
+  ],
+  "usualLocations": [
+    {
+      "label": "Juice and Dosa center / Harihara Foodtruck near Hyderabad University bus station",
+      "area": "Gachibowli / Nallagandla Road",
+      "city": "Hyderabad",
+      "state": "Telangana",
+      "country": "India",
+      "lat": 17.4525,
+      "lng": 78.3305,
+      "source": "manual_google_maps_pin"
+    }
+  ],
+  "normalBehaviour": "Seen active near food stalls / Harihara Foodtruck area; likely has some food access from nearby stalls.",
+  "currentCondition": "stable",
+  "careTags": [
+    "stable",
+    "food_access_likely",
+    "observe_again",
+    "followup_photo_optional"
+  ],
+  "healthTags": [
+    "healthy_status",
+    "no_visible_concern"
+  ],
+  "environmentTags": [
+    "food_stall_area",
+    "gachibowli_nallagandla_road",
+    "harihara_foodtruck_area"
+  ],
+  "aiObservation": {
+    "visibleConcern": false,
+    "conditionHint": "healthy_status",
+    "diagnosis": "not_provided",
+    "notes": "Dog appeared healthy and active with no visible concern. Likely has some food access from nearby stalls. PawWarrior should continue passive observation and care history tracking."
+  },
+  "missingStatus": "active",
+  "foodCountThisWeek": 0,
+  "waterCountThisWeek": 0,
+  "lastFoodAt": null,
+  "lastWaterAt": null,
+  "seenByCommunityCount": 1,
+  "createdBy": "field_collector_001",
+  "notes": "Healthy, active dog observed near Juice and Dosa center / Harihara Foodtruck near Hyderabad University bus station. Low-priority profile useful for normal-care baseline and map diversity."
+},
+{
+  "id": "dog_025",
+  "sourceId": "dog_raw_019",
+  "name": "Chai",
+  "species": "dog",
+  "relationship": "known_community_dog",
+  "profileStatus": "active",
+  "createdAt": "2026-05-25T18:43:00Z",
+  "lastSeenAt": "2026-05-25T18:43:00Z",
+  "breed": {
+    "aiEstimate": "unknown / indie-type dog",
+    "communityLabel": "Indie",
+    "verifiedBreed": null,
+    "confidence": "low",
+    "status": "unverified"
+  },
+  "identityFeatures": {
+    "color": "dark brown and grey brindle / sable",
+    "size": "medium",
+    "uniqueMarks": [
+      "extensive hair loss and visible patches on hindquarters and lower back",
+      "standing in front of Hebsiba Irani Dum Chai stall",
+      "facing a parked black motorcycle"
+    ],
+    "furCondition": "possible skin condition",
+    "bodyCondition": "thin / standing posture"
+  },
+  "photos": [
+    "images/dogs/dog_025_chai.jpeg"
+  ],
+  "usualLocations": [
+    {
+      "label": "Back side gate of University of Hyderabad, near Hebsiba Irani Dum Chai",
+      "area": "Gachibowli / Nallagandla Road",
+      "city": "Hyderabad",
+      "state": "Telangana",
+      "country": "India",
+      "lat": 17.4532,
+      "lng": 78.3284,
+      "source": "manual_google_maps_pin"
+    }
+  ],
+  "normalBehaviour": "Seen standing near tea stall / food area at the back side gate of University of Hyderabad; behaviour needs follow-up confirmation.",
+  "currentCondition": "serious_issue",
+  "careTags": [
+    "needs_food",
+    "needs_water",
+    "summer_care_needed",
+    "traffic_risk",
+    "urgent_followup_needed",
+    "observe_again",
+    "followup_photo_needed"
+  ],
+  "healthTags": [
+    "possible_skin_condition",
+    "extensive_hair_loss",
+    "visible_skin_patches",
+    "thin_body_condition",
+    "needs_vet_guidance",
+    "urgent_vet_escalation",
+    "avoid_self_medication"
+  ],
+  "environmentTags": [
+    "traffic_risk",
+    "tea_stall_area",
+    "food_searching",
+    "no_food_no_water",
+    "gachibowli_nallagandla_road",
+    "university_of_hyderabad_back_gate"
+  ],
+  "aiObservation": {
+    "visibleConcern": true,
+    "conditionHint": "possible_skin_condition",
+    "diagnosis": "not_provided",
+    "notes": "Dog was seen thin with extensive hair loss and visible patches on hindquarters/lower back, near a tea stall and parked motorcycle, with no food/water access. PawWarrior does not diagnose; food/water support, follow-up photo, and vet/NGO guidance are recommended."
+  },
+  "missingStatus": "active",
+  "foodCountThisWeek": 0,
+  "waterCountThisWeek": 0,
+  "lastFoodAt": null,
+  "lastWaterAt": null,
+  "seenByCommunityCount": 1,
+  "createdBy": "field_collector_001",
+  "notes": "Dog observed near back side gate of University of Hyderabad, near Hebsiba Irani Dum Chai. Main concern is extensive hair loss/visible skin patches, thin body condition, no food/water access, traffic exposure, and need for vet/NGO guidance."
 }
 ]

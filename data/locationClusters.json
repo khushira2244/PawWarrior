@@ -1,11 +1,11 @@
 [
   {
     "id": "cluster_001",
-    "name": "Kondapur / Masjid Banda",
-    "primaryLandmark": "Teapical / Masjid Banda / Burfi Ghar / Subway area",
+    "name": "Kondapur / Masjid Banda / Kothaguda",
+    "primaryLandmark": "Teapical / Masjid Banda / Burfi Ghar / Botanical Garden / Whitefields / Google Office",
     "center": {
-      "lat": 17.4646,
-      "lng": 78.3551
+      "lat": 17.4625,
+      "lng": 78.3612
     },
     "areas": [
       "Kondapur",
@@ -13,7 +13,12 @@
       "Teapical",
       "Burfi Ghar",
       "Kondapur Road",
-      "Subway / Yellow Leaf Designer Studio"
+      "Subway / Yellow Leaf Designer Studio",
+      "Botanical Garden",
+      "Whitefields",
+      "Aditya Windsor",
+      "Kothaguda",
+      "Google Office"
     ],
     "city": "Hyderabad",
     "state": "Telangana",
@@ -23,7 +28,11 @@
       "dog_002",
       "dog_003",
       "dog_008",
-      "dog_013"
+      "dog_013",
+      "dog_014",
+      "dog_015",
+      "dog_016",
+      "dog_017"
     ],
     "vetIds": [
       "vet_001",
@@ -42,9 +51,19 @@
       "visible_ribs",
       "heat_exposure_risk",
       "traffic_risk",
-      "food_searching"
+      "food_searching",
+      "botanical_garden_area",
+      "whitefields_kondapur_area",
+      "kothaguda_area",
+      "needs_water_check",
+      "low_mood_observation",
+      "resting_on_gravel",
+      "suspected_leg_injury",
+      "impaired_hind_leg_posture",
+      "needs_rescue_attention",
+      "urgent_vet_escalation"
     ],
-    "clusterSummary": "Kondapur / Masjid Banda cluster contains five known community dogs. Main risks include food-water irregularity, possible skin conditions, severe thinness, visible ribs, food searching, heat exposure, traffic risk, and urgent vet/NGO guidance for high-priority dogs.",
+    "clusterSummary": "Kondapur / Masjid Banda / Kothaguda cluster contains nine known community dogs. Main risks include food-water irregularity, possible skin conditions, severe thinness, heat exposure, traffic exposure, resting-on-road/gravel cases, and one high-priority suspected hind-leg injury case needing urgent vet/NGO guidance.",
     "careNeeds": {
       "needsFoodSupport": true,
       "needsWaterSupport": true,
@@ -53,28 +72,34 @@
     },
     "mapMarkerStatus": "high_priority",
     "createdAt": "2026-05-12T10:30:00Z",
-    "updatedAt": "2026-05-15T10:00:00Z"
+    "updatedAt": "2026-05-23T17:00:00Z"
   },
   {
     "id": "cluster_002",
-    "name": "DLF Road / Gachibowli",
-    "primaryLandmark": "DLF Road / DLF Road Eateries",
+    "name": "DLF Road / Gachibowli / SK Car Lounge / ESCI",
+    "primaryLandmark": "DLF Road / SK Car Lounge / ESCI / Gachibowli",
     "center": {
-      "lat": 17.4474,
-      "lng": 78.3582
+      "lat": 17.4417,
+      "lng": 78.3619
     },
     "areas": [
       "DLF Road",
       "DLF Road Eateries",
       "Gachibowli",
-      "Kondapur"
+      "SK Car Lounge",
+      "Engineering Staff College of India",
+      "ESCI"
     ],
     "city": "Hyderabad",
     "state": "Telangana",
     "country": "India",
     "dogIds": [
       "dog_004",
-      "dog_006"
+      "dog_006",
+      "dog_018",
+      "dog_019",
+      "dog_020",
+      "dog_022"
     ],
     "vetIds": [
       "vet_005",
@@ -86,18 +111,31 @@
       "construction_displacement_risk",
       "drinking_gutter_water",
       "high_traffic_area",
-      "followup_observation"
+      "followup_observation",
+      "puppy_group",
+      "possible_heat_exhaustion",
+      "heat_exposure_risk",
+      "needs_food",
+      "needs_water",
+      "traffic_risk",
+      "sk_car_lounge_area",
+      "check_for_mother_nearby",
+      "possible_skin_condition",
+      "skin_patches_near_tail_base",
+      "loose_gravel_area",
+      "no_food_no_water",
+      "esci_area"
     ],
-    "clusterSummary": "DLF Road / Gachibowli cluster contains dogs affected by traffic, construction displacement, unsafe water source, and follow-up observation needs.",
+    "clusterSummary": "DLF Road / Gachibowli cluster now contains five known community dogs, including a puppy group near SK Car Lounge and a low-energy brindle dog near ESCI. Main risks include heat exposure, food-water gaps, traffic exposure, puppy vulnerability, possible skin conditions, and follow-up observation needs.",
     "careNeeds": {
       "needsFoodSupport": true,
       "needsWaterSupport": true,
-      "needsVetGuidance": false,
+      "needsVetGuidance": true,
       "needsMissingWatch": false
     },
-    "mapMarkerStatus": "medium_priority",
+    "mapMarkerStatus": "high_priority",
     "createdAt": "2026-05-12T10:30:00Z",
-    "updatedAt": "2026-05-15T10:00:00Z"
+    "updatedAt": "2026-05-25T19:00:00Z"
   },
   {
     "id": "cluster_003",
@@ -154,24 +192,33 @@
   },
   {
     "id": "cluster_004",
-    "name": "Gopanpalle / Nallagandla",
-    "primaryLandmark": "Aparna Sarovar Road / HUDA Layout / GRANDE",
+    "name": "Nallagandla / Hyderabad University Road",
+    "primaryLandmark": "Hyderabad University Bus Station / Back Side Gate / Foodtruck Area",
     "center": {
-      "lat": 17.4578,
-      "lng": 78.3032
+      "lat": 17.453,
+      "lng": 78.3296
     },
     "areas": [
       "Gopanpalle",
       "Nallagandla",
       "Aparna Sarovar Road",
       "HUDA Layout",
-      "GRANDE"
+      "GRANDE",
+      "Hyderabad University Road",
+      "Gachibowli / Nallagandla Road",
+      "Hyderabad University Bus Station",
+      "University of Hyderabad Back Gate",
+      "Harihara Foodtruck",
+      "Hebsiba Irani Dum Chai"
     ],
     "city": "Hyderabad",
     "state": "Telangana",
     "country": "India",
     "dogIds": [
-      "dog_010"
+      "dog_010",
+      "dog_023",
+      "dog_024",
+      "dog_025"
     ],
     "vetIds": [],
     "riskTags": [
@@ -180,18 +227,33 @@
       "heat_exposure_risk",
       "no_food_no_water",
       "possible_abandoned_case",
-      "followup_observation"
+      "followup_observation",
+      "severe_skin_patches",
+      "possible_skin_condition",
+      "traffic_risk",
+      "bus_station_area",
+      "urgent_vet_escalation",
+      "nallagandla_gachibowli_junction_area",
+      "healthy_status",
+      "food_stall_area",
+      "harihara_foodtruck_area",
+      "low_priority",
+      "food_access_likely",
+      "extensive_hair_loss",
+      "visible_skin_patches",
+      "tea_stall_area",
+      "university_of_hyderabad_back_gate"
     ],
-    "clusterSummary": "Gopanpalle / Nallagandla cluster currently contains one known community dog with food-water gap, heat exposure risk, and possible abandoned-case indicators. Vet profiles for this new cluster still need to be added.",
+    "clusterSummary": "Nallagandla / Hyderabad University Road cluster contains mixed-priority dogs, including one healthy active dog near food stalls and high-priority dogs with visible skin patches, food-water gaps, traffic exposure, and urgent vet/NGO guidance needs.",
     "careNeeds": {
       "needsFoodSupport": true,
       "needsWaterSupport": true,
-      "needsVetGuidance": false,
+      "needsVetGuidance": true,
       "needsMissingWatch": false
     },
-    "mapMarkerStatus": "medium_priority",
+    "mapMarkerStatus": "mixed_priority",
     "createdAt": "2026-05-15T10:00:00Z",
-    "updatedAt": "2026-05-15T10:00:00Z"
+    "updatedAt": "2026-05-25T19:00:00Z"
   },
   {
     "id": "cluster_005",
@@ -235,5 +297,57 @@
     "mapMarkerStatus": "high_priority",
     "createdAt": "2026-05-15T10:00:00Z",
     "updatedAt": "2026-05-15T10:00:00Z"
+  },
+  {
+    "id": "cluster_006",
+    "name": "Khajaguda / Lake Point",
+    "primaryLandmark": "Khajaguda Lake Point / Tea Time",
+    "center": {
+      "lat": 17.4194,
+      "lng": 78.3619
+    },
+    "areas": [
+      "Khajaguda",
+      "Khajaguda Lake Point",
+      "Tea Time",
+      "Khajaguda Road"
+    ],
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "country": "India",
+    "dogIds": [
+      "dog_021"
+    ],
+    "vetIds": [
+      "vet_007",
+      "vet_008",
+      "vet_009"
+    ],
+    "riskTags": [
+      "nursing_mother",
+      "severe_malnutrition",
+      "visible_ribs",
+      "visible_spine",
+      "possible_skin_condition",
+      "heat_exposure_risk",
+      "needs_food",
+      "needs_water",
+      "food_searching",
+      "water_searching",
+      "check_for_puppies_nearby",
+      "urgent_vet_escalation",
+      "khajaguda_lake_point",
+      "tea_time_area"
+    ],
+    "clusterSummary": "Khajaguda / Lake Point cluster currently contains one high-priority nursing mother dog near Tea Time. Main risks include severe thinness, visible ribs/spine, food-water searching, possible skin concern, heat exposure, and need to check for puppies nearby.",
+    "careNeeds": {
+      "needsFoodSupport": true,
+      "needsWaterSupport": true,
+      "needsVetGuidance": true,
+      "needsMissingWatch": false
+    },
+    "mapMarkerStatus": "high_priority",
+    "createdAt": "2026-05-25T19:00:00Z",
+    "updatedAt": "2026-05-25T19:00:00Z"
   }
 ]

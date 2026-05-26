@@ -4,7 +4,13 @@
     "clinicName": "Paws Vet Clinic",
     "doctorName": "Dr. Navya",
     "clusterId": "cluster_001",
-    "servesDogIds": ["dog_001", "dog_002", "dog_003", "dog_008", "dog_013"],
+    "servesDogIds": [
+      "dog_001",
+      "dog_002",
+      "dog_003",
+      "dog_008",
+      "dog_013"
+    ],
     "area": "Kondapur",
     "addressHint": "Sree Prabhupada Township, Kondapur",
     "location": {
@@ -26,7 +32,13 @@
     "clinicName": "Happy Pet Clinic - Kondapur",
     "doctorName": "Unknown / Public Listing",
     "clusterId": "cluster_001",
-    "servesDogIds": ["dog_001", "dog_002", "dog_003", "dog_008", "dog_013"],
+    "servesDogIds": [
+      "dog_001",
+      "dog_002",
+      "dog_003",
+      "dog_008",
+      "dog_013"
+    ],
     "area": "Kondapur",
     "addressHint": "Raja Rajeshwara Nagar, Kondapur",
     "location": {
@@ -48,7 +60,13 @@
     "clinicName": "Snoot Pet Clinic",
     "doctorName": "Unknown / Public Listing",
     "clusterId": "cluster_001",
-    "servesDogIds": ["dog_001", "dog_002", "dog_003", "dog_008", "dog_013"],
+    "servesDogIds": [
+      "dog_001",
+      "dog_002",
+      "dog_003",
+      "dog_008",
+      "dog_013"
+    ],
     "area": "Shilpa Hills / Kondapur",
     "addressHint": "Near Hitex Road",
     "location": {
@@ -70,7 +88,13 @@
     "clinicName": "PULPA'S VETERINARY CLINIC",
     "doctorName": "Unknown / Public Listing",
     "clusterId": "cluster_001",
-    "servesDogIds": ["dog_001", "dog_002", "dog_003", "dog_008", "dog_013"],
+    "servesDogIds": [
+      "dog_001",
+      "dog_002",
+      "dog_003",
+      "dog_008",
+      "dog_013"
+    ],
     "area": "Hafeezpet / Kondapur",
     "addressHint": "Hafeezpet / Kondapur",
     "location": {
@@ -90,9 +114,16 @@
   {
     "id": "vet_005",
     "clinicName": "Mr.VET Animal Hospital, 24/7 Emergency - Gachibowli",
-    "doctorName": "Unknown / Public Listing",
+    "doctorName": "Dr. Ramesh Nanaboina",
     "clusterId": "cluster_002",
-    "servesDogIds": ["dog_004", "dog_006"],
+    "servesDogIds": [
+      "dog_004",
+      "dog_006",
+      "dog_018",
+      "dog_019",
+      "dog_020",
+      "dog_022"
+    ],
     "area": "DLF Road, Gachibowli",
     "addressHint": "DLF Road, Gachibowli",
     "location": {
@@ -104,17 +135,24 @@
     "availableForGuidance": true,
     "emergencySupport": true,
     "lowCostGuidance": "unknown",
-    "streetAnimalSupport": "unknown",
+    "streetAnimalSupport": "likely",
     "source": "Google Maps public listing",
     "partnershipStatus": "not_contacted_yet",
-    "notes": "24/7 emergency hospital. Strong option for urgent escalation near DLF Road."
+    "notes": "Updated with verified doctor (16+ years surgical experience). 24/7 emergency facility covering DLF, SK Car Lounge, and ESCI areas. Added dog_018 (Auto), dog_019 (Tiny Squad), dog_020 (Masky), and dog_022 (Stripe)."
   },
   {
     "id": "vet_006",
     "clinicName": "Caesar Pet Hospital",
     "doctorName": "Unknown / Public Listing",
     "clusterId": "cluster_002",
-    "servesDogIds": ["dog_004", "dog_006"],
+    "servesDogIds": [
+      "dog_004",
+      "dog_006",
+      "dog_018",
+      "dog_019",
+      "dog_020",
+      "dog_022"
+    ],
     "area": "Gachibowli",
     "addressHint": "Near Himagiri Hospital",
     "location": {
@@ -122,43 +160,56 @@
       "lng": 78.3593
     },
     "rating": 4.7,
-    "hours": "unknown",
+    "hours": "10:00 AM - 8:00 PM",
     "availableForGuidance": true,
     "emergencySupport": "unknown",
     "lowCostGuidance": "unknown",
-    "streetAnimalSupport": "unknown",
+    "streetAnimalSupport": "likely",
     "source": "Google Maps public listing",
     "partnershipStatus": "not_contacted_yet",
-    "notes": "Nearby clinic option for DLF Road / Gachibowli dog cluster."
+    "notes": "Updated hours. Highly rated for treating Indie street rescues with severe skin or mange issues. Serves Gachibowli stadium and SK Car Lounge cluster."
   },
   {
     "id": "vet_007",
     "clinicName": "Cornerstone Pet Clinic",
     "doctorName": "Dr. Abhishek Kalundia",
     "clusterId": "cluster_002",
-    "servesDogIds": ["dog_004", "dog_006"],
+    "servesDogIds": [
+      "dog_004",
+      "dog_006",
+      "dog_018",
+      "dog_019",
+      "dog_020",
+      "dog_021",
+      "dog_022"
+    ],
     "area": "Gachibowli / Khajaguda",
-    "addressHint": "Near Khajaguda",
+    "addressHint": "Near Khajaguda / Khajaguda Main Road",
     "location": {
       "lat": 17.4196,
       "lng": 78.3749
     },
-    "rating": 4.3,
-    "hours": "9:30 AM - 12:00 AM",
+    "rating": 4.5,
+    "hours": "12:00 AM - 11:00 PM",
     "availableForGuidance": true,
-    "emergencySupport": false,
+    "emergencySupport": true,
     "lowCostGuidance": "unknown",
     "streetAnimalSupport": "unknown",
-    "source": "Google Maps public listing / Gemini-assisted vet list",
+    "source": "Google Maps public listing",
     "partnershipStatus": "not_contacted_yet",
-    "notes": "Late-night clinic option. Also relevant for Nallagandla / Gopanpalle support if closer options are unavailable."
+    "notes": "Updated rating, hours, and maps visibility. Serves as late-night emergency support for cluster_002 and explicitly links to cluster_006 for dog_021 (Tea Amma) at Khajaguda Lake Point."
   },
   {
     "id": "vet_008",
     "clinicName": "Bhairava Pet Hospital",
     "doctorName": "Unknown / Public Listing",
     "clusterId": "cluster_003",
-    "servesDogIds": ["dog_005", "dog_007", "dog_011", "dog_012"],
+    "servesDogIds": [
+      "dog_005",
+      "dog_007",
+      "dog_011",
+      "dog_012"
+    ],
     "area": "Nanakramguda / Financial District",
     "addressHint": "Near TNGO Colony / Beside Delhi Sweet House",
     "location": {
@@ -180,12 +231,17 @@
     "clinicName": "Healthy Pet Hospital",
     "doctorName": "Unknown / Public Listing",
     "clusterId": "cluster_003",
-    "servesDogIds": ["dog_005", "dog_007", "dog_011", "dog_012"],
+    "servesDogIds": [
+      "dog_005",
+      "dog_007",
+      "dog_011",
+      "dog_012"
+    ],
     "area": "Manikonda / Near Financial District",
     "addressHint": "Manikonda, near Financial District",
     "location": {
       "lat": 17.4013,
-      "lng": 78.3670
+      "lng": 78.367
     },
     "rating": 4.5,
     "hours": "24/7",
@@ -202,7 +258,13 @@
     "clinicName": "Claws and Paws Pet Clinic",
     "doctorName": "Dr. M. S. Krishnakanth",
     "clusterId": "cluster_001",
-    "servesDogIds": ["dog_001", "dog_002", "dog_003", "dog_008", "dog_013"],
+    "servesDogIds": [
+      "dog_001",
+      "dog_002",
+      "dog_003",
+      "dog_008",
+      "dog_013"
+    ],
     "area": "Madhapur / Kondapur",
     "addressHint": "Madhapur / Kondapur area",
     "location": {
@@ -224,7 +286,13 @@
     "clinicName": "Vety Dog Clinic",
     "doctorName": "Dr. Santosh Reddy",
     "clusterId": "cluster_001",
-    "servesDogIds": ["dog_001", "dog_002", "dog_003", "dog_008", "dog_013"],
+    "servesDogIds": [
+      "dog_001",
+      "dog_002",
+      "dog_003",
+      "dog_008",
+      "dog_013"
+    ],
     "area": "Kondapur / nearby",
     "addressHint": "Kondapur area",
     "location": {
@@ -246,7 +314,9 @@
     "clinicName": "Animal Health Vet Clinic",
     "doctorName": "Unknown / Public Listing",
     "clusterId": "cluster_005",
-    "servesDogIds": ["dog_009"],
+    "servesDogIds": [
+      "dog_009"
+    ],
     "area": "Lingampally / Gulmohar Park",
     "addressHint": "Lingampally / Gulmohar Park area",
     "location": {
@@ -268,7 +338,9 @@
     "clinicName": "Dr. Rao's Pet Clinic",
     "doctorName": "Dr. Janardhan Rao",
     "clusterId": "cluster_005",
-    "servesDogIds": ["dog_009"],
+    "servesDogIds": [
+      "dog_009"
+    ],
     "area": "Lingampally / Gulmohar Park",
     "addressHint": "Lingampally / Gulmohar Park area",
     "location": {
@@ -290,7 +362,9 @@
     "clinicName": "BG Pet Clinic & Pet Store",
     "doctorName": "Unknown / Public Listing",
     "clusterId": "cluster_005",
-    "servesDogIds": ["dog_009"],
+    "servesDogIds": [
+      "dog_009"
+    ],
     "area": "Chanda Nagar / Lingampally",
     "addressHint": "Chanda Nagar / Lingampally area",
     "location": {
@@ -312,29 +386,39 @@
     "clinicName": "Dr. Dolittle Pet Clinic",
     "doctorName": "Unknown / Public Listing",
     "clusterId": "cluster_004",
-    "servesDogIds": ["dog_010"],
+    "servesDogIds": [
+      "dog_010",
+      "dog_023",
+      "dog_024",
+      "dog_025"
+    ],
     "area": "Nallagandla / Gopanpalle",
-    "addressHint": "Nallagandla / Gopanpalle area",
+    "addressHint": "Nallagandla Serilingampally Road, near University division",
     "location": {
-      "lat": null,
-      "lng": null
+      "lat": 17.456,
+      "lng": 78.3245
     },
-    "rating": "unknown",
-    "hours": "unknown",
+    "rating": 4.4,
+    "hours": "9:30 AM - 8:30 PM",
     "availableForGuidance": true,
     "emergencySupport": "unknown",
     "lowCostGuidance": "unknown",
     "streetAnimalSupport": "unknown",
-    "source": "Gemini-assisted vet list; verify on Google Maps",
+    "source": "Google Maps public listing",
     "partnershipStatus": "not_contacted_yet",
-    "notes": "Suggested for quick response and certified professionals. Verify exact listing and coordinates."
+    "notes": "Normalized coordinates and hours. Covers University Road cluster including dog_023 (Collar), dog_024 (Foodie), and dog_025 (Chai)."
   },
   {
     "id": "vet_016",
     "clinicName": "Fido Pet Clinic",
     "doctorName": "Unknown / Public Listing",
     "clusterId": "cluster_004",
-    "servesDogIds": ["dog_010"],
+    "servesDogIds": [
+      "dog_010",
+      "dog_023",
+      "dog_024",
+      "dog_025"
+    ],
     "area": "Nallagandla / Gopanpalle",
     "addressHint": "Nallagandla / Gopanpalle area",
     "location": {
@@ -349,14 +433,19 @@
     "streetAnimalSupport": "likely",
     "source": "Gemini-assisted vet list; verify on Google Maps",
     "partnershipStatus": "not_contacted_yet",
-    "notes": "Suggested as approachable and rescue-friendly. Verify exact listing and coordinates."
+    "notes": "Rescue-friendly option mapping directly to the Nallagandla and University Back Gate cluster."
   },
   {
     "id": "vet_017",
     "clinicName": "Pet Choice Animal Hospital",
     "doctorName": "Dr. Tejasree",
     "clusterId": "cluster_003",
-    "servesDogIds": ["dog_005", "dog_007", "dog_011", "dog_012"],
+    "servesDogIds": [
+      "dog_005",
+      "dog_007",
+      "dog_011",
+      "dog_012"
+    ],
     "area": "Nanakramguda / Financial District",
     "addressHint": "Financial District / Nanakramguda area",
     "location": {
@@ -378,7 +467,12 @@
     "clinicName": "Omega's Vet Hospital",
     "doctorName": "Unknown / Public Listing",
     "clusterId": "cluster_003",
-    "servesDogIds": ["dog_005", "dog_007", "dog_011", "dog_012"],
+    "servesDogIds": [
+      "dog_005",
+      "dog_007",
+      "dog_011",
+      "dog_012"
+    ],
     "area": "Financial District",
     "addressHint": "Financial District area",
     "location": {
@@ -394,5 +488,32 @@
     "source": "Gemini-assisted vet list; verify on Google Maps",
     "partnershipStatus": "not_contacted_yet",
     "notes": "Known for being well-sanitized and efficient according to Gemini-assisted notes. Verify exact listing and coordinates."
+  },
+  {
+    "id": "vet_019",
+    "clinicName": "Be Kind Vet Clinic",
+    "doctorName": "Unknown / Public Listing",
+    "clusterId": "cluster_001",
+    "servesDogIds": [
+      "dog_014",
+      "dog_015",
+      "dog_016",
+      "dog_017"
+    ],
+    "area": "Kothaguda / Kondapur",
+    "addressHint": "Gopal Reddy Nagar, near Botanical Garden road",
+    "location": {
+      "lat": 17.4595,
+      "lng": 78.3668
+    },
+    "rating": "unknown",
+    "hours": "10:00 AM - 9:00 PM",
+    "availableForGuidance": true,
+    "emergencySupport": "unknown",
+    "lowCostGuidance": "likely",
+    "streetAnimalSupport": "likely",
+    "source": "Google Maps public listing",
+    "partnershipStatus": "not_contacted_yet",
+    "notes": "New record added explicitly for the Kothaguda extension of cluster_001. Covers Botanical Garden (dog_014), Aditya Windsor (dog_015), Google Office (dog_016), and the broken hind leg case (dog_017)."
   }
 ]
