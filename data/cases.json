@@ -106,319 +106,569 @@
     ],
     "safetyNote": "No medicine or treatment should be suggested by AI. Because the dog appears severely malnourished and possibly lethargic, vet/NGO guidance is recommended."
   },
-  
-{
-  "id": "case_007",
-  "animalId": "dog_008",
-  "caseType": "severe_malnutrition_and_heat_risk",
-  "priority": "high",
-  "status": "open",
-  "summary": "Chintu is a white and tan medium dog near Subway / Yellow Leaf Designer Studio, Masjid Banda. The dog appears very thin with visible ribs and was searching for food. Needs food support, clean water support, follow-up observation, and vet/NGO guidance.",
-  "createdBy": "field_collector_001",
-  "createdAt": "2026-05-15T09:00:45Z",
-  "requiredActions": [
-    "provide_food_if_safe",
-    "provide_clean_water_if_safe",
-    "upload_followup_photo",
-    "check_if_dog_is_eating_or_drinking",
-    "request_vet_or_ngo_guidance",
-    "observe_again_within_24_hours"
-  ],
-  "safetyNote": "No medicine or treatment should be suggested by AI. Because the dog appears severely thin with visible ribs and heat exposure risk, vet/NGO guidance is recommended."
-},
-{
-  "id": "case_008",
-  "animalId": "dog_009",
-  "caseType": "extreme_malnutrition_and_heat_risk",
-  "priority": "high",
-  "status": "open",
-  "summary": "Safedi is a white and cream medium dog near Subway / Yellow Leaf Designer Studio area. The dog appears extremely thin with visible ribcage/spine, depressed posture, and no food/water access. Needs urgent food support, clean water support, follow-up observation, and vet/NGO guidance.",
-  "createdBy": "field_collector_001",
-  "createdAt": "2026-05-15T09:04:00Z",
-  "requiredActions": [
-    "provide_food_if_safe",
-    "provide_clean_water_if_safe",
-    "upload_followup_photo",
-    "check_if_dog_is_eating_or_drinking",
-    "request_vet_or_ngo_guidance",
-    "observe_again_within_24_hours"
-  ],
-  "safetyNote": "No medicine or treatment should be suggested by AI. Because the dog appears extremely malnourished with heat exposure risk, vet/NGO guidance is recommended."
-},
-{
-  "id": "case_009",
-  "animalId": "dog_010",
-  "caseType": "food_water_gap_and_heat_risk",
-  "priority": "medium",
-  "status": "open",
-  "summary": "Tiger is a black and tan medium dog near Aparna Sarovar Road, HUDA Layout, GRANDE. The dog was seen lying down with a low-energy posture and has reported no food/water access. Needs food support, clean water support, and follow-up observation.",
-  "createdBy": "field_collector_001",
-  "createdAt": "2026-05-15T09:08:00Z",
-  "requiredActions": [
-    "provide_food_if_safe",
-    "provide_clean_water_if_safe",
-    "upload_followup_photo",
-    "check_if_dog_is_active",
-    "observe_again_within_24_hours"
-  ],
-  "safetyNote": "No medicine or treatment should be suggested by AI. Escalate to vet/NGO guidance if the dog becomes severely weak, refuses food/water, appears injured, or shows emergency signs."
-},
-{
-  "id": "case_010",
-  "animalId": "dog_011",
-  "caseType": "malnourishment_lethargy_and_environment_risk",
-  "priority": "high",
-  "status": "open",
-  "summary": "Dhoolu is a greyish-white medium-large dog near Prism Cafe / Nanakramguda Road. The dog appears underfed, dusty, low-energy, and was lying flat on dirt with no food/water access. Needs food support, clean water support, follow-up observation, and vet/NGO guidance.",
-  "createdBy": "field_collector_001",
-  "createdAt": "2026-05-15T09:12:00Z",
-  "requiredActions": [
-    "provide_food_if_safe",
-    "provide_clean_water_if_safe",
-    "upload_followup_photo",
-    "check_if_dog_is_eating_or_drinking",
-    "request_vet_or_ngo_guidance",
-    "observe_again_within_24_hours"
-  ],
-  "safetyNote": "No medicine or treatment should be suggested by AI. Because the dog appears malnourished, low-energy, and exposed to roadside conditions, vet/NGO guidance is recommended."
-},
-{
-  "id": "case_011",
-  "animalId": "dog_012",
-  "caseType": "skin_condition_and_lethargy_followup",
-  "priority": "medium",
-  "status": "open",
-  "summary": "Kali is a black medium dog near Sri Ranganathaswamy Temple, Financial District. Food and water were present, but the dog appeared thin, low-energy, and had visible skin patches. Needs follow-up observation and vet/NGO guidance if condition worsens.",
-  "createdBy": "field_collector_001",
-  "createdAt": "2026-05-15T09:20:00Z",
-  "requiredActions": [
-    "upload_followup_photo",
-    "observe_skin_condition_again",
-    "check_if_dog_is_eating_or_drinking",
-    "request_vet_or_ngo_guidance_if_worsens"
-  ],
-  "safetyNote": "No medicine or treatment should be suggested by AI. Avoid self-medication or random creams. Use educational references only and request vet/NGO guidance if skin condition, weakness, or food refusal worsens."
-},
-{
-  "id": "case_012",
-  "animalId": "dog_013",
-  "caseType": "malnourishment_skin_followup_and_traffic_risk",
-  "priority": "high",
-  "status": "open",
-  "summary": "Bunty is a white and tan medium dog near Burfi Ghar, Kondapur Road. The dog appears thin, low-energy, and was searching for food. Water was available, but food support, follow-up observation, and vet/NGO guidance are needed.",
-  "createdBy": "field_collector_001",
-  "createdAt": "2026-05-15T09:17:35Z",
-  "requiredActions": [
-    "provide_food_if_safe",
-    "upload_followup_photo",
-    "observe_skin_condition_again",
-    "check_if_dog_is_eating_or_drinking",
-    "request_vet_or_ngo_guidance",
-    "observe_again_within_24_hours"
-  ],
-  "safetyNote": "No medicine or treatment should be suggested by AI. Because the dog appears thin, low-energy, and may have a skin concern, vet/NGO guidance is recommended."
-}
-,
-{
-  "id": "case_013",
-  "animalId": "dog_014",
-  "caseType": "malnourishment_lethargy_heat_risk",
-  "priority": "high",
-  "status": "open",
-  "summary": "Garden is a light brown/tan medium dog near Botanical Garden, Kondapur. The dog appears thin, curled in a depressed posture, with no food/water access, heat exposure risk, and possible skin condition. Needs food support, clean water support, follow-up observation, and vet/NGO guidance.",
-  "createdBy": "field_collector_001",
-  "createdAt": "2026-05-23T16:26:00Z",
-  "requiredActions": [
-    "provide_food_if_safe",
-    "provide_clean_water_if_safe",
-    "upload_followup_photo",
-    "check_if_dog_is_eating_or_drinking",
-    "request_vet_or_ngo_guidance",
-    "observe_again_within_24_hours"
-  ],
-  "safetyNote": "No medicine or treatment should be suggested by AI. Because the dog appears thin, low-energy, and heat-exposed, vet/NGO guidance is recommended."
-},
-{
-  "id": "case_014",
-  "animalId": "dog_015",
-  "caseType": "possible_skin_condition_and_heat_risk",
-  "priority": "medium",
-  "status": "open",
-  "summary": "Windsor is a black and light tan medium dog near Aditya Windsor, Whitefields, Kondapur. Food was available, but the dog appeared curled/depressed with possible skin/fur concern and heat exposure risk. Needs water check, follow-up observation, and vet/NGO guidance if condition worsens.",
-  "createdBy": "field_collector_001",
-  "createdAt": "2026-05-23T16:34:00Z",
-  "requiredActions": [
-    "check_water_access",
-    "upload_followup_photo",
-    "observe_skin_condition_again",
-    "check_if_dog_is_eating_or_drinking",
-    "request_vet_or_ngo_guidance_if_worsens"
-  ],
-  "safetyNote": "No medicine or treatment should be suggested by AI. Avoid self-medication or random creams. Use educational references only and request vet/NGO guidance if skin condition, weakness, or food refusal worsens."
-},
-{
-  "id": "case_015",
-  "animalId": "dog_016",
-  "caseType": "possible_skin_condition_water_gap_and_heat_risk",
-  "priority": "medium",
-  "status": "open",
-  "summary": "Google is a white and light brown medium dog near Google Office, Kothaguda. Food was available, but no water was present. The dog appeared thin, was resting on gravel, and may have a visible skin/fur concern. Needs clean water support, follow-up observation, and vet/NGO guidance if condition worsens.",
-  "createdBy": "field_collector_001",
-  "createdAt": "2026-05-23T16:38:00Z",
-  "requiredActions": [
-    "provide_clean_water_if_safe",
-    "upload_followup_photo",
-    "observe_skin_condition_again",
-    "check_if_dog_is_eating_or_drinking",
-    "request_vet_or_ngo_guidance_if_worsens"
-  ],
-  "safetyNote": "No medicine or treatment should be suggested by AI. Avoid self-medication or random creams. Use educational references only and request vet/NGO guidance if skin condition, weakness, or food refusal worsens."
-},
-{
-  "id": "case_016",
-  "animalId": "dog_017",
-  "caseType": "suspected_leg_injury_and_traffic_risk",
-  "priority": "high",
-  "status": "open",
-  "summary": "Langdu is a light brown and white medium dog near Google Office, Kothaguda. The dog was seen wandering on the road with impaired right hind leg posture, thin body condition, no food/water access, and traffic risk. Needs urgent follow-up observation and vet/NGO guidance.",
-  "createdBy": "field_collector_001",
-  "createdAt": "2026-05-23T16:44:00Z",
-  "requiredActions": [
-    "observe_from_safe_distance",
-    "do_not_chase_or_force_movement",
-    "provide_clean_water_if_safe",
-    "provide_food_if_safe",
-    "upload_followup_photo_or_video",
-    "request_vet_or_ngo_guidance",
-    "seek_rescue_help_if_dog_remains_on_road",
-    "observe_again_within_24_hours"
-  ],
-  "safetyNote": "No medicine or treatment should be suggested by AI. Do not force movement, pull the leg, or attempt physical treatment. Because the dog shows impaired hind leg posture and traffic exposure, vet/NGO or rescue guidance is recommended."
-}
-,
-{
-  "id": "case_017",
-  "animalId": "dog_019",
-  "caseType": "puppy_group_malnourishment_heat_risk",
-  "priority": "high",
-  "status": "open",
-  "summary": "Tiny Squad is a group of 5 sibling puppies near SK Car Lounge, Gachibowli. The puppies appeared extremely thin, low-energy, clustered near wall/gutter line, with limited food access, no water, and suspected heat exhaustion risk. Needs urgent food/water support, mother-dog check, follow-up observation, and vet/NGO guidance.",
-  "createdBy": "field_collector_001",
-  "createdAt": "2026-05-25T17:53:00Z",
-  "requiredActions": [
-    "provide_clean_water_if_safe",
-    "provide_food_if_safe",
-    "check_for_mother_nearby_without_disturbing",
-    "upload_followup_photo_or_video",
-    "check_if_puppies_are_eating_or_drinking",
-    "request_vet_or_ngo_guidance",
-    "observe_again_within_24_hours"
-  ],
-  "safetyNote": "No medicine or treatment should be suggested by AI. Do not separate puppies from the mother if she is nearby. Avoid handling unless necessary for safety. Because the puppies appear extremely thin and heat-exposed, vet/NGO guidance is recommended."
-},
-{
-  "id": "case_018",
-  "animalId": "dog_020",
-  "caseType": "thin_active_food_water_gap_and_heat_risk",
-  "priority": "high",
-  "status": "open",
-  "summary": "Masky is a tan/light brown medium dog near SK Car Lounge, Gachibowli. The dog appeared thin but active, panting, searching for food, with no water and traffic risk. Needs clean water, food support, follow-up observation, and vet/NGO guidance if panting or weakness continues.",
-  "createdBy": "field_collector_001",
-  "createdAt": "2026-05-25T17:56:00Z",
-  "requiredActions": [
-    "provide_clean_water_if_safe",
-    "provide_food_if_safe",
-    "upload_followup_photo",
-    "observe_breathing_and_energy_level",
-    "check_if_dog_is_eating_or_drinking",
-    "observe_traffic_risk",
-    "request_vet_or_ngo_guidance_if_worsens",
-    "observe_again_within_24_hours"
-  ],
-  "safetyNote": "No medicine or treatment should be suggested by AI. Do not force-feed or chase the dog. Because the dog is panting, thin, and heat-exposed, clean water and safe follow-up observation are recommended."
-},
-{
-  "id": "case_019",
-  "animalId": "dog_021",
-  "caseType": "nursing_mother_severe_malnutrition_heat_risk",
-  "priority": "high",
-  "status": "open",
-  "summary": "Tea Amma is a brindle/dark brown medium dog near Khajaguda Lake Point, Tea Time. She appears to be a nursing mother with visible ribcage, prominent spine line, extreme thinness, possible skin concern, and food/water searching behaviour. Needs urgent food support, clean water support, puppy-location follow-up, and vet/NGO guidance.",
-  "createdBy": "field_collector_001",
-  "createdAt": "2026-05-25T18:11:00Z",
-  "requiredActions": [
-    "provide_clean_water_if_safe",
-    "provide_food_if_safe",
-    "check_for_puppies_nearby_without_disturbing",
-    "upload_followup_photo_or_video",
-    "check_if_dog_is_eating_or_drinking",
-    "observe_breathing_and_energy_level",
-    "request_vet_or_ngo_guidance",
-    "observe_again_within_24_hours"
-  ],
-  "safetyNote": "No medicine or treatment should be suggested by AI. Do not separate a nursing mother from puppies. Avoid chasing or forcing movement. Because the dog appears severely thin and may be nursing, clean water, food support, safe observation, and vet/NGO guidance are recommended."
-},
-{
-  "id": "case_020",
-  "animalId": "dog_022",
-  "caseType": "possible_skin_condition_food_water_gap_and_heat_risk",
-  "priority": "high",
-  "status": "open",
-  "summary": "Stripe is a brindle/dark brown medium dog near ESCI, Gachibowli. The dog appeared thin and low-energy, lying flat on loose gravel/dirt, with possible skin patches near the base of the tail and no food/water access. Needs food support, clean water support, follow-up photo, and vet/NGO guidance.",
-  "createdBy": "field_collector_001",
-  "createdAt": "2026-05-25T18:20:00Z",
-  "requiredActions": [
-    "provide_clean_water_if_safe",
-    "provide_food_if_safe",
-    "upload_followup_photo",
-    "observe_skin_condition_again",
-    "check_if_dog_is_eating_or_drinking",
-    "observe_energy_level",
-    "request_vet_or_ngo_guidance",
-    "observe_again_within_24_hours"
-  ],
-  "safetyNote": "No medicine or treatment should be suggested by AI. Avoid self-medication or random creams. Because the dog appears low-energy, thin, heat-exposed, and may have skin patches, food/water support and vet/NGO guidance are recommended."
-},
-{
-  "id": "case_021",
-  "animalId": "dog_023",
-  "caseType": "severe_skin_condition_food_water_gap_and_traffic_risk",
-  "priority": "high",
-  "status": "open",
-  "summary": "Collar is a white/off-white medium dog near the bus station on the road towards Hyderabad University, opposite Gachibowli Stadium road division. The dog appeared thin and lethargic, lying flat on tiled pavement, with severe dark spotted skin patches on lower belly/flank, no food/water access, and traffic risk. Needs food support, clean water support, follow-up photo, and vet/NGO guidance.",
-  "createdBy": "field_collector_001",
-  "createdAt": "2026-05-25T18:34:00Z",
-  "requiredActions": [
-    "provide_clean_water_if_safe",
-    "provide_food_if_safe",
-    "upload_followup_photo",
-    "observe_skin_condition_again",
-    "check_if_dog_is_eating_or_drinking",
-    "observe_energy_level",
-    "request_vet_or_ngo_guidance",
-    "observe_again_within_24_hours"
-  ],
-  "safetyNote": "No medicine or treatment should be suggested by AI. Avoid self-medication, random creams, or touching affected skin areas. Because the dog appears lethargic with severe visible skin patches and traffic exposure, vet/NGO guidance is recommended."
-},
-{
-  "id": "case_022",
-  "animalId": "dog_025",
-  "caseType": "extensive_skin_condition_food_water_gap_and_traffic_risk",
-  "priority": "high",
-  "status": "open",
-  "summary": "Chai is a dark brown and grey brindle/sable medium dog near the back side gate of University of Hyderabad, near Hebsiba Irani Dum Chai. The dog appeared thin with extensive hair loss and visible patches on the hindquarters/lower back, no food/water access, and traffic risk. Needs food support, clean water support, follow-up photo, and vet/NGO guidance.",
-  "createdBy": "field_collector_001",
-  "createdAt": "2026-05-25T18:43:00Z",
-  "requiredActions": [
-    "provide_clean_water_if_safe",
-    "provide_food_if_safe",
-    "upload_followup_photo",
-    "observe_skin_condition_again",
-    "check_if_dog_is_eating_or_drinking",
-    "observe_energy_level",
-    "request_vet_or_ngo_guidance",
-    "observe_again_within_24_hours"
-  ],
-  "safetyNote": "No medicine or treatment should be suggested by AI. Avoid self-medication, random creams, or touching affected skin areas. Because the dog has extensive visible hair loss/skin patches and food-water gap, vet/NGO guidance is recommended."
-}
+  {
+    "id": "case_007",
+    "animalId": "dog_008",
+    "caseType": "severe_malnutrition_and_heat_risk",
+    "priority": "high",
+    "status": "open",
+    "summary": "Chintu is a white and tan medium dog near Subway / Yellow Leaf Designer Studio, Masjid Banda. The dog appears very thin with visible ribs and was searching for food. Needs food support, clean water support, follow-up observation, and vet/NGO guidance.",
+    "createdBy": "field_collector_001",
+    "createdAt": "2026-05-15T09:00:45Z",
+    "requiredActions": [
+      "provide_food_if_safe",
+      "provide_clean_water_if_safe",
+      "upload_followup_photo",
+      "check_if_dog_is_eating_or_drinking",
+      "request_vet_or_ngo_guidance",
+      "observe_again_within_24_hours"
+    ],
+    "safetyNote": "No medicine or treatment should be suggested by AI. Because the dog appears severely thin with visible ribs and heat exposure risk, vet/NGO guidance is recommended."
+  },
+  {
+    "id": "case_008",
+    "animalId": "dog_009",
+    "caseType": "extreme_malnutrition_and_heat_risk",
+    "priority": "high",
+    "status": "open",
+    "summary": "Safedi is a white and cream medium dog near Subway / Yellow Leaf Designer Studio area. The dog appears extremely thin with visible ribcage/spine, depressed posture, and no food/water access. Needs urgent food support, clean water support, follow-up observation, and vet/NGO guidance.",
+    "createdBy": "field_collector_001",
+    "createdAt": "2026-05-15T09:04:00Z",
+    "requiredActions": [
+      "provide_food_if_safe",
+      "provide_clean_water_if_safe",
+      "upload_followup_photo",
+      "check_if_dog_is_eating_or_drinking",
+      "request_vet_or_ngo_guidance",
+      "observe_again_within_24_hours"
+    ],
+    "safetyNote": "No medicine or treatment should be suggested by AI. Because the dog appears extremely malnourished with heat exposure risk, vet/NGO guidance is recommended."
+  },
+  {
+    "id": "case_009",
+    "animalId": "dog_010",
+    "caseType": "food_water_gap_and_heat_risk",
+    "priority": "medium",
+    "status": "open",
+    "summary": "Tiger is a black and tan medium dog near Aparna Sarovar Road, HUDA Layout, GRANDE. The dog was seen lying down with a low-energy posture and has reported no food/water access. Needs food support, clean water support, and follow-up observation.",
+    "createdBy": "field_collector_001",
+    "createdAt": "2026-05-15T09:08:00Z",
+    "requiredActions": [
+      "provide_food_if_safe",
+      "provide_clean_water_if_safe",
+      "upload_followup_photo",
+      "check_if_dog_is_active",
+      "observe_again_within_24_hours"
+    ],
+    "safetyNote": "No medicine or treatment should be suggested by AI. Escalate to vet/NGO guidance if the dog becomes severely weak, refuses food/water, appears injured, or shows emergency signs."
+  },
+  {
+    "id": "case_010",
+    "animalId": "dog_011",
+    "caseType": "malnourishment_lethargy_and_environment_risk",
+    "priority": "high",
+    "status": "open",
+    "summary": "Dhoolu is a greyish-white medium-large dog near Prism Cafe / Nanakramguda Road. The dog appears underfed, dusty, low-energy, and was lying flat on dirt with no food/water access. Needs food support, clean water support, follow-up observation, and vet/NGO guidance.",
+    "createdBy": "field_collector_001",
+    "createdAt": "2026-05-15T09:12:00Z",
+    "requiredActions": [
+      "provide_food_if_safe",
+      "provide_clean_water_if_safe",
+      "upload_followup_photo",
+      "check_if_dog_is_eating_or_drinking",
+      "request_vet_or_ngo_guidance",
+      "observe_again_within_24_hours"
+    ],
+    "safetyNote": "No medicine or treatment should be suggested by AI. Because the dog appears malnourished, low-energy, and exposed to roadside conditions, vet/NGO guidance is recommended."
+  },
+  {
+    "id": "case_011",
+    "animalId": "dog_012",
+    "caseType": "skin_condition_and_lethargy_followup",
+    "priority": "medium",
+    "status": "open",
+    "summary": "Kali is a black medium dog near Sri Ranganathaswamy Temple, Financial District. Food and water were present, but the dog appeared thin, low-energy, and had visible skin patches. Needs follow-up observation and vet/NGO guidance if condition worsens.",
+    "createdBy": "field_collector_001",
+    "createdAt": "2026-05-15T09:20:00Z",
+    "requiredActions": [
+      "upload_followup_photo",
+      "observe_skin_condition_again",
+      "check_if_dog_is_eating_or_drinking",
+      "request_vet_or_ngo_guidance_if_worsens"
+    ],
+    "safetyNote": "No medicine or treatment should be suggested by AI. Avoid self-medication or random creams. Use educational references only and request vet/NGO guidance if skin condition, weakness, or food refusal worsens."
+  },
+  {
+    "id": "case_012",
+    "animalId": "dog_013",
+    "caseType": "malnourishment_skin_followup_and_traffic_risk",
+    "priority": "high",
+    "status": "open",
+    "summary": "Bunty is a white and tan medium dog near Burfi Ghar, Kondapur Road. The dog appears thin, low-energy, and was searching for food. Water was available, but food support, follow-up observation, and vet/NGO guidance are needed.",
+    "createdBy": "field_collector_001",
+    "createdAt": "2026-05-15T09:17:35Z",
+    "requiredActions": [
+      "provide_food_if_safe",
+      "upload_followup_photo",
+      "observe_skin_condition_again",
+      "check_if_dog_is_eating_or_drinking",
+      "request_vet_or_ngo_guidance",
+      "observe_again_within_24_hours"
+    ],
+    "safetyNote": "No medicine or treatment should be suggested by AI. Because the dog appears thin, low-energy, and may have a skin concern, vet/NGO guidance is recommended."
+  },
+  {
+    "id": "case_013",
+    "animalId": "dog_014",
+    "caseType": "malnourishment_lethargy_heat_risk",
+    "priority": "high",
+    "status": "open",
+    "summary": "Garden is a light brown/tan medium dog near Botanical Garden, Kondapur. The dog appears thin, curled in a depressed posture, with no food/water access, heat exposure risk, and possible skin condition. Needs food support, clean water support, follow-up observation, and vet/NGO guidance.",
+    "createdBy": "field_collector_001",
+    "createdAt": "2026-05-23T16:26:00Z",
+    "requiredActions": [
+      "provide_food_if_safe",
+      "provide_clean_water_if_safe",
+      "upload_followup_photo",
+      "check_if_dog_is_eating_or_drinking",
+      "request_vet_or_ngo_guidance",
+      "observe_again_within_24_hours"
+    ],
+    "safetyNote": "No medicine or treatment should be suggested by AI. Because the dog appears thin, low-energy, and heat-exposed, vet/NGO guidance is recommended."
+  },
+  {
+    "id": "case_014",
+    "animalId": "dog_015",
+    "caseType": "possible_skin_condition_and_heat_risk",
+    "priority": "medium",
+    "status": "open",
+    "summary": "Windsor is a black and light tan medium dog near Aditya Windsor, Whitefields, Kondapur. Food was available, but the dog appeared curled/depressed with possible skin/fur concern and heat exposure risk. Needs water check, follow-up observation, and vet/NGO guidance if condition worsens.",
+    "createdBy": "field_collector_001",
+    "createdAt": "2026-05-23T16:34:00Z",
+    "requiredActions": [
+      "check_water_access",
+      "upload_followup_photo",
+      "observe_skin_condition_again",
+      "check_if_dog_is_eating_or_drinking",
+      "request_vet_or_ngo_guidance_if_worsens"
+    ],
+    "safetyNote": "No medicine or treatment should be suggested by AI. Avoid self-medication or random creams. Use educational references only and request vet/NGO guidance if skin condition, weakness, or food refusal worsens."
+  },
+  {
+    "id": "case_015",
+    "animalId": "dog_016",
+    "caseType": "possible_skin_condition_water_gap_and_heat_risk",
+    "priority": "medium",
+    "status": "open",
+    "summary": "Google is a white and light brown medium dog near Google Office, Kothaguda. Food was available, but no water was present. The dog appeared thin, was resting on gravel, and may have a visible skin/fur concern. Needs clean water support, follow-up observation, and vet/NGO guidance if condition worsens.",
+    "createdBy": "field_collector_001",
+    "createdAt": "2026-05-23T16:38:00Z",
+    "requiredActions": [
+      "provide_clean_water_if_safe",
+      "upload_followup_photo",
+      "observe_skin_condition_again",
+      "check_if_dog_is_eating_or_drinking",
+      "request_vet_or_ngo_guidance_if_worsens"
+    ],
+    "safetyNote": "No medicine or treatment should be suggested by AI. Avoid self-medication or random creams. Use educational references only and request vet/NGO guidance if skin condition, weakness, or food refusal worsens."
+  },
+  {
+    "id": "case_016",
+    "animalId": "dog_017",
+    "caseType": "suspected_leg_injury_and_traffic_risk",
+    "priority": "high",
+    "status": "open",
+    "summary": "Langdu is a light brown and white medium dog near Google Office, Kothaguda. The dog was seen wandering on the road with impaired right hind leg posture, thin body condition, no food/water access, and traffic risk. Needs urgent follow-up observation and vet/NGO guidance.",
+    "createdBy": "field_collector_001",
+    "createdAt": "2026-05-23T16:44:00Z",
+    "requiredActions": [
+      "observe_from_safe_distance",
+      "do_not_chase_or_force_movement",
+      "provide_clean_water_if_safe",
+      "provide_food_if_safe",
+      "upload_followup_photo_or_video",
+      "request_vet_or_ngo_guidance",
+      "seek_rescue_help_if_dog_remains_on_road",
+      "observe_again_within_24_hours"
+    ],
+    "safetyNote": "No medicine or treatment should be suggested by AI. Do not force movement, pull the leg, or attempt physical treatment. Because the dog shows impaired hind leg posture and traffic exposure, vet/NGO or rescue guidance is recommended."
+  },
+  {
+    "id": "case_017",
+    "animalId": "dog_019",
+    "caseType": "puppy_group_malnourishment_heat_risk",
+    "priority": "high",
+    "status": "open",
+    "summary": "Tiny Squad is a group of 5 sibling puppies near SK Car Lounge, Gachibowli. The puppies appeared extremely thin, low-energy, clustered near wall/gutter line, with limited food access, no water, and suspected heat exhaustion risk. Needs urgent food/water support, mother-dog check, follow-up observation, and vet/NGO guidance.",
+    "createdBy": "field_collector_001",
+    "createdAt": "2026-05-25T17:53:00Z",
+    "requiredActions": [
+      "provide_clean_water_if_safe",
+      "provide_food_if_safe",
+      "check_for_mother_nearby_without_disturbing",
+      "upload_followup_photo_or_video",
+      "check_if_puppies_are_eating_or_drinking",
+      "request_vet_or_ngo_guidance",
+      "observe_again_within_24_hours"
+    ],
+    "safetyNote": "No medicine or treatment should be suggested by AI. Do not separate puppies from the mother if she is nearby. Avoid handling unless necessary for safety. Because the puppies appear extremely thin and heat-exposed, vet/NGO guidance is recommended."
+  },
+  {
+    "id": "case_018",
+    "animalId": "dog_020",
+    "caseType": "thin_active_food_water_gap_and_heat_risk",
+    "priority": "high",
+    "status": "open",
+    "summary": "Masky is a tan/light brown medium dog near SK Car Lounge, Gachibowli. The dog appeared thin but active, panting, searching for food, with no water and traffic risk. Needs clean water, food support, follow-up observation, and vet/NGO guidance if panting or weakness continues.",
+    "createdBy": "field_collector_001",
+    "createdAt": "2026-05-25T17:56:00Z",
+    "requiredActions": [
+      "provide_clean_water_if_safe",
+      "provide_food_if_safe",
+      "upload_followup_photo",
+      "observe_breathing_and_energy_level",
+      "check_if_dog_is_eating_or_drinking",
+      "observe_traffic_risk",
+      "request_vet_or_ngo_guidance_if_worsens",
+      "observe_again_within_24_hours"
+    ],
+    "safetyNote": "No medicine or treatment should be suggested by AI. Do not force-feed or chase the dog. Because the dog is panting, thin, and heat-exposed, clean water and safe follow-up observation are recommended."
+  },
+  {
+    "id": "case_019",
+    "animalId": "dog_021",
+    "caseType": "nursing_mother_severe_malnutrition_heat_risk",
+    "priority": "high",
+    "status": "open",
+    "summary": "Tea Amma is a brindle/dark brown medium dog near Khajaguda Lake Point, Tea Time. She appears to be a nursing mother with visible ribcage, prominent spine line, extreme thinness, possible skin concern, and food/water searching behaviour. Needs urgent food support, clean water support, puppy-location follow-up, and vet/NGO guidance.",
+    "createdBy": "field_collector_001",
+    "createdAt": "2026-05-25T18:11:00Z",
+    "requiredActions": [
+      "provide_clean_water_if_safe",
+      "provide_food_if_safe",
+      "check_for_puppies_nearby_without_disturbing",
+      "upload_followup_photo_or_video",
+      "check_if_dog_is_eating_or_drinking",
+      "observe_breathing_and_energy_level",
+      "request_vet_or_ngo_guidance",
+      "observe_again_within_24_hours"
+    ],
+    "safetyNote": "No medicine or treatment should be suggested by AI. Do not separate a nursing mother from puppies. Avoid chasing or forcing movement. Because the dog appears severely thin and may be nursing, clean water, food support, safe observation, and vet/NGO guidance are recommended."
+  },
+  {
+    "id": "case_020",
+    "animalId": "dog_022",
+    "caseType": "possible_skin_condition_food_water_gap_and_heat_risk",
+    "priority": "high",
+    "status": "open",
+    "summary": "Stripe is a brindle/dark brown medium dog near ESCI, Gachibowli. The dog appeared thin and low-energy, lying flat on loose gravel/dirt, with possible skin patches near the base of the tail and no food/water access. Needs food support, clean water support, follow-up photo, and vet/NGO guidance.",
+    "createdBy": "field_collector_001",
+    "createdAt": "2026-05-25T18:20:00Z",
+    "requiredActions": [
+      "provide_clean_water_if_safe",
+      "provide_food_if_safe",
+      "upload_followup_photo",
+      "observe_skin_condition_again",
+      "check_if_dog_is_eating_or_drinking",
+      "observe_energy_level",
+      "request_vet_or_ngo_guidance",
+      "observe_again_within_24_hours"
+    ],
+    "safetyNote": "No medicine or treatment should be suggested by AI. Avoid self-medication or random creams. Because the dog appears low-energy, thin, heat-exposed, and may have skin patches, food/water support and vet/NGO guidance are recommended."
+  },
+  {
+    "id": "case_021",
+    "animalId": "dog_023",
+    "caseType": "severe_skin_condition_food_water_gap_and_traffic_risk",
+    "priority": "high",
+    "status": "open",
+    "summary": "Collar is a white/off-white medium dog near the bus station on the road towards Hyderabad University, opposite Gachibowli Stadium road division. The dog appeared thin and lethargic, lying flat on tiled pavement, with severe dark spotted skin patches on lower belly/flank, no food/water access, and traffic risk. Needs food support, clean water support, follow-up photo, and vet/NGO guidance.",
+    "createdBy": "field_collector_001",
+    "createdAt": "2026-05-25T18:34:00Z",
+    "requiredActions": [
+      "provide_clean_water_if_safe",
+      "provide_food_if_safe",
+      "upload_followup_photo",
+      "observe_skin_condition_again",
+      "check_if_dog_is_eating_or_drinking",
+      "observe_energy_level",
+      "request_vet_or_ngo_guidance",
+      "observe_again_within_24_hours"
+    ],
+    "safetyNote": "No medicine or treatment should be suggested by AI. Avoid self-medication, random creams, or touching affected skin areas. Because the dog appears lethargic with severe visible skin patches and traffic exposure, vet/NGO guidance is recommended."
+  },
+  {
+    "id": "case_022",
+    "animalId": "dog_025",
+    "caseType": "extensive_skin_condition_food_water_gap_and_traffic_risk",
+    "priority": "high",
+    "status": "open",
+    "summary": "Chai is a dark brown and grey brindle/sable medium dog near the back side gate of University of Hyderabad, near Hebsiba Irani Dum Chai. The dog appeared thin with extensive hair loss and visible patches on the hindquarters/lower back, no food/water access, and traffic risk. Needs food support, clean water support, follow-up photo, and vet/NGO guidance.",
+    "createdBy": "field_collector_001",
+    "createdAt": "2026-05-25T18:43:00Z",
+    "requiredActions": [
+      "provide_clean_water_if_safe",
+      "provide_food_if_safe",
+      "upload_followup_photo",
+      "observe_skin_condition_again",
+      "check_if_dog_is_eating_or_drinking",
+      "observe_energy_level",
+      "request_vet_or_ngo_guidance",
+      "observe_again_within_24_hours"
+    ],
+    "safetyNote": "No medicine or treatment should be suggested by AI. Avoid self-medication, random creams, or touching affected skin areas. Because the dog has extensive visible hair loss/skin patches and food-water gap, vet/NGO guidance is recommended."
+  },
+  {
+    "id": "case_023",
+    "animalId": "dog_026",
+    "caseType": "senior_dog_skin_condition_lethargy_and_water_gap",
+    "priority": "high",
+    "status": "open",
+    "summary": "Coffee Thatha is a dark brown/black medium senior-looking dog near Chennapatnam Filter Coffee, DLF Road, Gachibowli. The dog was curled tightly on tiled pavement steps, appeared lethargic/weak, had extensive hair loss or patches on the lower back and hindquarters, occasional food access, no regular water access, and heat exposure risk. Needs clean water support, food support if safe, follow-up photo, and vet/NGO guidance.",
+    "createdBy": "field_collector_001",
+    "createdAt": "2026-05-28T14:41:00Z",
+    "requiredActions": [
+      "provide_clean_water_if_safe",
+      "provide_food_if_safe",
+      "upload_followup_photo",
+      "observe_skin_condition_again",
+      "observe_energy_level",
+      "check_if_dog_is_eating_or_drinking",
+      "request_vet_or_ngo_guidance",
+      "observe_again_within_24_hours"
+    ],
+    "safetyNote": "No medicine or treatment should be suggested by AI. Avoid self-medication, random creams, or touching affected skin areas. Because the dog appears senior, weak/lethargic, and has visible hair loss or skin patches, vet/NGO guidance is recommended."
+  },
+  {
+    "id": "case_024",
+    "animalId": "dog_028",
+    "caseType": "tail_base_skin_condition_food_water_gap_and_heat_risk",
+    "priority": "high",
+    "status": "open",
+    "summary": "Rusty is a ginger/reddish brown medium dog near Hotel Samskruthi, Anjaiah Nagar, Gachibowli. The dog has a thick shaggy coat, severe matting and hair loss at the base of the tail, thin frame, weak standing posture, no food/water access, and heat exposure risk. Needs clean water support, food support if safe, urgent follow-up photo, and vet/NGO guidance.",
+    "createdBy": "field_collector_001",
+    "createdAt": "2026-05-28T14:48:00Z",
+    "requiredActions": [
+      "provide_clean_water_if_safe",
+      "provide_food_if_safe",
+      "upload_followup_photo_or_video",
+      "observe_tail_base_condition_again",
+      "check_if_dog_is_eating_or_drinking",
+      "observe_energy_level",
+      "request_vet_or_ngo_guidance",
+      "observe_again_within_24_hours"
+    ],
+    "safetyNote": "No medicine or treatment should be suggested by AI. Do not cut, pull, scrub, or apply anything to the matted or affected tail-base area without vet/NGO guidance. Because the dog has severe matting/hair loss around the tail base and weak posture, vet/NGO guidance is recommended."
+  },
+  {
+    "id": "case_025",
+    "animalId": "dog_001",
+    "createdBy": "demo_user_001",
+    "caseType": "vet_guidance_needed",
+    "priority": "medium",
+    "title": "Kaalu needs skin follow-up and vet guidance",
+    "description": "Dog has visible patchy fur/skin concern. Water was given, but follow-up photo and vet/NGO guidance are needed.",
+    "status": "vet_guidance_requested",
+    "requiredActions": [
+      "upload_followup_photo",
+      "request_vet_or_ngo_guidance",
+      "avoid_self_medication"
+    ],
+    "safetyNote": "This is not a veterinary diagnosis. Vet/NGO guidance is recommended when needed.",
+    "location": {
+      "lat": 17.4646,
+      "lng": 78.3551,
+      "label": "Teapical, near Masjid Banda, Kondapur"
+    },
+    "vetStatus": {
+      "needed": true,
+      "assignmentStatus": "vet_selected",
+      "nearbyVetCount": 0,
+      "assignedVetId": "vet_001",
+      "searchRadiusMeters": 3000
+    },
+    "metadata": {},
+    "createdAt": "2026-05-28T11:49:59.535Z",
+    "updatedAt": "2026-06-01T10:28:42.114Z",
+    "closedAt": null,
+    "closedBy": null,
+    "statusHistory": [
+      {
+        "status": "open",
+        "changedBy": "demo_user_001",
+        "changedAt": "2026-05-28T11:49:59.535Z",
+        "note": "Case created"
+      },
+      {
+        "status": "vet_guidance_requested",
+        "changedBy": "demo_user_001",
+        "changedAt": "2026-05-28T11:51:31.794Z",
+        "note": "User requested basic vet guidance."
+      },
+      {
+        "status": "vet_guidance_requested",
+        "changedBy": "demo_user_001",
+        "changedAt": "2026-05-28T12:08:35.147Z",
+        "note": "Vet guidance requested and vet selected: vet_001"
+      },
+      {
+        "status": "vet_guidance_completed",
+        "changedBy": "vet_001",
+        "changedAt": "2026-05-28T12:09:19.367Z",
+        "note": "Vet guidance completed and saved."
+      },
+      {
+        "status": "care_fund_opened",
+        "changedBy": "demo_user_001",
+        "changedAt": "2026-05-29T10:48:34.955Z",
+        "note": "Care fund opened with estimated amount ₹500."
+      },
+      {
+        "status": "vet_guidance_requested",
+        "changedBy": "demo_user_001",
+        "changedAt": "2026-06-01T10:28:42.114Z",
+        "note": "Vet guidance requested through agent. Vet selected: vet_001"
+      }
+    ],
+    "resolutionSummary": "",
+    "careFundId": "fund_001"
+  },
+  {
+    "id": "case_026",
+    "animalId": "dog_029",
+    "caseType": "severe_skin_condition_leg_trauma_and_food_water_gap",
+    "priority": "high",
+    "status": "open",
+    "summary": "Raju is a light tan/off-white medium dog near Raju Gari Biryani, opposite Google Office Kothaguda. The dog appeared thin, low-energy, with thick crusty/scaly skin layers on knee joints/legs, widespread hair loss, possible leg trauma or limping, no food/water access, and traffic risk. Needs clean water support, food support if safe, follow-up photo/video, and urgent vet/NGO guidance.",
+    "createdBy": "field_collector_001",
+    "createdAt": "2026-05-31T11:45:00Z",
+    "requiredActions": [
+      "provide_clean_water_if_safe",
+      "provide_food_if_safe",
+      "upload_followup_photo_or_video",
+      "observe_leg_movement_again",
+      "observe_skin_condition_again",
+      "check_if_dog_is_eating_or_drinking",
+      "request_vet_or_ngo_guidance",
+      "observe_again_within_24_hours"
+    ],
+    "safetyNote": "No medicine or treatment should be suggested by AI. Do not apply creams, scrub skin, or force movement. Because the dog shows severe crusting/scaling, possible leg trauma, low energy, and traffic exposure, vet/NGO guidance is strongly recommended."
+  },
+  {
+    "id": "case_027",
+    "animalId": "dog_030",
+    "caseType": "skin_irritation_discomfort_and_water_gap",
+    "priority": "high",
+    "status": "open",
+    "summary": "Anji is a tan/light brown medium dog in Anjaiah Nagar lane towards the back side of Google Office. The dog was lying on a concrete slab, actively scratching the ear and licking the lower belly/groin area, with visible darkened irritated skin patch and no clean drinking water access. Needs clean water, follow-up photo, observation of irritation, and vet/NGO guidance if symptoms continue.",
+    "createdBy": "field_collector_001",
+    "createdAt": "2026-05-31T11:53:00Z",
+    "requiredActions": [
+      "provide_clean_water_if_safe",
+      "upload_followup_photo",
+      "observe_ear_scratching_again",
+      "observe_groin_underbelly_irritation",
+      "check_if_dog_is_eating_or_drinking",
+      "request_vet_or_ngo_guidance_if_worsens",
+      "observe_again_within_24_hours"
+    ],
+    "safetyNote": "No medicine or treatment should be suggested by AI. Avoid touching, scrubbing, or applying anything to the irritated skin area. Vet/NGO guidance is recommended if scratching, licking, redness, weakness, or discomfort continues."
+  },
+  {
+    "id": "case_028",
+    "animalId": "dog_031",
+    "caseType": "low_responsiveness_skin_concern_and_lethargy",
+    "priority": "high",
+    "status": "open",
+    "summary": "Patchu is a white medium dog with a distinct black lower-back patch near Anjaiah Nagar Lane 6. The dog was lying on a concrete house step near a grey metal gate, appeared thin, low-responsive, lethargic/depressed, with possible skin concern and ear-tip scabbing/speckling. Food and water may be locally accessible, but low responsiveness makes this a high-priority follow-up case.",
+    "createdBy": "field_collector_001",
+    "createdAt": "2026-05-31T12:20:00Z",
+    "requiredActions": [
+      "observe_responsiveness_again",
+      "provide_clean_water_if_safe",
+      "upload_followup_photo_or_video",
+      "check_if_dog_is_eating_or_drinking",
+      "observe_energy_level",
+      "request_vet_or_ngo_guidance",
+      "observe_again_within_24_hours"
+    ],
+    "safetyNote": "No medicine or treatment should be suggested by AI. Do not disturb or force movement. Because the dog shows low responsiveness and lethargic/depressed posture, vet/NGO guidance and close follow-up are recommended."
+  },
+  {
+    "id": "case_029",
+    "animalId": "dog_032",
+    "caseType": "possible_chronic_skin_issue_movement_concern_and_traffic_risk",
+    "priority": "high",
+    "status": "open",
+    "summary": "Tiklu is a white medium dog with black ticking/spots and a black patch near the tail base, observed near Anjaiah Nagar Lane 6 close to Lavanya Tiffin Centre. The dog appeared thin, walking with head lowered, arched back posture, possible chronic skin issue, and traffic exposure. Needs follow-up photo/video, clean water support if safe, movement/posture observation, and vet/NGO guidance if condition continues.",
+    "createdBy": "field_collector_001",
+    "createdAt": "2026-05-31T12:25:00Z",
+    "requiredActions": [
+      "provide_clean_water_if_safe",
+      "upload_followup_photo_or_video",
+      "observe_movement_posture_again",
+      "observe_skin_condition_again",
+      "check_if_dog_is_eating_or_drinking",
+      "observe_traffic_risk",
+      "request_vet_or_ngo_guidance_if_worsens",
+      "observe_again_within_24_hours"
+    ],
+    "safetyNote": "No medicine or treatment should be suggested by AI. Do not chase, force movement, or apply anything to skin areas. Because the dog shows thin body condition, movement/posture concern, possible chronic skin issue, and traffic risk, safe follow-up and vet/NGO guidance are recommended."
+  },
+  {
+    "id": "case_030",
+    "animalId": "dog_033",
+    "createdBy": "demo_user_001",
+    "caseType": "new_dog_red_flag",
+    "priority": "high",
+    "title": "Agent Demo Dog needs urgent follow-up",
+    "description": "Newly scanned dog has visible concern and needs safe food/water guidance plus vet/NGO review.",
+    "status": "care_fund_opened",
+    "requiredActions": [
+      "provide_clean_water_if_safe",
+      "offer_simple_food_if_safe",
+      "request_vet_or_ngo_guidance",
+      "avoid_self_medication"
+    ],
+    "safetyNote": "This is not a veterinary diagnosis. Vet/NGO guidance is recommended when needed.",
+    "location": {
+      "label": "Near Teapical, Masjid Banda",
+      "area": "Kondapur",
+      "city": "Hyderabad",
+      "state": "Telangana",
+      "country": "India",
+      "lat": 17.4646,
+      "lng": 78.3551
+    },
+    "vetStatus": {
+      "needed": true,
+      "assignmentStatus": "suggested",
+      "nearbyVetCount": 7,
+      "assignedVetId": "vet_002",
+      "searchRadiusMeters": 3000
+    },
+    "metadata": {
+      "createdFrom": "scan_new_dog_agent",
+      "aiConditionHint": "serious_issue"
+    },
+    "createdAt": "2026-06-01T11:11:39.666Z",
+    "updatedAt": "2026-06-01T11:11:39.666Z",
+    "closedAt": null,
+    "closedBy": null,
+    "statusHistory": [
+      {
+        "status": "open",
+        "changedBy": "demo_user_001",
+        "changedAt": "2026-06-01T11:11:39.666Z",
+        "note": "Case created by Scan New Dog Agent."
+      },
+      {
+        "status": "care_fund_opened",
+        "changedBy": "demo_user_001",
+        "changedAt": "2026-06-01T11:11:39.666Z",
+        "note": "Care fund opened by Scan New Dog Agent with estimated amount ₹500."
+      }
+    ],
+    "careFundId": "fund_002"
+  }
 ]

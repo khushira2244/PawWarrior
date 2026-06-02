@@ -121,262 +121,428 @@
     "createdAt": "2026-05-12T10:15:00Z",
     "source": "field_collection"
   },
-  
-{
-  "id": "log_009",
-  "animalId": "dog_008",
-  "userId": "field_collector_001",
-  "actionType": "observed_only",
-  "notes": "Dog observed near Subway / Yellow Leaf Designer Studio, Masjid Banda. Appeared very thin with visible ribs and was searching for food.",
-  "photoProof": true,
-  "location": {
-    "lat": 17.4651,
-    "lng": 78.3562,
-    "label": "Subway / Yellow Leaf Designer Studio, Masjid Banda, Kondapur"
+  {
+    "id": "log_009",
+    "animalId": "dog_008",
+    "userId": "field_collector_001",
+    "actionType": "observed_only",
+    "notes": "Dog observed near Subway / Yellow Leaf Designer Studio, Masjid Banda. Appeared very thin with visible ribs and was searching for food.",
+    "photoProof": true,
+    "location": {
+      "lat": 17.4651,
+      "lng": 78.3562,
+      "label": "Subway / Yellow Leaf Designer Studio, Masjid Banda, Kondapur"
+    },
+    "createdAt": "2026-05-15T09:00:45Z",
+    "source": "field_collection"
   },
-  "createdAt": "2026-05-15T09:00:45Z",
-  "source": "field_collection"
-},
-{
-  "id": "log_010",
-  "animalId": "dog_009",
-  "userId": "field_collector_001",
-  "actionType": "observed_only",
-  "notes": "Dog observed near Subway / Yellow Leaf Designer Studio area. Appeared extremely thin with visible ribcage/spine and no food/water access.",
-  "photoProof": true,
-  "location": {
-    "lat": 17.4795,
-    "lng": 78.3324,
-    "label": "Subway / Yellow Leaf Designer Studio, Gulmohar Park Colony, Lingampally / Serilingampalle"
+  {
+    "id": "log_010",
+    "animalId": "dog_009",
+    "userId": "field_collector_001",
+    "actionType": "observed_only",
+    "notes": "Dog observed near Subway / Yellow Leaf Designer Studio area. Appeared extremely thin with visible ribcage/spine and no food/water access.",
+    "photoProof": true,
+    "location": {
+      "lat": 17.4795,
+      "lng": 78.3324,
+      "label": "Subway / Yellow Leaf Designer Studio, Gulmohar Park Colony, Lingampally / Serilingampalle"
+    },
+    "createdAt": "2026-05-15T09:04:00Z",
+    "source": "field_collection"
   },
-  "createdAt": "2026-05-15T09:04:00Z",
-  "source": "field_collection"
-},
-{
-  "id": "log_011",
-  "animalId": "dog_010",
-  "userId": "field_collector_001",
-  "actionType": "observed_only",
-  "notes": "Dog observed near Aparna Sarovar Road, HUDA Layout, GRANDE. Seen lying down with low-energy posture and reported no food/water access.",
-  "photoProof": true,
-  "location": {
-    "lat": 17.4578,
-    "lng": 78.3032,
-    "label": "Aparna Sarovar Road, HUDA Layout, GRANDE, Gopanpalle / Nallagandla"
+  {
+    "id": "log_011",
+    "animalId": "dog_010",
+    "userId": "field_collector_001",
+    "actionType": "observed_only",
+    "notes": "Dog observed near Aparna Sarovar Road, HUDA Layout, GRANDE. Seen lying down with low-energy posture and reported no food/water access.",
+    "photoProof": true,
+    "location": {
+      "lat": 17.4578,
+      "lng": 78.3032,
+      "label": "Aparna Sarovar Road, HUDA Layout, GRANDE, Gopanpalle / Nallagandla"
+    },
+    "createdAt": "2026-05-15T09:08:00Z",
+    "source": "field_collection"
   },
-  "createdAt": "2026-05-15T09:08:00Z",
-  "source": "field_collection"
-},
-{
-  "id": "log_012",
-  "animalId": "dog_011",
-  "userId": "field_collector_001",
-  "actionType": "observed_only",
-  "notes": "Dog observed near Prism Cafe / Nanakramguda Road. Seen lying flat on dirt with dusty/matted fur and no food/water access.",
-  "photoProof": true,
-  "location": {
-    "lat": 17.4198,
-    "lng": 78.3421,
-    "label": "Nearby Prism Cafe, Nanakramguda Road"
+  {
+    "id": "log_012",
+    "animalId": "dog_011",
+    "userId": "field_collector_001",
+    "actionType": "observed_only",
+    "notes": "Dog observed near Prism Cafe / Nanakramguda Road. Seen lying flat on dirt with dusty/matted fur and no food/water access.",
+    "photoProof": true,
+    "location": {
+      "lat": 17.4198,
+      "lng": 78.3421,
+      "label": "Nearby Prism Cafe, Nanakramguda Road"
+    },
+    "createdAt": "2026-05-15T09:12:00Z",
+    "source": "field_collection"
   },
-  "createdAt": "2026-05-15T09:12:00Z",
-  "source": "field_collection"
-},
-{
-  "id": "log_013",
-  "animalId": "dog_012",
-  "userId": "field_collector_001",
-  "actionType": "food_water_present_observed",
-  "notes": "Dog observed near Sri Ranganathaswamy Temple. Food and water were present, but dog appeared thin, low-energy, and had visible skin patches.",
-  "photoProof": true,
-  "location": {
-    "lat": 17.4172,
-    "lng": 78.3414,
-    "label": "Sri Ranganathaswamy Temple, Financial District"
+  {
+    "id": "log_013",
+    "animalId": "dog_012",
+    "userId": "field_collector_001",
+    "actionType": "food_water_present_observed",
+    "notes": "Dog observed near Sri Ranganathaswamy Temple. Food and water were present, but dog appeared thin, low-energy, and had visible skin patches.",
+    "photoProof": true,
+    "location": {
+      "lat": 17.4172,
+      "lng": 78.3414,
+      "label": "Sri Ranganathaswamy Temple, Financial District"
+    },
+    "createdAt": "2026-05-15T09:20:00Z",
+    "source": "field_collection"
   },
-  "createdAt": "2026-05-15T09:20:00Z",
-  "source": "field_collection"
-},
-{
-  "id": "log_014",
-  "animalId": "dog_013",
-  "userId": "field_collector_001",
-  "actionType": "water_available_observed",
-  "notes": "Dog observed near Burfi Ghar, Kondapur Road. Dog was searching for food, water was available, and the dog appeared thin with low-energy posture.",
-  "photoProof": true,
-  "location": {
-    "lat": 17.4622,
-    "lng": 78.3614,
-    "label": "Burfi Ghar, Kondapur Road, Kondapur"
+  {
+    "id": "log_014",
+    "animalId": "dog_013",
+    "userId": "field_collector_001",
+    "actionType": "water_available_observed",
+    "notes": "Dog observed near Burfi Ghar, Kondapur Road. Dog was searching for food, water was available, and the dog appeared thin with low-energy posture.",
+    "photoProof": true,
+    "location": {
+      "lat": 17.4622,
+      "lng": 78.3614,
+      "label": "Burfi Ghar, Kondapur Road, Kondapur"
+    },
+    "createdAt": "2026-05-15T09:17:35Z",
+    "source": "field_collection"
   },
-  "createdAt": "2026-05-15T09:17:35Z",
-  "source": "field_collection"
-},
-
-{
-  "id": "log_015",
-  "animalId": "dog_014",
-  "userId": "field_collector_001",
-  "actionType": "observed_only",
-  "notes": "Dog observed near Botanical Garden, Kondapur. Appeared thin, curled in a depressed posture, with no food/water access and possible skin concern.",
-  "photoProof": true,
-  "location": {
-    "lat": 17.4564,
-    "lng": 78.3643,
-    "label": "Near Botanical Garden, Kondapur"
+  {
+    "id": "log_015",
+    "animalId": "dog_014",
+    "userId": "field_collector_001",
+    "actionType": "observed_only",
+    "notes": "Dog observed near Botanical Garden, Kondapur. Appeared thin, curled in a depressed posture, with no food/water access and possible skin concern.",
+    "photoProof": true,
+    "location": {
+      "lat": 17.4564,
+      "lng": 78.3643,
+      "label": "Near Botanical Garden, Kondapur"
+    },
+    "createdAt": "2026-05-23T16:26:00Z",
+    "source": "field_collection"
   },
-  "createdAt": "2026-05-23T16:26:00Z",
-  "source": "field_collection"
-},
-{
-  "id": "log_016",
-  "animalId": "dog_015",
-  "userId": "field_collector_001",
-  "actionType": "food_available_observed",
-  "notes": "Dog observed near Aditya Windsor, Whitefields, Kondapur. Food was available, but the dog appeared curled/depressed with possible skin/fur concern.",
-  "photoProof": true,
-  "location": {
-    "lat": 17.4619,
-    "lng": 78.3541,
-    "label": "Near Aditya Windsor, Whitefields, Kondapur"
+  {
+    "id": "log_016",
+    "animalId": "dog_015",
+    "userId": "field_collector_001",
+    "actionType": "food_available_observed",
+    "notes": "Dog observed near Aditya Windsor, Whitefields, Kondapur. Food was available, but the dog appeared curled/depressed with possible skin/fur concern.",
+    "photoProof": true,
+    "location": {
+      "lat": 17.4619,
+      "lng": 78.3541,
+      "label": "Near Aditya Windsor, Whitefields, Kondapur"
+    },
+    "createdAt": "2026-05-23T16:34:00Z",
+    "source": "field_collection"
   },
-  "createdAt": "2026-05-23T16:34:00Z",
-  "source": "field_collection"
-},
-{
-  "id": "log_017",
-  "animalId": "dog_016",
-  "userId": "field_collector_001",
-  "actionType": "food_available_observed",
-  "notes": "Dog observed near Google Office, Kothaguda. Food was available, but no water was present. Dog appeared thin and was resting on gravel with possible skin/fur concern.",
-  "photoProof": true,
-  "location": {
-    "lat": 17.4611,
-    "lng": 78.3692,
-    "label": "Near Google Office, Kothaguda"
+  {
+    "id": "log_017",
+    "animalId": "dog_016",
+    "userId": "field_collector_001",
+    "actionType": "food_available_observed",
+    "notes": "Dog observed near Google Office, Kothaguda. Food was available, but no water was present. Dog appeared thin and was resting on gravel with possible skin/fur concern.",
+    "photoProof": true,
+    "location": {
+      "lat": 17.4611,
+      "lng": 78.3692,
+      "label": "Near Google Office, Kothaguda"
+    },
+    "createdAt": "2026-05-23T16:38:00Z",
+    "source": "field_collection"
   },
-  "createdAt": "2026-05-23T16:38:00Z",
-  "source": "field_collection"
-},
-{
-  "id": "log_018",
-  "animalId": "dog_017",
-  "userId": "field_collector_001",
-  "actionType": "observed_only",
-  "notes": "Dog observed near Google Office, Kothaguda. Dog was wandering on road with impaired right hind leg posture, appeared thin/depressed, and had no food/water access.",
-  "photoProof": true,
-  "location": {
-    "lat": 17.4611,
-    "lng": 78.3692,
-    "label": "Near Google Office, Kothaguda"
+  {
+    "id": "log_018",
+    "animalId": "dog_017",
+    "userId": "field_collector_001",
+    "actionType": "observed_only",
+    "notes": "Dog observed near Google Office, Kothaguda. Dog was wandering on road with impaired right hind leg posture, appeared thin/depressed, and had no food/water access.",
+    "photoProof": true,
+    "location": {
+      "lat": 17.4611,
+      "lng": 78.3692,
+      "label": "Near Google Office, Kothaguda"
+    },
+    "createdAt": "2026-05-23T16:44:00Z",
+    "source": "field_collection"
   },
-  "createdAt": "2026-05-23T16:44:00Z",
-  "source": "field_collection"
-},
-
-{
-  "id": "log_019",
-  "animalId": "dog_019",
-  "userId": "field_collector_001",
-  "actionType": "observed_only",
-  "notes": "Group of 5 sibling puppies observed near SK Car Lounge, Gachibowli. Puppies appeared extremely thin, low-energy, clustered together near wall/gutter line, with limited food access and no water.",
-  "photoProof": true,
-  "location": {
-    "lat": 17.4428,
-    "lng": 78.3574,
-    "label": "SK Car Lounge, Gachibowli"
+  {
+    "id": "log_019",
+    "animalId": "dog_019",
+    "userId": "field_collector_001",
+    "actionType": "observed_only",
+    "notes": "Group of 5 sibling puppies observed near SK Car Lounge, Gachibowli. Puppies appeared extremely thin, low-energy, clustered together near wall/gutter line, with limited food access and no water.",
+    "photoProof": true,
+    "location": {
+      "lat": 17.4428,
+      "lng": 78.3574,
+      "label": "SK Car Lounge, Gachibowli"
+    },
+    "createdAt": "2026-05-25T17:53:00Z",
+    "source": "field_collection"
   },
-  "createdAt": "2026-05-25T17:53:00Z",
-  "source": "field_collection"
-},
-{
-  "id": "log_020",
-  "animalId": "dog_020",
-  "userId": "field_collector_001",
-  "actionType": "observed_only",
-  "notes": "Dog observed near SK Car Lounge, Gachibowli. Dog appeared thin but active, panting with tongue out, searching for food, and no water was available.",
-  "photoProof": true,
-  "location": {
-    "lat": 17.4428,
-    "lng": 78.3574,
-    "label": "SK Car Lounge, Gachibowli"
+  {
+    "id": "log_020",
+    "animalId": "dog_020",
+    "userId": "field_collector_001",
+    "actionType": "observed_only",
+    "notes": "Dog observed near SK Car Lounge, Gachibowli. Dog appeared thin but active, panting with tongue out, searching for food, and no water was available.",
+    "photoProof": true,
+    "location": {
+      "lat": 17.4428,
+      "lng": 78.3574,
+      "label": "SK Car Lounge, Gachibowli"
+    },
+    "createdAt": "2026-05-25T17:56:00Z",
+    "source": "field_collection"
   },
-  "createdAt": "2026-05-25T17:56:00Z",
-  "source": "field_collection"
-},
-{
-  "id": "log_021",
-  "animalId": "dog_021",
-  "userId": "field_collector_001",
-  "actionType": "observed_only",
-  "notes": "Nursing mother dog observed near Khajaguda Lake Point, Tea Time. Dog appeared extremely thin with visible ribcage/spine, foraging posture, and searching for food and water.",
-  "photoProof": true,
-  "location": {
-    "lat": 17.4194,
-    "lng": 78.3619,
-    "label": "Khajaguda Lake Point, Tea Time, Khajaguda"
+  {
+    "id": "log_021",
+    "animalId": "dog_021",
+    "userId": "field_collector_001",
+    "actionType": "observed_only",
+    "notes": "Nursing mother dog observed near Khajaguda Lake Point, Tea Time. Dog appeared extremely thin with visible ribcage/spine, foraging posture, and searching for food and water.",
+    "photoProof": true,
+    "location": {
+      "lat": 17.4194,
+      "lng": 78.3619,
+      "label": "Khajaguda Lake Point, Tea Time, Khajaguda"
+    },
+    "createdAt": "2026-05-25T18:11:00Z",
+    "source": "field_collection"
   },
-  "createdAt": "2026-05-25T18:11:00Z",
-  "source": "field_collection"
-},
-{
-  "id": "log_022",
-  "animalId": "dog_022",
-  "userId": "field_collector_001",
-  "actionType": "observed_only",
-  "notes": "Dog observed near ESCI, Gachibowli. Dog appeared thin and low-energy, lying flat on loose gravel/dirt, with possible skin patches near the base of the tail and no food/water access.",
-  "photoProof": true,
-  "location": {
-    "lat": 17.4348,
-    "lng": 78.3671,
-    "label": "Engineering Staff College of India (ESCI), Gachibowli"
+  {
+    "id": "log_022",
+    "animalId": "dog_022",
+    "userId": "field_collector_001",
+    "actionType": "observed_only",
+    "notes": "Dog observed near ESCI, Gachibowli. Dog appeared thin and low-energy, lying flat on loose gravel/dirt, with possible skin patches near the base of the tail and no food/water access.",
+    "photoProof": true,
+    "location": {
+      "lat": 17.4348,
+      "lng": 78.3671,
+      "label": "Engineering Staff College of India (ESCI), Gachibowli"
+    },
+    "createdAt": "2026-05-25T18:20:00Z",
+    "source": "field_collection"
   },
-  "createdAt": "2026-05-25T18:20:00Z",
-  "source": "field_collection"
-},
-{
-  "id": "log_023",
-  "animalId": "dog_023",
-  "userId": "field_collector_001",
-  "actionType": "observed_only",
-  "notes": "Dog observed near bus station on the road towards Hyderabad University, opposite Gachibowli Stadium road division. Dog appeared thin and lethargic, lying flat on tiled pavement, with severe dark spotted skin patches and no food/water access.",
-  "photoProof": true,
-  "location": {
-    "lat": 17.4522,
-    "lng": 78.3298,
-    "label": "Bus station on road towards Hyderabad University, Nallagandla / Gachibowli junction area"
+  {
+    "id": "log_023",
+    "animalId": "dog_023",
+    "userId": "field_collector_001",
+    "actionType": "observed_only",
+    "notes": "Dog observed near bus station on the road towards Hyderabad University, opposite Gachibowli Stadium road division. Dog appeared thin and lethargic, lying flat on tiled pavement, with severe dark spotted skin patches and no food/water access.",
+    "photoProof": true,
+    "location": {
+      "lat": 17.4522,
+      "lng": 78.3298,
+      "label": "Bus station on road towards Hyderabad University, Nallagandla / Gachibowli junction area"
+    },
+    "createdAt": "2026-05-25T18:34:00Z",
+    "source": "field_collection"
   },
-  "createdAt": "2026-05-25T18:34:00Z",
-  "source": "field_collection"
-},
-{
-  "id": "log_024",
-  "animalId": "dog_024",
-  "userId": "field_collector_001",
-  "actionType": "observed_only",
-  "notes": "Healthy, active dog observed near Juice and Dosa center / Harihara Foodtruck near Hyderabad University bus station. Dog likely has some food access from nearby stalls.",
-  "photoProof": true,
-  "location": {
-    "lat": 17.4525,
-    "lng": 78.3305,
-    "label": "Juice and Dosa center / Harihara Foodtruck near Hyderabad University bus station"
+  {
+    "id": "log_024",
+    "animalId": "dog_024",
+    "userId": "field_collector_001",
+    "actionType": "observed_only",
+    "notes": "Healthy, active dog observed near Juice and Dosa center / Harihara Foodtruck near Hyderabad University bus station. Dog likely has some food access from nearby stalls.",
+    "photoProof": true,
+    "location": {
+      "lat": 17.4525,
+      "lng": 78.3305,
+      "label": "Juice and Dosa center / Harihara Foodtruck near Hyderabad University bus station"
+    },
+    "createdAt": "2026-05-25T18:38:00Z",
+    "source": "field_collection"
   },
-  "createdAt": "2026-05-25T18:38:00Z",
-  "source": "field_collection"
-},
-{
-  "id": "log_025",
-  "animalId": "dog_025",
-  "userId": "field_collector_001",
-  "actionType": "observed_only",
-  "notes": "Dog observed near back side gate of University of Hyderabad, near Hebsiba Irani Dum Chai. Dog appeared thin with extensive hair loss/visible skin patches, was looking toward the tea stall, and had no food/water access.",
-  "photoProof": true,
-  "location": {
-    "lat": 17.4532,
-    "lng": 78.3284,
-    "label": "Back side gate of University of Hyderabad, near Hebsiba Irani Dum Chai"
+  {
+    "id": "log_025",
+    "animalId": "dog_025",
+    "userId": "field_collector_001",
+    "actionType": "observed_only",
+    "notes": "Dog observed near back side gate of University of Hyderabad, near Hebsiba Irani Dum Chai. Dog appeared thin with extensive hair loss/visible skin patches, was looking toward the tea stall, and had no food/water access.",
+    "photoProof": true,
+    "location": {
+      "lat": 17.4532,
+      "lng": 78.3284,
+      "label": "Back side gate of University of Hyderabad, near Hebsiba Irani Dum Chai"
+    },
+    "createdAt": "2026-05-25T18:43:00Z",
+    "source": "field_collection"
   },
-  "createdAt": "2026-05-25T18:43:00Z",
-  "source": "field_collection"
-}
+  {
+    "id": "log_026",
+    "animalId": "dog_026",
+    "userId": "field_collector_001",
+    "actionType": "observed_only",
+    "notes": "Senior-looking dog observed near Chennapatnam Filter Coffee, DLF Road. Dog was curled tightly on tiled pavement steps, appeared lethargic/weak, had extensive hair loss or patches on lower back and hindquarters, occasional food access, and no regular water access.",
+    "photoProof": true,
+    "location": {
+      "lat": 17.4479,
+      "lng": 78.3582,
+      "label": "Chennapatnam Filter Coffee, DLF Road, Gachibowli"
+    },
+    "createdAt": "2026-05-28T14:41:00Z",
+    "source": "field_collection"
+  },
+  {
+    "id": "log_027",
+    "animalId": "dog_027",
+    "userId": "field_collector_001",
+    "actionType": "observed_only",
+    "notes": "Healthy tan and white dog observed resting beside the shop entrance threshold near Chennapatnam Filter Coffee, DLF Road. Dog appeared to have good weight profile and likely food access from nearby stalls, but clean water access should be checked due to heat.",
+    "photoProof": true,
+    "location": {
+      "lat": 17.4479,
+      "lng": 78.3582,
+      "label": "Chennapatnam Filter Coffee, DLF Road, Gachibowli"
+    },
+    "createdAt": "2026-05-28T14:44:00Z",
+    "source": "field_collection"
+  },
+  {
+    "id": "log_028",
+    "animalId": "dog_028",
+    "userId": "field_collector_001",
+    "actionType": "observed_only",
+    "notes": "Ginger/reddish brown dog observed near Hotel Samskruthi, Anjaiah Nagar. Dog had thick shaggy coat, severe matting and hair loss at the base of the tail, weak standing posture, no food/water access, and possible skin/tail-base concern.",
+    "photoProof": true,
+    "location": {
+      "lat": 17.4528,
+      "lng": 78.3631,
+      "label": "Near Hotel Samskruthi, Anjaiah Nagar, Gachibowli"
+    },
+    "createdAt": "2026-05-28T14:48:00Z",
+    "source": "field_collection"
+  },
+  {
+    "id": "log_029",
+    "animalId": "dog_001",
+    "userId": "demo_user_001",
+    "actionType": "water_given",
+    "notes": "Clean water given near Teapical",
+    "photoProof": false,
+    "location": {
+      "lat": 17.4646,
+      "lng": 78.3551,
+      "label": "Teapical, near Masjid Banda, Kondapur"
+    },
+    "createdAt": "2026-05-28T10:31:17.708Z",
+    "source": "app_user"
+  },
+  {
+    "id": "log_030",
+    "animalId": "dog_001",
+    "userId": "demo_user_001",
+    "actionType": "water_given",
+    "notes": "Clean water given near Teapical",
+    "photoProof": false,
+    "location": {
+      "lat": 17.4646,
+      "lng": 78.3551,
+      "label": "Teapical, near Masjid Banda, Kondapur"
+    },
+    "createdAt": "2026-05-28T10:37:36.578Z",
+    "source": "app_user"
+  },
+  {
+    "id": "log_031",
+    "animalId": "dog_029",
+    "userId": "field_collector_001",
+    "actionType": "observed_only",
+    "notes": "Raju observed near Raju Gari Biryani, opposite Google Office Kothaguda. Dog appeared thin, low-energy, with severe crusty/scaly skin layers on knee joints/legs, widespread hair loss, possible leg trauma or limping, and no food/water access.",
+    "photoProof": true,
+    "location": {
+      "lat": 17.4612,
+      "lng": 78.3684,
+      "label": "Raju Gari Biryani, opposite Google Office Kothaguda"
+    },
+    "createdAt": "2026-05-31T11:45:00Z",
+    "source": "field_collection"
+  },
+  {
+    "id": "log_032",
+    "animalId": "dog_030",
+    "userId": "field_collector_001",
+    "actionType": "observed_only",
+    "notes": "Anji observed in Anjaiah Nagar lane leading towards the back side of Google Office. Dog was lying on a concrete slab, scratching ear and licking lower belly/groin area, with visible irritated darkened skin patch and no clean drinking water available.",
+    "photoProof": true,
+    "location": {
+      "lat": 17.4565,
+      "lng": 78.3648,
+      "label": "Anjaiah Nagar lane towards back side of Google Office"
+    },
+    "createdAt": "2026-05-31T11:53:00Z",
+    "source": "field_collection"
+  },
+  {
+    "id": "log_033",
+    "animalId": "dog_031",
+    "userId": "field_collector_001",
+    "actionType": "observed_only",
+    "notes": "Patchu observed at Anjaiah Nagar Lane 6. Dog was lying on a concrete house step near a grey metal gate, with a white body and black lower-back patch, thin frame, low responsiveness, lethargic/depressed demeanor, and possible skin concern.",
+    "photoProof": true,
+    "location": {
+      "lat": 17.4552,
+      "lng": 78.3639,
+      "label": "Anjaiah Nagar Lane 6, Gachibowli / Kothaguda border"
+    },
+    "createdAt": "2026-05-31T12:20:00Z",
+    "source": "field_collection"
+  },
+  {
+    "id": "log_034",
+    "animalId": "dog_032",
+    "userId": "field_collector_001",
+    "actionType": "observed_only",
+    "notes": "Tiklu observed near Anjaiah Nagar Lane 6, close to Lavanya Tiffin Centre. Dog had white coat with black ticking/spots and a black patch near tail base, thin frame, arched back posture while moving, possible chronic skin issue, and traffic exposure.",
+    "photoProof": true,
+    "location": {
+      "lat": 17.4554,
+      "lng": 78.3641,
+      "label": "Anjaiah Nagar Lane 6, near Lavanya Tiffin Centre"
+    },
+    "createdAt": "2026-05-31T12:25:00Z",
+    "source": "field_collection"
+  },
+  {
+    "id": "log_035",
+    "animalId": "dog_001",
+    "userId": "demo_user_001",
+    "actionType": "water_given",
+    "notes": "Water given through agent route near Teapical.",
+    "photoProof": false,
+    "location": {
+      "lat": 17.4646,
+      "lng": 78.3551,
+      "label": "Teapical, near Masjid Banda, Kondapur"
+    },
+    "createdAt": "2026-06-01T10:20:44.433Z",
+    "source": "agent_log_care"
+  },
+  {
+    "id": "log_036",
+    "animalId": "dog_033",
+    "userId": "demo_user_001",
+    "actionType": "observed_only",
+    "notes": "Dog found during demo scan. Needs food, water, and vet/NGO guidance.",
+    "photoProof": true,
+    "location": {
+      "label": "Near Teapical, Masjid Banda",
+      "area": "Kondapur",
+      "city": "Hyderabad",
+      "state": "Telangana",
+      "country": "India",
+      "lat": 17.4646,
+      "lng": 78.3551
+    },
+    "createdAt": "2026-06-01T11:11:39.666Z",
+    "source": "scan_new_dog_agent"
+  }
 ]

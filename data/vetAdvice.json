@@ -1,0 +1,136 @@
+[
+  {
+    "id": "vet_advice_001",
+    "animalId": "dog_001",
+    "caseId": "case_025",
+    "requestedBy": "demo_user_001",
+    "vetId": "vet_001",
+    "requestType": "basic_food_water_guidance",
+    "status": "completed",
+    "basicAdviceFee": 10,
+    "paymentStatus": "demo_not_charged",
+    "userMessage": "Kaalu has patchy fur and skin concern. Water was given. Please suggest food, water, and precautions.",
+    "animalSnapshot": {
+      "name": "Kaalu",
+      "currentCondition": "mild_issue",
+      "careTags": [
+        "food_given_today",
+        "summer_care_needed",
+        "observe_again",
+        "followup_photo_needed"
+      ],
+      "healthTags": [
+        "possible_skin_condition",
+        "needs_vet_guidance",
+        "avoid_self_medication"
+      ],
+      "lastFoodAt": "2026-05-12T09:42:00Z",
+      "lastWaterAt": "2026-05-28T10:37:36.578Z"
+    },
+    "caseSnapshot": {
+      "caseType": "vet_guidance_needed",
+      "priority": "medium",
+      "title": "Kaalu needs skin follow-up and vet guidance",
+      "requiredActions": [
+        "upload_followup_photo",
+        "request_vet_or_ngo_guidance",
+        "avoid_self_medication"
+      ]
+    },
+    "vetSnapshot": {
+      "id": "vet_001",
+      "clinicName": "Paws Vet Clinic",
+      "doctorName": "Dr. Navya",
+      "area": "Kondapur",
+      "hours": "9:00 AM - 9:00 PM",
+      "availableForGuidance": true,
+      "emergencySupport": false,
+      "contactOptions": {
+        "phone": null,
+        "phoneLink": null,
+        "chatLink": null,
+        "videoCallLink": null,
+        "contactStatus": "contact_not_added"
+      }
+    },
+    "advice": {
+      "foodGuidance": [
+        "Offer simple soft food if the dog is alert and willing to eat.",
+        "Do not force-feed if the dog refuses food."
+      ],
+      "waterGuidance": [
+        "Keep clean water nearby in a safe shaded area.",
+        "Observe whether the dog drinks normally."
+      ],
+      "precautions": [
+        "Do not apply medicine or shampoo without vet/NGO review.",
+        "Avoid touching or scrubbing the affected skin area.",
+        "Upload a clearer follow-up photo if possible."
+      ],
+      "siteVisitRecommended": true,
+      "estimatedTreatmentCost": 500,
+      "followUpNeeded": true,
+      "adviceNotes": "Basic guidance only. Skin issue needs photo review or site visit if it worsens.",
+      "safetyNote": "Basic vet guidance only. This is not a final diagnosis or prescription. Do not self-medicate."
+    },
+    "safetyNote": "This request is for basic food, water, precaution, and escalation guidance only. It is not a diagnosis or prescription.",
+    "createdAt": "2026-05-28T12:08:35.147Z",
+    "updatedAt": "2026-05-28T12:09:19.367Z",
+    "completedAt": "2026-05-28T12:09:19.367Z",
+    "completedBy": "vet_001"
+  },
+  {
+    "id": "vet_advice_002",
+    "animalId": "dog_001",
+    "caseId": "case_025",
+    "requestedBy": "demo_user_001",
+    "vetId": "vet_001",
+    "requestType": "basic_food_water_guidance",
+    "status": "requested",
+    "basicAdviceFee": 10,
+    "paymentStatus": "demo_not_charged",
+    "userMessage": "Kaalu has skin concern. Water was given. Please suggest safe food/water and precautions.",
+    "animalSnapshot": {
+      "name": "Kaalu",
+      "currentCondition": "mild_issue",
+      "careTags": [
+        "food_given_today",
+        "summer_care_needed",
+        "observe_again",
+        "followup_photo_needed",
+        "water_given_today"
+      ],
+      "healthTags": [
+        "possible_skin_condition",
+        "needs_vet_guidance",
+        "avoid_self_medication"
+      ],
+      "lastFoodAt": "2026-05-12T09:42:00Z",
+      "lastWaterAt": "2026-06-01T10:20:44.433Z"
+    },
+    "caseSnapshot": {
+      "caseType": "vet_guidance_needed",
+      "priority": "medium",
+      "title": "Kaalu needs skin follow-up and vet guidance",
+      "requiredActions": [
+        "upload_followup_photo",
+        "request_vet_or_ngo_guidance",
+        "avoid_self_medication"
+      ]
+    },
+    "vetSnapshot": {
+      "id": "vet_001",
+      "clinicName": "Paws Vet Clinic",
+      "doctorName": "Dr. Navya",
+      "area": "Kondapur",
+      "hours": "9:00 AM - 9:00 PM",
+      "availableForGuidance": true,
+      "emergencySupport": false
+    },
+    "advice": null,
+    "safetyNote": "This request is for basic food, water, precaution, and escalation guidance only. It is not a diagnosis or prescription.",
+    "createdAt": "2026-06-01T10:28:42.114Z",
+    "updatedAt": "2026-06-01T10:28:42.114Z",
+    "completedAt": null
+  }
+]

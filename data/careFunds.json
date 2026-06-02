@@ -1,0 +1,131 @@
+[
+  {
+    "id": "fund_001",
+    "animalId": "dog_001",
+    "caseId": "case_025",
+    "createdBy": "demo_user_001",
+    "purpose": "Skin follow-up and vet-guided care support for Kaalu",
+    "estimatedAmount": 500,
+    "collectedAmount": 300,
+    "remainingAmount": 200,
+    "currency": "INR",
+    "status": "open",
+    "paymentMode": "demo_pledge_plus_upi_intent",
+    "paymentVerificationMode": "manual_or_demo",
+    "adminUpiId": "pawwarrior@okaxis",
+    "fundController": {
+      "type": "pawwarrior_admin",
+      "id": "admin_001",
+      "name": "PawWarrior Care Admin"
+    },
+    "moneyGoesToFinder": false,
+    "contributors": [
+      {
+        "id": "contribution_001",
+        "userId": "supporter_001",
+        "amount": 200,
+        "platformFee": 2,
+        "netAmountForCare": 198,
+        "currency": "INR",
+        "paymentMode": "demo_pledge_plus_upi_intent",
+        "paymentStatus": "upi_intent_generated_pending_verification",
+        "upiIntentLink": "upi://pay?pa=pawwarrior%40okaxis&pn=PawWarrior+Care&tr=fund_001_supporter_001_1780051926287&tn=Care+fund+for+dog_001+case_025&am=200&cu=INR",
+        "transactionRef": "fund_001_supporter_001_1780051926287",
+        "note": "I want to support Kaalu's care.",
+        "moneyGoesToFinder": false,
+        "createdAt": "2026-05-29T10:52:06.287Z"
+      },
+      {
+        "id": "contribution_002",
+        "userId": "supporter_002",
+        "amount": 100,
+        "platformFee": 1,
+        "netAmountForCare": 99,
+        "currency": "INR",
+        "paymentMode": "demo_pledge_plus_upi_intent",
+        "paymentStatus": "upi_intent_generated_pending_verification",
+        "upiIntentLink": "upi://pay?pa=pawwarrior%40okaxis&pn=PawWarrior+Care&tr=fund_001_supporter_002_1780310268625&tn=Care+fund+for+dog_001+case_025&am=100&cu=INR",
+        "transactionRef": "fund_001_supporter_002_1780310268625",
+        "note": "I want to support Kaalu through agent flow.",
+        "moneyGoesToFinder": false,
+        "createdAt": "2026-06-01T10:37:48.622Z"
+      }
+    ],
+    "releasePolicy": {
+      "requiresProof": true,
+      "moneyGoesToFinder": false,
+      "allowedReleaseTargets": [
+        "vet_clinic",
+        "medicine_purchase_with_bill",
+        "food_purchase_with_bill",
+        "verified_transport"
+      ]
+    },
+    "auditTrail": [
+      {
+        "action": "care_fund_created",
+        "by": "demo_user_001",
+        "at": "2026-05-29T10:48:34.955Z",
+        "note": "Care fund created under PawWarrior admin control."
+      },
+      {
+        "action": "contribution_recorded",
+        "by": "supporter_001",
+        "at": "2026-05-29T10:52:06.287Z",
+        "note": "Contribution of ₹200 recorded. Money remains controlled by PawWarrior/admin."
+      },
+      {
+        "action": "agent_contribution_recorded",
+        "by": "supporter_002",
+        "at": "2026-06-01T10:37:48.622Z",
+        "note": "Agent recorded contribution of ₹100. Money remains controlled by PawWarrior/admin."
+      }
+    ],
+    "createdAt": "2026-05-29T10:48:34.955Z",
+    "updatedAt": "2026-06-01T10:37:48.622Z",
+    "closedAt": null
+  },
+  {
+    "id": "fund_002",
+    "animalId": "dog_033",
+    "caseId": "case_030",
+    "createdBy": "demo_user_001",
+    "purpose": "Vet-guided care and follow-up support for Agent Demo Dog",
+    "estimatedAmount": 500,
+    "collectedAmount": 0,
+    "remainingAmount": 500,
+    "currency": "INR",
+    "status": "open",
+    "paymentMode": "demo_pledge_plus_upi_intent",
+    "paymentVerificationMode": "manual_or_demo",
+    "adminUpiId": "pawwarrior@okaxis",
+    "fundController": {
+      "type": "pawwarrior_admin",
+      "id": "admin_001",
+      "name": "PawWarrior Care Admin"
+    },
+    "moneyGoesToFinder": false,
+    "contributors": [],
+    "releasePolicy": {
+      "requiresProof": true,
+      "moneyGoesToFinder": false,
+      "allowedReleaseTargets": [
+        "vet_clinic",
+        "medicine_purchase_with_bill",
+        "food_purchase_with_bill",
+        "verified_transport"
+      ]
+    },
+    "auditTrail": [
+      {
+        "action": "care_fund_created_by_agent",
+        "by": "demo_user_001",
+        "at": "2026-06-01T11:11:39.666Z",
+        "note": "Care fund created by Scan New Dog Agent under PawWarrior admin control."
+      }
+    ],
+    "createdAt": "2026-06-01T11:11:39.666Z",
+    "updatedAt": "2026-06-01T11:11:39.666Z",
+    "closedAt": null
+  }
+]

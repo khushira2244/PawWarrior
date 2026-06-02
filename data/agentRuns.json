@@ -1,0 +1,341 @@
+[
+  {
+    "id": "agent_run_001",
+    "trigger": "open_profile",
+    "userId": "demo_user_001",
+    "animalId": "dog_001",
+    "caseId": "case_025",
+    "status": "completed",
+    "priority": "orange",
+    "mapFlag": "orange",
+    "steps": [
+      {
+        "agent": "Profile Memory Agent",
+        "toolUsed": "getAnimalProfile",
+        "status": "completed",
+        "result": "Loaded profile for Kaalu."
+      },
+      {
+        "agent": "Care Memory Agent",
+        "toolUsed": "getCareHistory",
+        "status": "completed",
+        "result": "Found 3 care log(s)."
+      },
+      {
+        "agent": "Case Tracking Agent",
+        "toolUsed": "getOpenCases",
+        "status": "completed",
+        "result": "Found 2 active case(s)."
+      },
+      {
+        "agent": "Vet Guidance Agent",
+        "toolUsed": "getVetAdviceByAnimal",
+        "status": "completed",
+        "result": "Found 1 vet advice record(s)."
+      },
+      {
+        "agent": "Care Fund Agent",
+        "toolUsed": "getCareFundsByAnimal",
+        "status": "completed",
+        "result": "Found 1 care fund record(s)."
+      },
+      {
+        "agent": "Safety Verification Agent",
+        "toolUsed": "verifySafety",
+        "status": "completed",
+        "result": "No diagnosis or medicine dosage is shown. Vet/NGO guidance is recommended for serious or worsening signs."
+      }
+    ],
+    "finalRecommendation": "Recommended next actions: provide_clean_water_if_safe, offer_simple_food_if_safe, upload_followup_photo, observe_again_within_24_hours.",
+    "humanConfirmationRequired": false,
+    "metadata": {
+      "animalName": "Kaalu",
+      "statusLabel": "Follow-up needed",
+      "primaryNeed": [
+        "needs_food",
+        "needs_water",
+        "observe",
+        "follow_up"
+      ],
+      "careStatus": {
+        "foodStatus": "needs_food",
+        "waterStatus": "needs_water",
+        "foodHoursSinceLast": 481,
+        "waterHoursSinceLast": 96,
+        "careGaps": [
+          "needs_food",
+          "needs_water"
+        ]
+      },
+      "openCaseCount": 2,
+      "vetAdviceCount": 1,
+      "careFundCount": 1
+    },
+    "createdAt": "2026-06-01T10:12:27.326Z",
+    "updatedAt": "2026-06-01T10:12:27.326Z"
+  },
+  {
+    "id": "agent_run_002",
+    "trigger": "log_care",
+    "userId": "demo_user_001",
+    "animalId": "dog_001",
+    "caseId": null,
+    "status": "completed",
+    "priority": "orange",
+    "mapFlag": "orange",
+    "steps": [
+      {
+        "agent": "Care Action Agent",
+        "toolUsed": "createCareLog",
+        "status": "completed",
+        "result": "Created care log log_035 with action water_given."
+      },
+      {
+        "agent": "Animal Memory Agent",
+        "toolUsed": "updateAnimalMemory",
+        "status": "completed",
+        "result": "Updated last seen, weekly care count, and food/water memory where applicable."
+      },
+      {
+        "agent": "Care Status Agent",
+        "toolUsed": "getAnimalMapStatus",
+        "status": "completed",
+        "result": "Recalculated status as orange: Follow-up needed."
+      },
+      {
+        "agent": "Safety Verification Agent",
+        "toolUsed": "verifySafety",
+        "status": "completed",
+        "result": "Care action stored without diagnosis, dosage, or self-medication advice."
+      }
+    ],
+    "finalRecommendation": "Water support recorded. Continue observation and request vet/NGO guidance if symptoms worsen.",
+    "humanConfirmationRequired": false,
+    "metadata": {
+      "actionType": "water_given",
+      "careLogId": "log_035",
+      "animalName": "Kaalu",
+      "statusLabel": "Follow-up needed",
+      "primaryNeed": [
+        "needs_food",
+        "observe",
+        "follow_up"
+      ],
+      "careStatus": {
+        "foodStatus": "needs_food",
+        "waterStatus": "recently_given",
+        "foodHoursSinceLast": 481,
+        "waterHoursSinceLast": 0,
+        "careGaps": [
+          "needs_food"
+        ]
+      }
+    },
+    "createdAt": "2026-06-01T10:20:44.444Z",
+    "updatedAt": "2026-06-01T10:20:44.444Z"
+  },
+  {
+    "id": "agent_run_003",
+    "trigger": "request_vet_advice",
+    "userId": "demo_user_001",
+    "animalId": "dog_001",
+    "caseId": "case_025",
+    "status": "completed",
+    "priority": "orange",
+    "mapFlag": "orange",
+    "steps": [
+      {
+        "agent": "Vet Request Agent",
+        "toolUsed": "validateAnimalAndCase",
+        "status": "completed",
+        "result": "Validated Kaalu and case case_025."
+      },
+      {
+        "agent": "Vet Registry Agent",
+        "toolUsed": "getVetProfile",
+        "status": "completed",
+        "result": "Selected vet vet_001 for guidance."
+      },
+      {
+        "agent": "Vet Advice Agent",
+        "toolUsed": "createVetAdviceRequest",
+        "status": "completed",
+        "result": "Created vet advice request vet_advice_002."
+      },
+      {
+        "agent": "Case Tracking Agent",
+        "toolUsed": "updateCaseStatus",
+        "status": "completed",
+        "result": "Updated case status to vet_guidance_requested."
+      },
+      {
+        "agent": "Safety Verification Agent",
+        "toolUsed": "verifySafety",
+        "status": "completed",
+        "result": "Request limited to food, water, precautions, and escalation guidance. No diagnosis or prescription generated."
+      }
+    ],
+    "finalRecommendation": "Vet guidance request created. User can open doctor chat/video link if contact is available.",
+    "humanConfirmationRequired": true,
+    "metadata": {
+      "animalName": "Kaalu",
+      "vetAdviceId": "vet_advice_002",
+      "vetId": "vet_001",
+      "requestType": "basic_food_water_guidance",
+      "caseStatus": "vet_guidance_requested",
+      "statusLabel": "Follow-up needed",
+      "primaryNeed": [
+        "needs_food",
+        "observe",
+        "follow_up"
+      ]
+    },
+    "createdAt": "2026-06-01T10:28:42.173Z",
+    "updatedAt": "2026-06-01T10:28:42.173Z"
+  },
+  {
+    "id": "agent_run_004",
+    "trigger": "contribute_fund",
+    "userId": "supporter_002",
+    "animalId": "dog_001",
+    "caseId": "case_025",
+    "status": "completed",
+    "priority": "orange",
+    "mapFlag": "orange",
+    "steps": [
+      {
+        "agent": "Care Fund Agent",
+        "toolUsed": "validateCareFund",
+        "status": "completed",
+        "result": "Validated fund fund_001 for Kaalu."
+      },
+      {
+        "agent": "Contribution Agent",
+        "toolUsed": "recordContribution",
+        "status": "completed",
+        "result": "Recorded contribution of ₹100 by supporter_002."
+      },
+      {
+        "agent": "Payment Intent Agent",
+        "toolUsed": "generateUpiIntentLink",
+        "status": "completed",
+        "result": "Generated UPI intent link for pending user payment verification."
+      },
+      {
+        "agent": "Trust Ledger Agent",
+        "toolUsed": "updateCareFundLedger",
+        "status": "completed",
+        "result": "Collected ₹300, remaining ₹200. Money does not go to finder."
+      },
+      {
+        "agent": "Safety Verification Agent",
+        "toolUsed": "verifyFundPolicy",
+        "status": "completed",
+        "result": "Fund remains controlled by PawWarrior/admin and requires proof before release."
+      }
+    ],
+    "finalRecommendation": "Contribution recorded. ₹200 still needed for this care fund.",
+    "humanConfirmationRequired": true,
+    "metadata": {
+      "animalName": "Kaalu",
+      "fundId": "fund_001",
+      "contributionId": "contribution_002",
+      "contributionAmount": 100,
+      "platformFee": 1,
+      "netAmountForCare": 99,
+      "collectedAmount": 300,
+      "remainingAmount": 200,
+      "paymentStatus": "upi_intent_generated_pending_verification",
+      "moneyGoesToFinder": false,
+      "fundController": {
+        "type": "pawwarrior_admin",
+        "id": "admin_001",
+        "name": "PawWarrior Care Admin"
+      }
+    },
+    "createdAt": "2026-06-01T10:37:48.632Z",
+    "updatedAt": "2026-06-01T10:37:48.632Z"
+  },
+  {
+    "id": "agent_run_005",
+    "trigger": "scan_new_dog",
+    "userId": "demo_user_001",
+    "animalId": "dog_033",
+    "caseId": "case_030",
+    "status": "completed",
+    "priority": "red",
+    "mapFlag": "red",
+    "steps": [
+      {
+        "agent": "Scan & Match Agent",
+        "toolUsed": "createAnimalProfile",
+        "status": "completed",
+        "result": "Created new animal profile dog_033 for Agent Demo Dog."
+      },
+      {
+        "agent": "Care Memory Agent",
+        "toolUsed": "createInitialCareLog",
+        "status": "completed",
+        "result": "Created initial care log log_036 with action observed_only."
+      },
+      {
+        "agent": "Health Risk Agent",
+        "toolUsed": "evaluateVisibleConcern",
+        "status": "completed",
+        "result": "Visible concern detected: serious_issue."
+      },
+      {
+        "agent": "Case Tracking Agent",
+        "toolUsed": "createCaseIfNeeded",
+        "status": "completed",
+        "result": "Created/updated case case_030."
+      },
+      {
+        "agent": "Vet Escalation Agent",
+        "toolUsed": "findNearbyVets",
+        "status": "completed",
+        "result": "Found 7 nearby vet option(s). Suggested vet_002."
+      },
+      {
+        "agent": "Fund Planner Agent",
+        "toolUsed": "createCareFundIfNeeded",
+        "status": "completed",
+        "result": "Created care fund fund_002 with estimated amount ₹500."
+      },
+      {
+        "agent": "Safety Verification Agent",
+        "toolUsed": "verifySafety",
+        "status": "completed",
+        "result": "No diagnosis or medicine dosage generated. User should request vet/NGO guidance for serious signs."
+      }
+    ],
+    "finalRecommendation": "New dog profile created with high-priority follow-up. Provide clean water if safe, avoid self-medication, and request vet/NGO guidance.",
+    "humanConfirmationRequired": true,
+    "metadata": {
+      "animalName": "Agent Demo Dog",
+      "careLogId": "log_036",
+      "caseId": "case_030",
+      "fundId": "fund_002",
+      "nearbyVetCount": 7,
+      "suggestedVetId": "vet_002",
+      "statusLabel": "Vet guidance needed",
+      "primaryNeed": [
+        "needs_food",
+        "needs_water",
+        "vet_guidance"
+      ],
+      "careStatus": {
+        "foodStatus": "needs_food",
+        "waterStatus": "needs_water",
+        "foodHoursSinceLast": null,
+        "waterHoursSinceLast": null,
+        "careGaps": [
+          "needs_food",
+          "needs_water"
+        ]
+      }
+    },
+    "createdAt": "2026-06-01T11:11:39.680Z",
+    "updatedAt": "2026-06-01T11:11:39.680Z"
+  }
+]
