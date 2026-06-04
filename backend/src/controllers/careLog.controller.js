@@ -1,14 +1,13 @@
-import { readJsonFile, writeJsonFile } from "../services/jsonData.service.js";
+import Animal from "../models/Animal.js";
+import CareLog from "../models/CareLog.js";
 
 export const getCareLogsByAnimalId = async (req, res) => {
   try {
     const { animalId } = req.params;
 
-    const careLogs = await readJsonFile("careLogs.json");
-
-    const animalLogs = careLogs
-      .filter((log) => log.animalId === animalId)
-      .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+    const animalLogs = await CareLog.find({ animalId })
+      .sort({ createdAt: -1 })
+      .lean();
 
     res.json({
       success: true,
@@ -35,6 +34,7 @@ export const createCareLog = async (req, res) => {
       photoProof = false,
       location,
       source = "app_user",
+      quantityNote = "",
     } = req.body;
 
     if (!animalId || !userId || !actionType) {
@@ -50,10 +50,15 @@ export const createCareLog = async (req, res) => {
       "observed_only",
       "reported_problem",
       "dog_refused_food",
+      "food_offered_refused",
       "other_dogs_fighting",
       "unsafe_feeding_area",
       "not_found",
       "followup_photo_uploaded",
+      "water_available_observed",
+      "food_available_observed",
+      "food_water_present_observed",
+      "food_available_but_not_eaten",
     ];
 
     if (!allowedActions.includes(actionType)) {
@@ -64,39 +69,33 @@ export const createCareLog = async (req, res) => {
       });
     }
 
-    const careLogs = await readJsonFile("careLogs.json");
-    const animals = await readJsonFile("animals.json");
+    const animal = await Animal.findOne({ id: animalId });
 
-    const animalIndex = animals.findIndex((animal) => animal.id === animalId);
-
-    if (animalIndex === -1) {
+    if (!animal) {
       return res.status(404).json({
         success: false,
         message: "Animal not found",
       });
     }
 
-    const now = new Date().toISOString();
+    const logCount = await CareLog.countDocuments();
+    const now = new Date();
 
-    const newCareLog = {
-      id: `log_${String(careLogs.length + 1).padStart(3, "0")}`,
+    const newCareLog = await CareLog.create({
+      id: `log_${String(logCount + 1).padStart(3, "0")}`,
       animalId,
       userId,
       actionType,
       notes: notes || "",
+      quantityNote,
       photoProof,
       location: location || null,
       createdAt: now,
       source,
-    };
-
-    careLogs.push(newCareLog);
-
-    const animal = animals[animalIndex];
+    });
 
     animal.lastSeenAt = now;
     animal.seenByCommunityCount = (animal.seenByCommunityCount || 0) + 1;
-
     animal.careTags = animal.careTags || [];
 
     if (actionType === "food_given") {
@@ -106,6 +105,10 @@ export const createCareLog = async (req, res) => {
       animal.careTags = animal.careTags.filter(
         (tag) => tag !== "needs_food" && tag !== "food_irregular"
       );
+
+      if (!animal.careTags.includes("food_given_today")) {
+        animal.careTags.push("food_given_today");
+      }
     }
 
     if (actionType === "water_given") {
@@ -118,6 +121,10 @@ export const createCareLog = async (req, res) => {
           tag !== "needs_clean_water" &&
           tag !== "water_irregular"
       );
+
+      if (!animal.careTags.includes("water_given_today")) {
+        animal.careTags.push("water_given_today");
+      }
     }
 
     if (actionType === "reported_problem") {
@@ -126,7 +133,11 @@ export const createCareLog = async (req, res) => {
       }
     }
 
-    if (actionType === "dog_refused_food") {
+    if (actionType === "dog_refused_food" || actionType === "food_offered_refused") {
+      if (!animal.careTags.includes("refused_food")) {
+        animal.careTags.push("refused_food");
+      }
+
       if (!animal.careTags.includes("observe_again")) {
         animal.careTags.push("observe_again");
       }
@@ -138,16 +149,29 @@ export const createCareLog = async (req, res) => {
       }
     }
 
+    if (actionType === "unsafe_feeding_area") {
+      if (!animal.careTags.includes("unsafe_feeding_area")) {
+        animal.careTags.push("unsafe_feeding_area");
+      }
+    }
+
     if (actionType === "not_found") {
       if (!animal.careTags.includes("not_seen_recently")) {
         animal.careTags.push("not_seen_recently");
       }
     }
 
-    animals[animalIndex] = animal;
+    if (actionType === "followup_photo_uploaded") {
+      animal.careTags = animal.careTags.filter(
+        (tag) => tag !== "followup_photo_needed"
+      );
 
-    await writeJsonFile("careLogs.json", careLogs);
-    await writeJsonFile("animals.json", animals);
+      if (!animal.careTags.includes("followup_photo_uploaded")) {
+        animal.careTags.push("followup_photo_uploaded");
+      }
+    }
+
+    await animal.save();
 
     res.status(201).json({
       success: true,

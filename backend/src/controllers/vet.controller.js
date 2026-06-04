@@ -1,43 +1,14 @@
-import { readJsonFile } from "../services/jsonData.service.js";
+import Vet from "../models/Vet.js";
 import { calculateDistanceMeters } from "../tools/geo.tools.js";
-
-const buildVetContactOptions = (vet) => {
-  const cleanPhone = vet.phone ? String(vet.phone).replace(/\D/g, "") : null;
-
-  return {
-    phone: vet.phone || null,
-    phoneLink: cleanPhone ? `tel:+${cleanPhone}` : null,
-    chatLink:
-      vet.chatLink || (cleanPhone ? `https://wa.me/${cleanPhone}` : null),
-    videoCallLink: vet.videoCallLink || null,
-    contactStatus: cleanPhone || vet.chatLink || vet.videoCallLink
-      ? "contact_available"
-      : "contact_not_added",
-  };
-};
-
-const getVetAvailabilityRank = (vet) => {
-  if (vet.emergencySupport === true) return 4;
-  if (vet.availableForGuidance === true && vet.lowCostGuidance === "likely") {
-    return 3;
-  }
-  if (vet.availableForGuidance === true) return 2;
-  return 1;
-};
 
 export const getVets = async (req, res) => {
   try {
-    const vets = await readJsonFile("vets.json");
-
-    const normalizedVets = vets.map((vet) => ({
-      ...vet,
-      contactOptions: buildVetContactOptions(vet),
-    }));
+    const vets = await Vet.find().sort({ id: 1 }).lean();
 
     res.json({
       success: true,
-      count: normalizedVets.length,
-      data: normalizedVets,
+      count: vets.length,
+      data: vets,
     });
   } catch (error) {
     res.status(500).json({
@@ -52,8 +23,7 @@ export const getVetById = async (req, res) => {
   try {
     const { vetId } = req.params;
 
-    const vets = await readJsonFile("vets.json");
-    const vet = vets.find((item) => item.id === vetId);
+    const vet = await Vet.findOne({ id: vetId }).lean();
 
     if (!vet) {
       return res.status(404).json({
@@ -64,10 +34,7 @@ export const getVetById = async (req, res) => {
 
     res.json({
       success: true,
-      data: {
-        ...vet,
-        contactOptions: buildVetContactOptions(vet),
-      },
+      data: vet,
     });
   } catch (error) {
     res.status(500).json({
@@ -91,7 +58,7 @@ export const getNearbyVets = async (req, res) => {
       });
     }
 
-    const vets = await readJsonFile("vets.json");
+    const vets = await Vet.find().lean();
 
     const nearbyVets = vets
       .map((vet) => {
@@ -111,16 +78,21 @@ export const getNearbyVets = async (req, res) => {
         return {
           ...vet,
           distanceMeters,
-          contactOptions: buildVetContactOptions(vet),
-          guidanceRank: getVetAvailabilityRank(vet),
         };
       })
       .filter(Boolean)
       .filter((vet) => vet.distanceMeters <= radius)
       .sort((a, b) => {
-        if (b.guidanceRank !== a.guidanceRank) {
-          return b.guidanceRank - a.guidanceRank;
-        }
+        const availabilityRank = {
+          available: 3,
+          limited: 2,
+          unavailable: 1,
+        };
+
+        const bRank = availabilityRank[b.availabilityStatus] || 0;
+        const aRank = availabilityRank[a.availabilityStatus] || 0;
+
+        if (bRank !== aRank) return bRank - aRank;
 
         return a.distanceMeters - b.distanceMeters;
       });

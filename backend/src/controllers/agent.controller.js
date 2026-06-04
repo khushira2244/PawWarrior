@@ -1,9 +1,14 @@
-import { readJsonFile, writeJsonFile } from "../services/jsonData.service.js";
+import Animal from "../models/Animal.js";
+import CareLog from "../models/CareLog.js";
+import Case from "../models/Case.js";
+import Vet from "../models/Vet.js";
+import VetAdvice from "../models/VetAdvice.js";
+import CareFund from "../models/CareFund.js";
+
 import {
   saveAgentRun,
   getAgentRunsByAnimalId,
 } from "../services/agentRun.service.js";
-
 
 import { getAnimalMapStatus } from "../tools/animalStatus.tools.js";
 import { calculateDistanceMeters } from "../tools/geo.tools.js";
@@ -63,13 +68,7 @@ export const runOpenProfileAgent = async (req, res) => {
       });
     }
 
-    const animals = await readJsonFile("animals.json");
-    const careLogs = await readJsonFile("careLogs.json");
-    const cases = await readJsonFile("cases.json");
-    const vetAdviceList = await readJsonFile("vetAdvice.json");
-    const careFunds = await readJsonFile("careFunds.json");
-
-    const animal = animals.find((item) => item.id === animalId);
+    const animal = await Animal.findOne({ id: animalId }).lean();
 
     if (!animal) {
       return res.status(404).json({
@@ -78,23 +77,25 @@ export const runOpenProfileAgent = async (req, res) => {
       });
     }
 
-    const animalCareLogs = careLogs
-      .filter((log) => log.animalId === animalId)
-      .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+    const animalCareLogs = await CareLog.find({ animalId })
+      .sort({ createdAt: -1 })
+      .lean();
 
-    const animalCases = cases
-      .filter((item) => item.animalId === animalId)
-      .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+    const animalCases = await Case.find({ animalId })
+      .sort({ createdAt: -1 })
+      .lean();
 
-    const openCases = animalCases.filter((item) => item.status !== "closed");
+    const openCases = animalCases.filter(
+      (item) => item.status !== "closed" && item.status !== "resolved"
+    );
 
-    const animalVetAdvice = vetAdviceList
-      .filter((item) => item.animalId === animalId)
-      .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+    const animalVetAdvice = await VetAdvice.find({ animalId })
+      .sort({ createdAt: -1 })
+      .lean();
 
-    const animalCareFunds = careFunds
-      .filter((fund) => fund.animalId === animalId)
-      .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+    const animalCareFunds = await CareFund.find({ animalId })
+      .sort({ createdAt: -1 })
+      .lean();
 
     const mapStatus = getAnimalMapStatus(animal);
 
@@ -252,10 +253,15 @@ export const runLogCareAgent = async (req, res) => {
       "observed_only",
       "reported_problem",
       "dog_refused_food",
+      "food_offered_refused",
       "other_dogs_fighting",
       "unsafe_feeding_area",
       "not_found",
       "followup_photo_uploaded",
+      "water_available_observed",
+      "food_available_observed",
+      "food_water_present_observed",
+      "food_available_but_not_eaten",
     ];
 
     if (!allowedActions.includes(actionType)) {
@@ -266,22 +272,20 @@ export const runLogCareAgent = async (req, res) => {
       });
     }
 
-    const careLogs = await readJsonFile("careLogs.json");
-    const animals = await readJsonFile("animals.json");
+    const animal = await Animal.findOne({ id: animalId });
 
-    const animalIndex = animals.findIndex((animal) => animal.id === animalId);
-
-    if (animalIndex === -1) {
+    if (!animal) {
       return res.status(404).json({
         success: false,
         message: "Animal not found",
       });
     }
 
-    const now = new Date().toISOString();
+    const logCount = await CareLog.countDocuments();
+    const now = new Date();
 
-    const newCareLog = {
-      id: `log_${String(careLogs.length + 1).padStart(3, "0")}`,
+    const newCareLog = await CareLog.create({
+      id: `log_${String(logCount + 1).padStart(3, "0")}`,
       animalId,
       userId,
       actionType,
@@ -290,11 +294,7 @@ export const runLogCareAgent = async (req, res) => {
       location,
       createdAt: now,
       source,
-    };
-
-    careLogs.push(newCareLog);
-
-    const animal = animals[animalIndex];
+    });
 
     animal.lastSeenAt = now;
     animal.seenByCommunityCount = (animal.seenByCommunityCount || 0) + 1;
@@ -335,7 +335,10 @@ export const runLogCareAgent = async (req, res) => {
       }
     }
 
-    if (actionType === "dog_refused_food") {
+    if (
+      actionType === "dog_refused_food" ||
+      actionType === "food_offered_refused"
+    ) {
       if (!animal.careTags.includes("refused_food")) {
         animal.careTags.push("refused_food");
       }
@@ -351,18 +354,32 @@ export const runLogCareAgent = async (req, res) => {
       }
     }
 
+    if (actionType === "unsafe_feeding_area") {
+      if (!animal.careTags.includes("unsafe_feeding_area")) {
+        animal.careTags.push("unsafe_feeding_area");
+      }
+    }
+
     if (actionType === "not_found") {
       if (!animal.careTags.includes("not_seen_recently")) {
         animal.careTags.push("not_seen_recently");
       }
     }
 
-    animals[animalIndex] = animal;
+    if (actionType === "followup_photo_uploaded") {
+      animal.careTags = animal.careTags.filter(
+        (tag) => tag !== "followup_photo_needed"
+      );
 
-    await writeJsonFile("careLogs.json", careLogs);
-    await writeJsonFile("animals.json", animals);
+      if (!animal.careTags.includes("followup_photo_uploaded")) {
+        animal.careTags.push("followup_photo_uploaded");
+      }
+    }
 
-    const updatedMapStatus = getAnimalMapStatus(animal);
+    await animal.save();
+
+    const animalObject = animal.toObject();
+    const updatedMapStatus = getAnimalMapStatus(animalObject);
 
     const steps = [
       {
@@ -428,7 +445,7 @@ export const runLogCareAgent = async (req, res) => {
       message: "Log care agent completed successfully",
       data: {
         careLog: newCareLog,
-        updatedAnimal: animal,
+        updatedAnimal: animalObject,
         mapStatus: updatedMapStatus,
         finalRecommendation,
         agentRun,
@@ -442,7 +459,6 @@ export const runLogCareAgent = async (req, res) => {
     });
   }
 };
-
 export const runRequestVetAdviceAgent = async (req, res) => {
   try {
     const {
@@ -462,14 +478,9 @@ export const runRequestVetAdviceAgent = async (req, res) => {
       });
     }
 
-    const animals = await readJsonFile("animals.json");
-    const cases = await readJsonFile("cases.json");
-    const vets = await readJsonFile("vets.json");
-    const vetAdviceList = await readJsonFile("vetAdvice.json");
-
-    const animal = animals.find((item) => item.id === animalId);
-    const caseIndex = cases.findIndex((item) => item.id === caseId);
-    const selectedVet = vetId ? vets.find((item) => item.id === vetId) : null;
+    const animal = await Animal.findOne({ id: animalId }).lean();
+    const caseItem = await Case.findOne({ id: caseId });
+    const selectedVet = vetId ? await Vet.findOne({ id: vetId }).lean() : null;
 
     if (!animal) {
       return res.status(404).json({
@@ -478,7 +489,7 @@ export const runRequestVetAdviceAgent = async (req, res) => {
       });
     }
 
-    if (caseIndex === -1) {
+    if (!caseItem) {
       return res.status(404).json({
         success: false,
         message: "Case not found",
@@ -492,9 +503,8 @@ export const runRequestVetAdviceAgent = async (req, res) => {
       });
     }
 
-    const now = new Date().toISOString();
-
-    const caseItem = cases[caseIndex];
+    const now = new Date();
+    const adviceCount = await VetAdvice.countDocuments();
 
     const vetSnapshot = selectedVet
       ? {
@@ -505,11 +515,13 @@ export const runRequestVetAdviceAgent = async (req, res) => {
           hours: selectedVet.hours,
           availableForGuidance: selectedVet.availableForGuidance,
           emergencySupport: selectedVet.emergencySupport,
+          chatLink: selectedVet.chatLink || null,
+          videoCallLink: selectedVet.videoCallLink || null,
         }
       : null;
 
-    const newVetAdviceRequest = {
-      id: `vet_advice_${String(vetAdviceList.length + 1).padStart(3, "0")}`,
+    const newVetAdviceRequest = await VetAdvice.create({
+      id: `vet_advice_${String(adviceCount + 1).padStart(3, "0")}`,
       animalId,
       caseId,
       requestedBy: userId,
@@ -540,22 +552,20 @@ export const runRequestVetAdviceAgent = async (req, res) => {
       createdAt: now,
       updatedAt: now,
       completedAt: null,
-    };
+    });
 
-    vetAdviceList.push(newVetAdviceRequest);
+    caseItem.status = "vet_guidance_requested";
+    caseItem.updatedAt = now;
 
-    cases[caseIndex].status = "vet_guidance_requested";
-    cases[caseIndex].updatedAt = now;
-
-    cases[caseIndex].vetStatus = {
-      ...(cases[caseIndex].vetStatus || {}),
+    caseItem.vetStatus = {
+      ...(caseItem.vetStatus?.toObject?.() || caseItem.vetStatus || {}),
       needed: true,
       assignmentStatus: vetId ? "vet_selected" : "pending",
       assignedVetId: vetId,
     };
 
-    cases[caseIndex].statusHistory = cases[caseIndex].statusHistory || [];
-    cases[caseIndex].statusHistory.push({
+    caseItem.statusHistory = caseItem.statusHistory || [];
+    caseItem.statusHistory.push({
       status: "vet_guidance_requested",
       changedBy: userId,
       changedAt: now,
@@ -564,8 +574,7 @@ export const runRequestVetAdviceAgent = async (req, res) => {
         : "Vet guidance requested through agent. Vet selection pending.",
     });
 
-    await writeJsonFile("vetAdvice.json", vetAdviceList);
-    await writeJsonFile("cases.json", cases);
+    await caseItem.save();
 
     const mapStatus = getAnimalMapStatus(animal);
 
@@ -636,7 +645,7 @@ export const runRequestVetAdviceAgent = async (req, res) => {
       message: "Request vet advice agent completed successfully",
       data: {
         vetAdviceRequest: newVetAdviceRequest,
-        updatedCase: cases[caseIndex],
+        updatedCase: caseItem,
         selectedVet,
         finalRecommendation,
         agentRun,
@@ -650,7 +659,6 @@ export const runRequestVetAdviceAgent = async (req, res) => {
     });
   }
 };
-
 export const runContributeFundAgent = async (req, res) => {
   try {
     const {
@@ -680,16 +688,9 @@ export const runContributeFundAgent = async (req, res) => {
       });
     }
 
-    const animals = await readJsonFile("animals.json");
-    const cases = await readJsonFile("cases.json");
-    const careFunds = await readJsonFile("careFunds.json");
-
-    const animal = animals.find((item) => item.id === animalId);
-    const caseItem = caseId
-      ? cases.find((item) => item.id === caseId)
-      : null;
-
-    const fundIndex = careFunds.findIndex((fund) => fund.id === fundId);
+    const animal = await Animal.findOne({ id: animalId }).lean();
+    const caseItem = caseId ? await Case.findOne({ id: caseId }).lean() : null;
+    const fund = await CareFund.findOne({ id: fundId });
 
     if (!animal) {
       return res.status(404).json({
@@ -705,14 +706,12 @@ export const runContributeFundAgent = async (req, res) => {
       });
     }
 
-    if (fundIndex === -1) {
+    if (!fund) {
       return res.status(404).json({
         success: false,
         message: "Care fund not found",
       });
     }
-
-    const fund = careFunds[fundIndex];
 
     if (fund.animalId !== animalId) {
       return res.status(400).json({
@@ -735,14 +734,13 @@ export const runContributeFundAgent = async (req, res) => {
       });
     }
 
-    const now = new Date().toISOString();
+    const now = new Date();
 
     const platformFee = Math.round(
       (contributionAmount * PLATFORM_FEE_PERCENT) / 100
     );
 
     const netAmountForCare = contributionAmount - platformFee;
-
     const transactionRef = `${fund.id}_${userId}_${Date.now()}`;
 
     const upiIntentLink = generateUpiIntentLink({
@@ -802,9 +800,7 @@ export const runContributeFundAgent = async (req, res) => {
       note: `Agent recorded contribution of ₹${contributionAmount}. Money remains controlled by PawWarrior/admin.`,
     });
 
-    careFunds[fundIndex] = fund;
-
-    await writeJsonFile("careFunds.json", careFunds);
+    await fund.save();
 
     const mapStatus = getAnimalMapStatus(animal);
 
@@ -893,7 +889,6 @@ export const runContributeFundAgent = async (req, res) => {
     });
   }
 };
-
 export const runScanNewDogAgent = async (req, res) => {
   try {
     const {
@@ -939,16 +934,15 @@ export const runScanNewDogAgent = async (req, res) => {
       });
     }
 
-    const animals = await readJsonFile("animals.json");
-    const careLogs = await readJsonFile("careLogs.json");
-    const cases = await readJsonFile("cases.json");
-    const vets = await readJsonFile("vets.json");
-    const careFunds = await readJsonFile("careFunds.json");
+    const now = new Date();
 
-    const now = new Date().toISOString();
+    const animalCount = await Animal.countDocuments();
+    const careLogCount = await CareLog.countDocuments();
+    const caseCount = await Case.countDocuments();
+    const careFundCount = await CareFund.countDocuments();
 
-    const newAnimal = {
-      id: `dog_${String(animals.length + 1).padStart(3, "0")}`,
+    const newAnimal = await Animal.create({
+      id: `dog_${String(animalCount + 1).padStart(3, "0")}`,
       sourceId: null,
       name,
       species,
@@ -991,12 +985,10 @@ export const runScanNewDogAgent = async (req, res) => {
       seenByCommunityCount: 1,
       createdBy: userId,
       notes: "Created through Scan New Dog Agent.",
-    };
+    });
 
-    animals.push(newAnimal);
-
-    const newCareLog = {
-      id: `log_${String(careLogs.length + 1).padStart(3, "0")}`,
+    const newCareLog = await CareLog.create({
+      id: `log_${String(careLogCount + 1).padStart(3, "0")}`,
       animalId: newAnimal.id,
       userId,
       actionType: firstActionType,
@@ -1007,9 +999,7 @@ export const runScanNewDogAgent = async (req, res) => {
       location,
       createdAt: now,
       source: "scan_new_dog_agent",
-    };
-
-    careLogs.push(newCareLog);
+    });
 
     let newCase = null;
 
@@ -1022,8 +1012,8 @@ export const runScanNewDogAgent = async (req, res) => {
         healthTags.includes("urgent_vet_escalation"));
 
     if (shouldCreateCase) {
-      newCase = {
-        id: `case_${String(cases.length + 1).padStart(3, "0")}`,
+      newCase = await Case.create({
+        id: `case_${String(caseCount + 1).padStart(3, "0")}`,
         animalId: newAnimal.id,
         createdBy: userId,
         caseType,
@@ -1077,10 +1067,10 @@ export const runScanNewDogAgent = async (req, res) => {
             note: "Case created by Scan New Dog Agent.",
           },
         ],
-      };
-
-      cases.push(newCase);
+      });
     }
+
+    const vets = await Vet.find().lean();
 
     const nearbyVets = vets
       .map((vet) => {
@@ -1107,16 +1097,14 @@ export const runScanNewDogAgent = async (req, res) => {
       .sort((a, b) => a.distanceMeters - b.distanceMeters);
 
     if (newCase) {
-      const caseIndex = cases.findIndex((item) => item.id === newCase.id);
-
-      cases[caseIndex].vetStatus = {
-        ...(cases[caseIndex].vetStatus || {}),
+      newCase.vetStatus = {
+        ...(newCase.vetStatus?.toObject?.() || newCase.vetStatus || {}),
         nearbyVetCount: nearbyVets.length,
         assignedVetId: nearbyVets[0]?.id || null,
         assignmentStatus: nearbyVets.length > 0 ? "suggested" : "pending",
       };
 
-      newCase = cases[caseIndex];
+      await newCase.save();
     }
 
     let newFund = null;
@@ -1124,8 +1112,8 @@ export const runScanNewDogAgent = async (req, res) => {
     if (openCareFund && newCase && estimatedAmount) {
       const amount = Number(estimatedAmount);
 
-      newFund = {
-        id: `fund_${String(careFunds.length + 1).padStart(3, "0")}`,
+      newFund = await CareFund.create({
+        id: `fund_${String(careFundCount + 1).padStart(3, "0")}`,
         animalId: newAnimal.id,
         caseId: newCase.id,
         createdBy: userId,
@@ -1168,32 +1156,25 @@ export const runScanNewDogAgent = async (req, res) => {
         createdAt: now,
         updatedAt: now,
         closedAt: null,
-      };
+      });
 
-      careFunds.push(newFund);
+      newCase.careFundId = newFund.id;
+      newCase.status = "care_fund_opened";
+      newCase.updatedAt = now;
 
-      const caseIndex = cases.findIndex((item) => item.id === newCase.id);
-
-      cases[caseIndex].careFundId = newFund.id;
-      cases[caseIndex].status = "care_fund_opened";
-      cases[caseIndex].updatedAt = now;
-
-      cases[caseIndex].statusHistory.push({
+      newCase.statusHistory = newCase.statusHistory || [];
+      newCase.statusHistory.push({
         status: "care_fund_opened",
         changedBy: userId,
         changedAt: now,
         note: `Care fund opened by Scan New Dog Agent with estimated amount ₹${amount}.`,
       });
 
-      newCase = cases[caseIndex];
+      await newCase.save();
     }
 
-    await writeJsonFile("animals.json", animals);
-    await writeJsonFile("careLogs.json", careLogs);
-    await writeJsonFile("cases.json", cases);
-    await writeJsonFile("careFunds.json", careFunds);
-
-    const mapStatus = getAnimalMapStatus(newAnimal);
+    const newAnimalObject = newAnimal.toObject();
+    const mapStatus = getAnimalMapStatus(newAnimalObject);
 
     const steps = [
       {

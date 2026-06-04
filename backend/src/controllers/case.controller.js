@@ -1,14 +1,13 @@
-import { readJsonFile, writeJsonFile } from "../services/jsonData.service.js";
+import Animal from "../models/Animal.js";
+import Case from "../models/Case.js";
 
 export const getCasesByAnimalId = async (req, res) => {
   try {
     const { animalId } = req.params;
 
-    const cases = await readJsonFile("cases.json");
-
-    const animalCases = cases
-      .filter((item) => item.animalId === animalId)
-      .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+    const animalCases = await Case.find({ animalId })
+      .sort({ createdAt: -1 })
+      .lean();
 
     res.json({
       success: true,
@@ -27,27 +26,27 @@ export const getCasesByAnimalId = async (req, res) => {
 
 export const getOpenCases = async (req, res) => {
   try {
-    const cases = await readJsonFile("cases.json");
+    const priorityRank = {
+      urgent: 6,
+      high: 5,
+      medium_to_high: 4,
+      medium: 3,
+      low_to_medium: 2,
+      low: 1,
+    };
 
-    const openCases = cases
-      .filter((item) => item.status === "open")
-      .sort((a, b) => {
-        const priorityRank = {
-          urgent: 4,
-          high: 3,
-          medium: 2,
-          low: 1,
-        };
+    const cases = await Case.find({
+      status: { $nin: ["resolved", "closed"] },
+    }).lean();
 
-        const bPriority = priorityRank[b.priority] || 0;
-        const aPriority = priorityRank[a.priority] || 0;
+    const openCases = cases.sort((a, b) => {
+      const bPriority = priorityRank[b.priority] || 0;
+      const aPriority = priorityRank[a.priority] || 0;
 
-        if (bPriority !== aPriority) {
-          return bPriority - aPriority;
-        }
+      if (bPriority !== aPriority) return bPriority - aPriority;
 
-        return new Date(b.createdAt) - new Date(a.createdAt);
-      });
+      return new Date(b.createdAt) - new Date(a.createdAt);
+    });
 
     res.json({
       success: true,
@@ -92,7 +91,14 @@ export const createCase = async (req, res) => {
       });
     }
 
-    const allowedPriorities = ["low", "medium", "high", "urgent"];
+    const allowedPriorities = [
+      "low",
+      "low_to_medium",
+      "medium",
+      "medium_to_high",
+      "high",
+      "urgent",
+    ];
 
     if (!allowedPriorities.includes(priority)) {
       return res.status(400).json({
@@ -102,10 +108,7 @@ export const createCase = async (req, res) => {
       });
     }
 
-    const cases = await readJsonFile("cases.json");
-    const animals = await readJsonFile("animals.json");
-
-    const animal = animals.find((item) => item.id === animalId);
+    const animal = await Animal.findOne({ id: animalId }).lean();
 
     if (!animal) {
       return res.status(404).json({
@@ -114,10 +117,11 @@ export const createCase = async (req, res) => {
       });
     }
 
-    const now = new Date().toISOString();
+    const caseCount = await Case.countDocuments();
+    const now = new Date();
 
-    const newCase = {
-      id: `case_${String(cases.length + 1).padStart(3, "0")}`,
+    const newCase = await Case.create({
+      id: `case_${String(caseCount + 1).padStart(3, "0")}`,
       animalId,
       createdBy,
       caseType,
@@ -142,11 +146,7 @@ export const createCase = async (req, res) => {
           note: "Case created",
         },
       ],
-    };
-
-    cases.push(newCase);
-
-    await writeJsonFile("cases.json", cases);
+    });
 
     res.status(201).json({
       success: true,
@@ -198,19 +198,16 @@ export const updateCaseStatus = async (req, res) => {
       });
     }
 
-    const cases = await readJsonFile("cases.json");
+    const existingCase = await Case.findOne({ id: caseId });
 
-    const caseIndex = cases.findIndex((item) => item.id === caseId);
-
-    if (caseIndex === -1) {
+    if (!existingCase) {
       return res.status(404).json({
         success: false,
         message: "Case not found",
       });
     }
 
-    const now = new Date().toISOString();
-    const existingCase = cases[caseIndex];
+    const now = new Date();
 
     existingCase.status = status;
     existingCase.updatedAt = now;
@@ -231,9 +228,7 @@ export const updateCaseStatus = async (req, res) => {
       existingCase.closedBy = changedBy;
     }
 
-    cases[caseIndex] = existingCase;
-
-    await writeJsonFile("cases.json", cases);
+    await existingCase.save();
 
     res.json({
       success: true,

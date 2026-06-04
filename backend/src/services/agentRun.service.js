@@ -1,4 +1,4 @@
-import { readJsonFile, writeJsonFile } from "./jsonData.service.js";
+import AgentRun from "../models/AgentRun.js";
 
 export const saveAgentRun = async ({
   trigger,
@@ -13,12 +13,11 @@ export const saveAgentRun = async ({
   humanConfirmationRequired = false,
   metadata = {},
 }) => {
-  const agentRuns = await readJsonFile("agentRuns.json");
+  const runCount = await AgentRun.countDocuments();
+  const now = new Date();
 
-  const now = new Date().toISOString();
-
-  const newAgentRun = {
-    id: `agent_run_${String(agentRuns.length + 1).padStart(3, "0")}`,
+  const newAgentRun = await AgentRun.create({
+    id: `agent_run_${String(runCount + 1).padStart(3, "0")}`,
     trigger,
     userId,
     animalId,
@@ -32,19 +31,20 @@ export const saveAgentRun = async ({
     metadata,
     createdAt: now,
     updatedAt: now,
-  };
+  });
 
-  agentRuns.push(newAgentRun);
-
-  await writeJsonFile("agentRuns.json", agentRuns);
-
-  return newAgentRun;
+  return newAgentRun.toObject();
 };
 
 export const getAgentRunsByAnimalId = async (animalId) => {
-  const agentRuns = await readJsonFile("agentRuns.json");
+  const runs = await AgentRun.find({ animalId })
+    .sort({ createdAt: -1 })
+    .lean();
 
-  return agentRuns
-    .filter((run) => run.animalId === animalId)
-    .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+  return runs;
+};
+
+export const getAgentRunById = async (agentRunId) => {
+  const run = await AgentRun.findOne({ id: agentRunId }).lean();
+  return run;
 };

@@ -1,16 +1,26 @@
 
+
+import { readJsonFile, writeJsonFile } from "../services/jsonData.service.js";
+
+
+
+import Animal from "../models/Animal.js";
 import { calculateDistanceMeters } from "../tools/geo.tools.js";
 import { getAnimalMapStatus } from "../tools/animalStatus.tools.js";
-import { readJsonFile, writeJsonFile } from "../services/jsonData.service.js";
 
 export const getAnimals = async (req, res) => {
   try {
-    const animals = await readJsonFile("animals.json");
+    const animals = await Animal.find().sort({ createdAt: -1 }).lean();
+
+    const enrichedAnimals = animals.map((animal) => ({
+      ...animal,
+      mapStatus: getAnimalMapStatus(animal),
+    }));
 
     res.json({
       success: true,
-      count: animals.length,
-      data: animals,
+      count: enrichedAnimals.length,
+      data: enrichedAnimals,
     });
   } catch (error) {
     res.status(500).json({
@@ -21,17 +31,11 @@ export const getAnimals = async (req, res) => {
   }
 };
 
-
-
 export const getAnimalById = async (req, res) => {
   try {
-    const animals = await readJsonFile("animals.json");
-    const animal = animals.find(
-      (item) => item.id === req.params.animalId
-    );
+    const { animalId } = req.params;
 
-
-
+    const animal = await Animal.findOne({ id: animalId }).lean();
 
     if (!animal) {
       return res.status(404).json({
@@ -42,7 +46,10 @@ export const getAnimalById = async (req, res) => {
 
     res.json({
       success: true,
-      data: animal,
+      data: {
+        ...animal,
+        mapStatus: getAnimalMapStatus(animal),
+      },
     });
   } catch (error) {
     res.status(500).json({
@@ -57,7 +64,7 @@ export const getNearbyAnimals = async (req, res) => {
   try {
     const lat = Number(req.query.lat);
     const lng = Number(req.query.lng);
-    const radius = Number(req.query.radius || 1000);
+    const radius = Number(req.query.radius || 3000);
 
     if (!lat || !lng) {
       return res.status(400).json({
@@ -66,7 +73,9 @@ export const getNearbyAnimals = async (req, res) => {
       });
     }
 
-    const animals = await readJsonFile("animals.json");
+    const animals = await Animal.find({
+      profileStatus: "active",
+    }).lean();
 
     const nearbyAnimals = animals
       .map((animal) => {
@@ -83,24 +92,10 @@ export const getNearbyAnimals = async (req, res) => {
           primaryLocation.lng
         );
 
-        const status = getAnimalMapStatus(animal);
-
         return {
-          id: animal.id,
-          name: animal.name,
-          species: animal.species,
-          photos: animal.photos,
-          currentCondition: animal.currentCondition,
-          careTags: animal.careTags,
-          healthTags: animal.healthTags,
+          ...animal,
           distanceMeters,
-          ...status,
-          location: {
-            lat: primaryLocation.lat,
-            lng: primaryLocation.lng,
-            label: primaryLocation.label,
-            area: primaryLocation.area,
-          },
+          mapStatus: getAnimalMapStatus(animal),
         };
       })
       .filter(Boolean)
@@ -121,7 +116,6 @@ export const getNearbyAnimals = async (req, res) => {
     });
   }
 };
-
 
 export const createAnimal = async (req, res) => {
   try {
@@ -176,12 +170,11 @@ export const createAnimal = async (req, res) => {
       });
     }
 
-    const animals = await readJsonFile("animals.json");
+    const animalCount = await Animal.countDocuments();
+    const now = new Date();
 
-    const now = new Date().toISOString();
-
-    const newAnimal = {
-      id: `dog_${String(animals.length + 1).padStart(3, "0")}`,
+    const newAnimal = await Animal.create({
+      id: `dog_${String(animalCount + 1).padStart(3, "0")}`,
       sourceId: null,
       name,
       species,
@@ -207,16 +200,15 @@ export const createAnimal = async (req, res) => {
       seenByCommunityCount: 1,
       createdBy,
       notes,
-    };
-
-    animals.push(newAnimal);
-
-    await writeJsonFile("animals.json", animals);
+    });
 
     res.status(201).json({
       success: true,
       message: "Animal profile created successfully",
-      data: newAnimal,
+      data: {
+        ...newAnimal.toObject(),
+        mapStatus: getAnimalMapStatus(newAnimal.toObject()),
+      },
     });
   } catch (error) {
     res.status(500).json({

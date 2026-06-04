@@ -1,4 +1,6 @@
-import { readJsonFile, writeJsonFile } from "../services/jsonData.service.js";
+import Animal from "../models/Animal.js";
+import Case from "../models/Case.js";
+import CareFund from "../models/CareFund.js";
 
 const PLATFORM_FEE_PERCENT = 1;
 
@@ -43,19 +45,17 @@ export const createCareFund = async (req, res) => {
       });
     }
 
-    if (Number(estimatedAmount) <= 0) {
+    const amount = Number(estimatedAmount);
+
+    if (amount <= 0) {
       return res.status(400).json({
         success: false,
         message: "estimatedAmount must be greater than 0",
       });
     }
 
-    const careFunds = await readJsonFile("careFunds.json");
-    const animals = await readJsonFile("animals.json");
-    const cases = await readJsonFile("cases.json");
-
-    const animal = animals.find((item) => item.id === animalId);
-    const caseItem = cases.find((item) => item.id === caseId);
+    const animal = await Animal.findOne({ id: animalId }).lean();
+    const caseItem = await Case.findOne({ id: caseId });
 
     if (!animal) {
       return res.status(404).json({
@@ -71,12 +71,11 @@ export const createCareFund = async (req, res) => {
       });
     }
 
-    const existingOpenFund = careFunds.find(
-      (fund) =>
-        fund.animalId === animalId &&
-        fund.caseId === caseId &&
-        fund.status === "open"
-    );
+    const existingOpenFund = await CareFund.findOne({
+      animalId,
+      caseId,
+      status: "open",
+    }).lean();
 
     if (existingOpenFund) {
       return res.status(409).json({
@@ -86,11 +85,11 @@ export const createCareFund = async (req, res) => {
       });
     }
 
-    const now = new Date().toISOString();
-    const amount = Number(estimatedAmount);
+    const fundCount = await CareFund.countDocuments();
+    const now = new Date();
 
-    const newFund = {
-      id: `fund_${String(careFunds.length + 1).padStart(3, "0")}`,
+    const newFund = await CareFund.create({
+      id: `fund_${String(fundCount + 1).padStart(3, "0")}`,
       animalId,
       caseId,
       createdBy,
@@ -131,28 +130,21 @@ export const createCareFund = async (req, res) => {
       createdAt: now,
       updatedAt: now,
       closedAt: null,
-    };
+    });
 
-    careFunds.push(newFund);
+    caseItem.status = "care_fund_opened";
+    caseItem.updatedAt = now;
+    caseItem.careFundId = newFund.id;
 
-    const caseIndex = cases.findIndex((item) => item.id === caseId);
+    caseItem.statusHistory = caseItem.statusHistory || [];
+    caseItem.statusHistory.push({
+      status: "care_fund_opened",
+      changedBy: createdBy,
+      changedAt: now,
+      note: `Care fund opened with estimated amount ₹${amount}.`,
+    });
 
-    if (caseIndex !== -1) {
-      cases[caseIndex].status = "care_fund_opened";
-      cases[caseIndex].updatedAt = now;
-      cases[caseIndex].careFundId = newFund.id;
-
-      cases[caseIndex].statusHistory = cases[caseIndex].statusHistory || [];
-      cases[caseIndex].statusHistory.push({
-        status: "care_fund_opened",
-        changedBy: createdBy,
-        changedAt: now,
-        note: `Care fund opened with estimated amount ₹${amount}.`,
-      });
-    }
-
-    await writeJsonFile("careFunds.json", careFunds);
-    await writeJsonFile("cases.json", cases);
+    await caseItem.save();
 
     res.status(201).json({
       success: true,
@@ -172,11 +164,9 @@ export const getCareFundsByAnimalId = async (req, res) => {
   try {
     const { animalId } = req.params;
 
-    const careFunds = await readJsonFile("careFunds.json");
-
-    const animalFunds = careFunds
-      .filter((fund) => fund.animalId === animalId)
-      .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+    const animalFunds = await CareFund.find({ animalId })
+      .sort({ createdAt: -1 })
+      .lean();
 
     res.json({
       success: true,
@@ -221,18 +211,14 @@ export const contributeToCareFund = async (req, res) => {
       });
     }
 
-    const careFunds = await readJsonFile("careFunds.json");
+    const fund = await CareFund.findOne({ id: fundId });
 
-    const fundIndex = careFunds.findIndex((fund) => fund.id === fundId);
-
-    if (fundIndex === -1) {
+    if (!fund) {
       return res.status(404).json({
         success: false,
         message: "Care fund not found",
       });
     }
-
-    const fund = careFunds[fundIndex];
 
     if (fund.status !== "open") {
       return res.status(400).json({
@@ -241,7 +227,7 @@ export const contributeToCareFund = async (req, res) => {
       });
     }
 
-    const now = new Date().toISOString();
+    const now = new Date();
 
     const platformFee = Math.round(
       (contributionAmount * PLATFORM_FEE_PERCENT) / 100
@@ -258,6 +244,8 @@ export const contributeToCareFund = async (req, res) => {
       transactionRef,
       note: `Care fund for ${fund.animalId} ${fund.caseId}`,
     });
+
+    fund.contributors = fund.contributors || [];
 
     const contribution = {
       id: `contribution_${String(fund.contributors.length + 1).padStart(
@@ -306,9 +294,7 @@ export const contributeToCareFund = async (req, res) => {
       note: `Contribution of ₹${contributionAmount} recorded. Money remains controlled by PawWarrior/admin.`,
     });
 
-    careFunds[fundIndex] = fund;
-
-    await writeJsonFile("careFunds.json", careFunds);
+    await fund.save();
 
     res.status(201).json({
       success: true,

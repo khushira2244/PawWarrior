@@ -1,20 +1,7 @@
-import { readJsonFile, writeJsonFile } from "../services/jsonData.service.js";
-
-const buildVetContactOptions = (vet) => {
-  const cleanPhone = vet?.phone ? String(vet.phone).replace(/\D/g, "") : null;
-
-  return {
-    phone: vet?.phone || null,
-    phoneLink: cleanPhone ? `tel:+${cleanPhone}` : null,
-    chatLink:
-      vet?.chatLink || (cleanPhone ? `https://wa.me/${cleanPhone}` : null),
-    videoCallLink: vet?.videoCallLink || null,
-    contactStatus:
-      cleanPhone || vet?.chatLink || vet?.videoCallLink
-        ? "contact_available"
-        : "contact_not_added",
-  };
-};
+import Animal from "../models/Animal.js";
+import Case from "../models/Case.js";
+import Vet from "../models/Vet.js";
+import VetAdvice from "../models/VetAdvice.js";
 
 export const requestVetAdvice = async (req, res) => {
   try {
@@ -35,14 +22,9 @@ export const requestVetAdvice = async (req, res) => {
       });
     }
 
-    const vetAdviceList = await readJsonFile("vetAdvice.json");
-    const animals = await readJsonFile("animals.json");
-    const cases = await readJsonFile("cases.json");
-    const vets = await readJsonFile("vets.json");
-
-    const animal = animals.find((item) => item.id === animalId);
-    const caseItem = cases.find((item) => item.id === caseId);
-    const vet = vetId ? vets.find((item) => item.id === vetId) : null;
+    const animal = await Animal.findOne({ id: animalId }).lean();
+    const caseItem = await Case.findOne({ id: caseId });
+    const vet = vetId ? await Vet.findOne({ id: vetId }).lean() : null;
 
     if (!animal) {
       return res.status(404).json({
@@ -65,10 +47,11 @@ export const requestVetAdvice = async (req, res) => {
       });
     }
 
-    const now = new Date().toISOString();
+    const adviceCount = await VetAdvice.countDocuments();
+    const now = new Date();
 
-    const newVetAdviceRequest = {
-      id: `vet_advice_${String(vetAdviceList.length + 1).padStart(3, "0")}`,
+    const vetAdviceRequest = await VetAdvice.create({
+      id: `vet_advice_${String(adviceCount + 1).padStart(3, "0")}`,
       animalId,
       caseId,
       requestedBy,
@@ -101,7 +84,8 @@ export const requestVetAdvice = async (req, res) => {
             hours: vet.hours,
             availableForGuidance: vet.availableForGuidance,
             emergencySupport: vet.emergencySupport,
-            contactOptions: buildVetContactOptions(vet),
+            chatLink: vet.chatLink || null,
+            videoCallLink: vet.videoCallLink || null,
           }
         : null,
       advice: null,
@@ -110,41 +94,38 @@ export const requestVetAdvice = async (req, res) => {
       createdAt: now,
       updatedAt: now,
       completedAt: null,
+    });
+
+    caseItem.status = "vet_guidance_requested";
+    caseItem.updatedAt = now;
+
+    caseItem.vetStatus = {
+      ...(caseItem.vetStatus?.toObject?.() || caseItem.vetStatus || {}),
+      needed: true,
+      assignmentStatus: vetId ? "vet_selected" : "pending",
+      assignedVetId: vetId,
     };
 
-    vetAdviceList.push(newVetAdviceRequest);
+    caseItem.statusHistory = caseItem.statusHistory || [];
+    caseItem.statusHistory.push({
+      status: "vet_guidance_requested",
+      changedBy: requestedBy,
+      changedAt: now,
+      note: vetId
+        ? `Vet guidance requested. Vet selected: ${vetId}`
+        : "Vet guidance requested. Vet selection pending.",
+    });
 
-    const caseIndex = cases.findIndex((item) => item.id === caseId);
-
-    if (caseIndex !== -1) {
-      cases[caseIndex].status = "vet_guidance_requested";
-      cases[caseIndex].updatedAt = now;
-
-      cases[caseIndex].vetStatus = {
-        ...(cases[caseIndex].vetStatus || {}),
-        needed: true,
-        assignmentStatus: vetId ? "vet_selected" : "pending",
-        assignedVetId: vetId,
-      };
-
-      cases[caseIndex].statusHistory = cases[caseIndex].statusHistory || [];
-      cases[caseIndex].statusHistory.push({
-        status: "vet_guidance_requested",
-        changedBy: requestedBy,
-        changedAt: now,
-        note: vetId
-          ? `Vet guidance requested and vet selected: ${vetId}`
-          : "Vet guidance requested. Vet selection pending.",
-      });
-    }
-
-    await writeJsonFile("vetAdvice.json", vetAdviceList);
-    await writeJsonFile("cases.json", cases);
+    await caseItem.save();
 
     res.status(201).json({
       success: true,
       message: "Vet advice request created successfully",
-      data: newVetAdviceRequest,
+      data: {
+        vetAdviceRequest,
+        updatedCase: caseItem,
+        selectedVet: vet,
+      },
     });
   } catch (error) {
     res.status(500).json({
@@ -161,9 +142,8 @@ export const completeVetAdvice = async (req, res) => {
 
     const {
       completedBy,
-      vetId = null,
-      foodGuidance = [],
-      waterGuidance = [],
+      foodGuidance = "",
+      waterGuidance = "",
       precautions = [],
       siteVisitRecommended = false,
       estimatedTreatmentCost = null,
@@ -178,32 +158,35 @@ export const completeVetAdvice = async (req, res) => {
       });
     }
 
-    const vetAdviceList = await readJsonFile("vetAdvice.json");
-    const cases = await readJsonFile("cases.json");
+    const vetAdviceRequest = await VetAdvice.findOne({
+      caseId,
+      status: "requested",
+    }).sort({ createdAt: -1 });
 
-    const adviceIndex = vetAdviceList.findIndex(
-      (item) => item.caseId === caseId && item.status !== "completed"
-    );
-
-    if (adviceIndex === -1) {
+    if (!vetAdviceRequest) {
       return res.status(404).json({
         success: false,
         message: "Open vet advice request not found for this case",
       });
     }
 
-    const caseIndex = cases.findIndex((item) => item.id === caseId);
+    const caseItem = await Case.findOne({ id: caseId });
 
-    if (caseIndex === -1) {
+    if (!caseItem) {
       return res.status(404).json({
         success: false,
         message: "Case not found",
       });
     }
 
-    const now = new Date().toISOString();
+    const now = new Date();
 
-    const completedAdvice = {
+    vetAdviceRequest.status = "completed";
+    vetAdviceRequest.completedBy = completedBy;
+    vetAdviceRequest.completedAt = now;
+    vetAdviceRequest.updatedAt = now;
+
+    vetAdviceRequest.advice = {
       foodGuidance,
       waterGuidance,
       precautions,
@@ -212,41 +195,36 @@ export const completeVetAdvice = async (req, res) => {
       followUpNeeded,
       adviceNotes,
       safetyNote:
-        "Basic vet guidance only. This is not a final diagnosis or prescription. Do not self-medicate.",
+        "This is basic guidance only. It is not a diagnosis or prescription. For serious symptoms, seek in-person vet/NGO help.",
     };
 
-    vetAdviceList[adviceIndex].status = "completed";
-    vetAdviceList[adviceIndex].vetId = vetId || vetAdviceList[adviceIndex].vetId;
-    vetAdviceList[adviceIndex].advice = completedAdvice;
-    vetAdviceList[adviceIndex].completedBy = completedBy;
-    vetAdviceList[adviceIndex].completedAt = now;
-    vetAdviceList[adviceIndex].updatedAt = now;
+    await vetAdviceRequest.save();
 
-    cases[caseIndex].status = "vet_guidance_completed";
-    cases[caseIndex].updatedAt = now;
+    caseItem.status = "vet_guidance_completed";
+    caseItem.updatedAt = now;
 
-    cases[caseIndex].vetStatus = {
-      ...(cases[caseIndex].vetStatus || {}),
-      needed: true,
+    caseItem.vetStatus = {
+      ...(caseItem.vetStatus?.toObject?.() || caseItem.vetStatus || {}),
       assignmentStatus: "completed",
-      assignedVetId: vetId || cases[caseIndex].vetStatus?.assignedVetId || null,
     };
 
-    cases[caseIndex].statusHistory = cases[caseIndex].statusHistory || [];
-    cases[caseIndex].statusHistory.push({
+    caseItem.statusHistory = caseItem.statusHistory || [];
+    caseItem.statusHistory.push({
       status: "vet_guidance_completed",
       changedBy: completedBy,
       changedAt: now,
-      note: "Vet guidance completed and saved.",
+      note: "Vet guidance completed.",
     });
 
-    await writeJsonFile("vetAdvice.json", vetAdviceList);
-    await writeJsonFile("cases.json", cases);
+    await caseItem.save();
 
     res.json({
       success: true,
       message: "Vet advice completed successfully",
-      data: vetAdviceList[adviceIndex],
+      data: {
+        vetAdvice: vetAdviceRequest,
+        updatedCase: caseItem,
+      },
     });
   } catch (error) {
     res.status(500).json({
@@ -261,17 +239,15 @@ export const getVetAdviceByAnimalId = async (req, res) => {
   try {
     const { animalId } = req.params;
 
-    const vetAdviceList = await readJsonFile("vetAdvice.json");
-
-    const animalAdvice = vetAdviceList
-      .filter((item) => item.animalId === animalId)
-      .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+    const adviceList = await VetAdvice.find({ animalId })
+      .sort({ createdAt: -1 })
+      .lean();
 
     res.json({
       success: true,
       animalId,
-      count: animalAdvice.length,
-      data: animalAdvice,
+      count: adviceList.length,
+      data: adviceList,
     });
   } catch (error) {
     res.status(500).json({
