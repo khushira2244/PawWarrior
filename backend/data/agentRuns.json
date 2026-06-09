@@ -270,7 +270,7 @@
         "agent": "Scan & Match Agent",
         "toolUsed": "createAnimalProfile",
         "status": "completed",
-        "result": "Created new animal profile dog_033 for Agent Demo Dog."
+        "result": "Created new animal profile dog_033 for Teapical Dog."
       },
       {
         "agent": "Care Memory Agent",
@@ -312,7 +312,7 @@
     "finalRecommendation": "New dog profile created with high-priority follow-up. Provide clean water if safe, avoid self-medication, and request vet/NGO guidance.",
     "humanConfirmationRequired": true,
     "metadata": {
-      "animalName": "Agent Demo Dog",
+      "animalName": "Teapical Dog",
       "careLogId": "log_036",
       "caseId": "case_030",
       "fundId": "fund_002",

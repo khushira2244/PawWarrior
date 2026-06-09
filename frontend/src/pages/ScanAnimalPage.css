@@ -1,0 +1,260 @@
+.scan-page {
+  width: 100vw;
+  min-height: 100vh;
+  margin-left: calc(50% - 50vw);
+  padding: 32px 48px 56px;
+  box-sizing: border-box;
+  background:
+    radial-gradient(circle at top left, rgba(39, 111, 83, 0.42), transparent 32%),
+    linear-gradient(135deg, #07140f 0%, #0d1e16 48%, #111827 100%);
+  color: white;
+}
+
+.scan-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(360px, 0.8fr);
+  gap: 28px;
+  margin-top: 32px;
+}
+
+.scan-preview-card,
+.scan-form-card,
+.scan-result-card,
+.scan-confirm-card {
+  border-radius: 32px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.12), rgba(255,255,255,0.04));
+  border: 1px solid rgba(255,255,255,0.16);
+  box-shadow: 0 28px 90px rgba(0,0,0,0.24);
+}
+
+.scan-preview-card {
+  padding: 36px;
+}
+
+.scan-eyebrow {
+  margin: 0 0 10px;
+  color: #81f6a8;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.scan-preview-card h1 {
+  margin: 0;
+  color: white;
+  font-size: clamp(48px, 6vw, 82px);
+  line-height: 0.95;
+}
+
+.scan-preview-card p {
+  max-width: 700px;
+  margin-top: 18px;
+  color: rgba(255,255,255,0.74);
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.scan-image-box {
+  margin-top: 30px;
+  height: 460px;
+  border-radius: 28px;
+  overflow: hidden;
+  background: rgba(0,0,0,0.2);
+}
+
+.scan-image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.scan-location-box {
+  margin-top: 18px;
+  padding: 16px;
+  border-radius: 18px;
+  background: rgba(0,0,0,0.2);
+  display: grid;
+  gap: 4px;
+}
+
+.scan-location-box span {
+  color: rgba(255,255,255,0.68);
+}
+
+.scan-form-card {
+  padding: 30px;
+}
+
+.scan-form-card h2,
+.scan-result-card h2,
+.scan-confirm-card h2 {
+  margin: 0 0 22px;
+  color: white;
+  font-size: 34px;
+}
+
+.scan-form-card label {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 16px;
+  color: rgba(255,255,255,0.82);
+  font-weight: 800;
+}
+
+.scan-form-card input,
+.scan-form-card select,
+.scan-form-card textarea {
+  width: 100%;
+  border: 1px solid rgba(255,255,255,0.16);
+  border-radius: 16px;
+  padding: 14px 16px;
+  box-sizing: border-box;
+  background: rgba(0,0,0,0.22);
+  color: white;
+  font: inherit;
+  outline: none;
+}
+
+.scan-form-card textarea {
+  resize: vertical;
+}
+
+.scan-button-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.scan-button-row button {
+  border: none;
+  border-radius: 18px;
+  padding: 16px 18px;
+  background: #81f6a8;
+  color: #07140f;
+  font-weight: 950;
+  cursor: pointer;
+}
+
+.scan-button-row button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.scan-message {
+  margin-top: 18px;
+  color: #81f6a8;
+  font-weight: 900;
+}
+
+.scan-result-card,
+.scan-confirm-card {
+  margin-top: 24px;
+  padding: 28px;
+}
+
+.scan-result-card p,
+.scan-confirm-card p {
+  color: rgba(255,255,255,0.72);
+  line-height: 1.6;
+}
+
+.scan-match-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.scan-match-card {
+  border: 1px solid rgba(255,255,255,0.16);
+  border-radius: 18px;
+  padding: 16px;
+  background: rgba(0,0,0,0.2);
+  color: white;
+  text-align: left;
+  cursor: pointer;
+}
+
+.scan-match-card strong {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.scan-match-card span {
+  color: rgba(255,255,255,0.68);
+  font-size: 14px;
+}
+
+.scan-result-card pre {
+  max-height: 360px;
+  overflow: auto;
+  padding: 18px;
+  border-radius: 18px;
+  background: rgba(0,0,0,0.28);
+  color: #d7ffe3;
+}
+
+@media (max-width: 980px) {
+  .scan-page {
+    padding: 20px;
+  }
+
+  .scan-layout,
+  .scan-match-grid,
+  .scan-button-row {
+    grid-template-columns: 1fr;
+  }
+
+  .scan-image-box {
+    height: 340px;
+  }
+}
+
+.scan-inline-confirm {
+  margin-top: 18px;
+  padding: 18px;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.24);
+  border: 1px solid rgba(129, 246, 168, 0.25);
+}
+
+.scan-inline-confirm h3 {
+  margin: 0 0 8px;
+  color: white;
+  font-size: 22px;
+}
+
+.scan-inline-confirm p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.5;
+}
+
+.scan-inline-confirm .scan-button-row {
+  margin-top: 16px;
+}
+
+
+.scan-image-box {
+  position: relative;
+}
+
+.scan-camera-button {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  border-radius: 999px;
+  padding: 13px 18px;
+  background: #81f6a8;
+  color: #07140f;
+  font-weight: 950;
+  cursor: pointer;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.28);
+}
+
+.scan-camera-button input {
+  display: none;
+}

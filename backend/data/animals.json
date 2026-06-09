@@ -2165,7 +2165,7 @@
   {
     "id": "dog_028",
     "sourceId": null,
-    "name": "Demo New Dog",
+    "name": "Teapical_Brave_Dog",
     "species": "dog",
     "relationship": "new_community_dog",
     "profileStatus": "active",
@@ -2575,7 +2575,7 @@
   {
     "id": "dog_033",
     "sourceId": null,
-    "name": "Agent Demo Dog",
+    "name": "Teapical Dog",
     "species": "dog",
     "relationship": "new_community_dog",
     "profileStatus": "active",

@@ -621,7 +621,7 @@
     "createdBy": "demo_user_001",
     "caseType": "new_dog_red_flag",
     "priority": "high",
-    "title": "Agent Demo Dog needs urgent follow-up",
+    "title": "Teapical Dog needs urgent follow-up",
     "description": "Newly scanned dog has visible concern and needs safe food/water guidance plus vet/NGO review.",
     "status": "care_fund_opened",
     "requiredActions": [

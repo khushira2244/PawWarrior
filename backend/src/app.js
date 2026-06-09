@@ -8,6 +8,8 @@ import vetRoutes from "./routes/vet.routes.js";
 import vetAdviceRoutes from "./routes/vetAdvice.routes.js";
 import careFundRoutes from "./routes/careFund.routes.js";
 import agentRoutes from "./routes/agent.routes.js";
+import googleAgentRoutes from "./routes/googleAgent.routes.js";
+import uploadRoutes from "./src/routes/upload.routes.js";
 dotenv.config();
 
 const app = express();
@@ -34,6 +36,8 @@ app.use("/api/vets", vetRoutes);
 app.use("/api/vet-advice", vetAdviceRoutes);
 app.use("/api/care-funds", careFundRoutes);
 app.use("/api/agents", agentRoutes);
+app.use("/api/google-agent", googleAgentRoutes);
+app.use("/api/uploads", uploadRoutes);
 
 export default app;
 
