@@ -11,10 +11,10 @@ import imgGeminiBond from "/images/landing/geminibond.png";
 
 // ─── DATA ─────────────────────────────────────────────────────────────────────
 const STORIES = [
-  { img: imgUnevenCare, num: "01", name: "Ravi", story: "Feeds the same dog every day without knowing others are starving nearby.", q: "Which animals were missed today?" },
-  { img: imgConfusedActions, num: "02", name: "Priya", story: "Spots a dog with an empty bowl but someone may have already fed it.", q: "Was this animal fed or watered today?" },
-  { img: imgConfusedActions, num: "03", name: "Arjun", story: "Finds an injured dog on the street but has no idea who to contact.", q: "Is there a vet or volunteer nearby?" },
-  { img: imgCommunity, num: "04", name: "Sara", story: "Wants to help but animals and helpers in the same city never find each other.", q: "How do I know who needs help right now?" },
+  { img: imgUnevenCare, num: "01", name: "Jhon", story: "Feeds the same dog every day without knowing others are starving nearby.", q: "Which animals were missed today?" },
+  { img: imgConfusedActions, num: "02", name: "Astor", story: "Spots a dog with an empty bowl but someone may have already fed it.", q: "Was this animal fed or watered today?" },
+  { img: imgNoKnowledge, num: "03", name: "Arjun", story: "Finds an injured dog on the street but has no idea who to contact.", q: "Is there a vet or volunteer nearby?" },
+  { img: imgCommunity, num: "04", name: "Eva", story: "Wants to help but animals and helpers in the same city never find each other.", q: "How do I know who needs help right now?" },
 ];
 
 const HW_CARDS = [
