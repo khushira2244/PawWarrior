@@ -2163,74 +2163,6 @@
     "notes": "Dog observed near Hotel Samskruthi, Anjaiah Nagar, Gachibowli. Main concern is possible severe skin/tail-base condition, matting, hair loss, weak posture, no food/water access, and heat exposure risk."
   },
   {
-    "id": "dog_028",
-    "sourceId": null,
-    "name": "Teapical_Brave_Dog",
-    "species": "dog",
-    "relationship": "new_community_dog",
-    "profileStatus": "active",
-    "createdAt": "2026-05-29T10:18:56.920Z",
-    "lastSeenAt": "2026-05-29T10:18:56.920Z",
-    "breed": {
-      "aiEstimate": "unknown / indie-type dog",
-      "communityLabel": "Unknown",
-      "verifiedBreed": null,
-      "confidence": "low",
-      "status": "unverified"
-    },
-    "identityFeatures": {
-      "color": "brown and white",
-      "size": "medium",
-      "uniqueMarks": [
-        "white patch near face",
-        "black tail tip"
-      ]
-    },
-    "photos": [
-      "images/dogs/demo_new_dog.jpg"
-    ],
-    "usualLocations": [
-      {
-        "label": "Near Teapical, Masjid Banda",
-        "area": "Kondapur",
-        "city": "Hyderabad",
-        "state": "Telangana",
-        "country": "India",
-        "lat": 17.4646,
-        "lng": 78.3551,
-        "source": "user_scan_location"
-      }
-    ],
-    "normalBehaviour": "",
-    "currentCondition": "mild_issue",
-    "careTags": [
-      "needs_food",
-      "needs_water",
-      "summer_care_needed",
-      "followup_photo_needed"
-    ],
-    "healthTags": [
-      "possible_skin_condition",
-      "needs_vet_guidance",
-      "avoid_self_medication"
-    ],
-    "environmentTags": [],
-    "aiObservation": {
-      "visibleConcern": true,
-      "conditionHint": "possible_skin_condition",
-      "diagnosis": "not_provided",
-      "notes": "Visible concern reported by user. PawWarrior does not diagnose from image."
-    },
-    "missingStatus": "active",
-    "foodCountThisWeek": 0,
-    "waterCountThisWeek": 0,
-    "lastFoodAt": null,
-    "lastWaterAt": null,
-    "seenByCommunityCount": 1,
-    "createdBy": "demo_user_001",
-    "notes": "Created from demo scan-new-dog flow."
-  },
-  {
     "id": "dog_029",
     "sourceId": "dog_raw_023",
     "name": "Raju",
@@ -2258,7 +2190,7 @@
       "bodyCondition": "thin frame / visibly low energy / depressed posture / limping or favoring damaged leg"
     },
     "photos": [
-      "images/dogs/dog_029_raju.jpeg"
+      "images/dogs/dog_029_raju_google_office_kothaguda.jpeg"
     ],
     "usualLocations": [
       {
@@ -2348,7 +2280,7 @@
       "bodyCondition": "thin to moderate frame / visible physical discomfort and irritation"
     },
     "photos": [
-      "images/dogs/dog_030_anji.jpeg"
+      "images/dogs/dog_030_anji_anjaiah_nagar_skin_issue.jpeg"
     ],
     "usualLocations": [
       {
@@ -2433,7 +2365,7 @@
       "bodyCondition": "thin frame / low responsiveness / lethargic or depressed demeanor"
     },
     "photos": [
-      "images/dogs/dog_031_patchu.jpeg"
+      "images/dogs/dog_031_patchu_anjaiah_nagar_lane_6.jpeg"
     ],
     "usualLocations": [
       {
@@ -2518,7 +2450,7 @@
       "bodyCondition": "thin frame / arched back posture while moving"
     },
     "photos": [
-      "images/dogs/dog_032_tiklu.jpeg"
+      "images/dogs/dog_032_tiklu_anjaiah_nagar_lane_6.jpeg"
     ],
     "usualLocations": [
       {
@@ -2598,7 +2530,7 @@
       ]
     },
     "photos": [
-      "images/dogs/agent_demo_dog.jpg"
+      "images/dogs/Demo_dog.png"
     ],
     "usualLocations": [
       {

@@ -258,3 +258,35 @@
 .scan-camera-button input {
   display: none;
 }
+
+.scan-empty-preview {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  background:
+    radial-gradient(circle, rgba(129, 246, 168, 0.18), transparent 55%),
+    rgba(0, 0, 0, 0.22);
+  color: white;
+  padding: 24px;
+}
+
+.scan-empty-preview__image {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  opacity: 0.9;
+}
+
+.scan-empty-preview strong {
+  display: block;
+  margin-top: 14px;
+  font-size: 22px;
+}
+
+.scan-empty-preview span {
+  display: block;
+  margin-top: 6px;
+  color: rgba(255, 255, 255, 0.68);
+}

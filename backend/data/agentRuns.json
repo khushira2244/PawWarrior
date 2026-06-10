@@ -6,8 +6,8 @@
     "animalId": "dog_001",
     "caseId": "case_025",
     "status": "completed",
-    "priority": "orange",
-    "mapFlag": "orange",
+    "priority": "red",
+    "mapFlag": "red",
     "steps": [
       {
         "agent": "Profile Memory Agent",
@@ -25,13 +25,13 @@
         "agent": "Case Tracking Agent",
         "toolUsed": "getOpenCases",
         "status": "completed",
-        "result": "Found 2 active case(s)."
+        "result": "Found 2 active case(s). Vet guidance is requested."
       },
       {
         "agent": "Vet Guidance Agent",
         "toolUsed": "getVetAdviceByAnimal",
         "status": "completed",
-        "result": "Found 1 vet advice record(s)."
+        "result": "Found vet guidance history and active request for Kaalu."
       },
       {
         "agent": "Care Fund Agent",
@@ -43,19 +43,20 @@
         "agent": "Safety Verification Agent",
         "toolUsed": "verifySafety",
         "status": "completed",
-        "result": "No diagnosis or medicine dosage is shown. Vet/NGO guidance is recommended for serious or worsening signs."
+        "result": "No diagnosis or medicine dosage is shown. Vet/NGO guidance remains active."
       }
     ],
-    "finalRecommendation": "Recommended next actions: provide_clean_water_if_safe, offer_simple_food_if_safe, upload_followup_photo, observe_again_within_24_hours.",
+    "finalRecommendation": "Kaalu needs follow-up plus vet guidance. Provide clean water if safe, offer simple food if alert, upload a follow-up photo, and avoid self-medication.",
     "humanConfirmationRequired": false,
     "metadata": {
       "animalName": "Kaalu",
-      "statusLabel": "Follow-up needed",
+      "statusLabel": "Vet guidance requested",
       "primaryNeed": [
         "needs_food",
         "needs_water",
         "observe",
-        "follow_up"
+        "follow_up",
+        "vet_guidance"
       ],
       "careStatus": {
         "foodStatus": "needs_food",
@@ -68,7 +69,7 @@
         ]
       },
       "openCaseCount": 2,
-      "vetAdviceCount": 1,
+      "vetAdviceCount": 2,
       "careFundCount": 1
     },
     "createdAt": "2026-06-01T10:12:27.326Z",
@@ -79,10 +80,10 @@
     "trigger": "log_care",
     "userId": "demo_user_001",
     "animalId": "dog_001",
-    "caseId": null,
+    "caseId": "case_025",
     "status": "completed",
-    "priority": "orange",
-    "mapFlag": "orange",
+    "priority": "red",
+    "mapFlag": "red",
     "steps": [
       {
         "agent": "Care Action Agent",
@@ -94,32 +95,33 @@
         "agent": "Animal Memory Agent",
         "toolUsed": "updateAnimalMemory",
         "status": "completed",
-        "result": "Updated last seen, weekly care count, and food/water memory where applicable."
+        "result": "Updated last seen, weekly care count, and water memory."
       },
       {
         "agent": "Care Status Agent",
         "toolUsed": "getAnimalMapStatus",
         "status": "completed",
-        "result": "Recalculated status as orange: Follow-up needed."
+        "result": "Recalculated status as red: Vet guidance requested."
       },
       {
         "agent": "Safety Verification Agent",
         "toolUsed": "verifySafety",
         "status": "completed",
-        "result": "Care action stored without diagnosis, dosage, or self-medication advice."
+        "result": "Care action stored without diagnosis, dosage, or self-medication advice. Vet guidance remains active."
       }
     ],
-    "finalRecommendation": "Water support recorded. Continue observation and request vet/NGO guidance if symptoms worsen.",
+    "finalRecommendation": "Water support recorded for Kaalu. Continue observation, upload a follow-up photo, and keep vet guidance active.",
     "humanConfirmationRequired": false,
     "metadata": {
       "actionType": "water_given",
       "careLogId": "log_035",
       "animalName": "Kaalu",
-      "statusLabel": "Follow-up needed",
+      "statusLabel": "Vet guidance requested",
       "primaryNeed": [
         "needs_food",
         "observe",
-        "follow_up"
+        "follow_up",
+        "vet_guidance"
       ],
       "careStatus": {
         "foodStatus": "needs_food",
@@ -141,8 +143,8 @@
     "animalId": "dog_001",
     "caseId": "case_025",
     "status": "completed",
-    "priority": "orange",
-    "mapFlag": "orange",
+    "priority": "red",
+    "mapFlag": "red",
     "steps": [
       {
         "agent": "Vet Request Agent",
@@ -175,7 +177,7 @@
         "result": "Request limited to food, water, precautions, and escalation guidance. No diagnosis or prescription generated."
       }
     ],
-    "finalRecommendation": "Vet guidance request created. User can open doctor chat/video link if contact is available.",
+    "finalRecommendation": "Vet guidance request created for Kaalu. Dr. Navya is selected for guidance. Continue food/water support safely and avoid self-medication.",
     "humanConfirmationRequired": true,
     "metadata": {
       "animalName": "Kaalu",
@@ -183,11 +185,12 @@
       "vetId": "vet_001",
       "requestType": "basic_food_water_guidance",
       "caseStatus": "vet_guidance_requested",
-      "statusLabel": "Follow-up needed",
+      "statusLabel": "Vet guidance requested",
       "primaryNeed": [
         "needs_food",
         "observe",
-        "follow_up"
+        "follow_up",
+        "vet_guidance"
       ]
     },
     "createdAt": "2026-06-01T10:28:42.173Z",
@@ -200,8 +203,8 @@
     "animalId": "dog_001",
     "caseId": "case_025",
     "status": "completed",
-    "priority": "orange",
-    "mapFlag": "orange",
+    "priority": "red",
+    "mapFlag": "red",
     "steps": [
       {
         "agent": "Care Fund Agent",
@@ -234,7 +237,7 @@
         "result": "Fund remains controlled by PawWarrior/admin and requires proof before release."
       }
     ],
-    "finalRecommendation": "Contribution recorded. ₹200 still needed for this care fund.",
+    "finalRecommendation": "Contribution recorded. Kaalu still has active vet guidance request and ₹200 remaining for care support.",
     "humanConfirmationRequired": true,
     "metadata": {
       "animalName": "Kaalu",
@@ -246,6 +249,13 @@
       "collectedAmount": 300,
       "remainingAmount": 200,
       "paymentStatus": "upi_intent_generated_pending_verification",
+      "statusLabel": "Vet guidance requested",
+      "primaryNeed": [
+        "needs_food",
+        "observe",
+        "follow_up",
+        "vet_guidance"
+      ],
       "moneyGoesToFinder": false,
       "fundController": {
         "type": "pawwarrior_admin",

@@ -30,9 +30,7 @@ function ScanAnimalPage() {
   });
 
   const [scanImageFile, setScanImageFile] = useState(null);
-  const [scanImagePreview, setScanImagePreview] = useState(
-    "/images/dog/Demo_dog.jpg"
-  );
+  const [scanImagePreview, setScanImagePreview] = useState("");
   const [uploadedPhotoUrl, setUploadedPhotoUrl] = useState("");
 
   const [loading, setLoading] = useState(false);
@@ -199,13 +197,25 @@ function ScanAnimalPage() {
           </p>
 
           <div className="scan-image-box">
-            <img
-              src={scanImagePreview}
-              alt="Captured dog scan"
-              onError={(event) => {
-                event.currentTarget.src = "/images/dog/Demo_dog.jpg";
-              }}
-            />
+            {scanImagePreview ? (
+              <img
+                src={scanImagePreview}
+                alt="Captured dog scan"
+                onError={(event) => {
+                  event.currentTarget.src = "/images/dog/Demo_dog.png";
+                }}
+              />
+            ) : (
+              <div className="scan-empty-preview">
+                <img
+                  src="/images/dog/Demo_dog.png"
+                  alt="Dog outline"
+                  className="scan-empty-preview__image"
+                />
+                <strong>No photo captured yet</strong>
+                <span>Open camera and capture the animal photo</span>
+              </div>
+            )}
 
             <label className="scan-camera-button">
               Open Camera

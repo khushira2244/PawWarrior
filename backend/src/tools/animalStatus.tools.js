@@ -7,54 +7,59 @@ export const getAnimalMapStatus = (animal) => {
 
   const careStatus = getFoodWaterStatus(animal);
 
-  const hasUrgentVet =
-    condition === "serious_issue" ||
+  const needsVetGuidance =
+    healthTags.includes("needs_vet_guidance") ||
     healthTags.includes("urgent_vet_escalation") ||
+    healthTags.includes("possible_skin_condition") ||
     healthTags.includes("severe_malnutrition") ||
     healthTags.includes("severe_lethargy") ||
     healthTags.includes("suspected_leg_injury") ||
     healthTags.includes("nursing_mother") ||
-    healthTags.includes("possible_heat_exhaustion");
-
-  if (hasUrgentVet) {
-    return {
-      mapStatus: "red",
-      statusLabel: "Vet guidance needed",
-      primaryNeed: [
-        ...careStatus.careGaps,
-        "vet_guidance",
-      ],
-      careStatus,
-    };
-  }
+    healthTags.includes("possible_heat_exhaustion") ||
+    condition === "serious_issue";
 
   const hasMildIssue =
     condition === "mild_issue" ||
-    healthTags.includes("possible_skin_condition") ||
     healthTags.includes("possible_skin_irritation") ||
     healthTags.includes("visible_skin_patches") ||
     healthTags.includes("thin_body_condition") ||
     careTags.includes("followup_photo_needed");
 
-  if (hasMildIssue) {
+  const primaryNeed = [...careStatus.careGaps];
+
+  if (hasMildIssue || needsVetGuidance) {
+    primaryNeed.push("observe", "follow_up");
+  }
+
+  if (needsVetGuidance) {
+    primaryNeed.push("vet_guidance");
+  }
+
+  const uniquePrimaryNeed = [...new Set(primaryNeed)];
+
+  if (needsVetGuidance) {
     return {
-      mapStatus: "orange",
-      statusLabel: "Follow-up needed",
-      primaryNeed:
-        careStatus.careGaps.length > 0
-          ? [...careStatus.careGaps, "observe", "follow_up"]
-          : ["observe", "follow_up"],
+      mapStatus: "red",
+      statusLabel: "Vet guidance needed",
+      primaryNeed: uniquePrimaryNeed,
       careStatus,
     };
   }
 
-  const needsFoodWater = careStatus.careGaps.length > 0;
+  if (hasMildIssue) {
+    return {
+      mapStatus: "orange",
+      statusLabel: "Follow-up needed",
+      primaryNeed: uniquePrimaryNeed,
+      careStatus,
+    };
+  }
 
-  if (needsFoodWater) {
+  if (careStatus.careGaps.length > 0) {
     return {
       mapStatus: "yellow",
       statusLabel: "Food/water needed",
-      primaryNeed: careStatus.careGaps,
+      primaryNeed: uniquePrimaryNeed,
       careStatus,
     };
   }

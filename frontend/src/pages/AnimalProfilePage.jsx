@@ -205,7 +205,7 @@ function AnimalProfilePage() {
               alt={animal.name}
               className="dog-photo"
               onError={(event) => {
-                event.currentTarget.src = "/images/dog/Demo_dog.jpg";
+                event.currentTarget.src = "/images/dog/Demo_dog.png";
               }}
             />
 

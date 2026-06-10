@@ -9,7 +9,7 @@ import vetAdviceRoutes from "./routes/vetAdvice.routes.js";
 import careFundRoutes from "./routes/careFund.routes.js";
 import agentRoutes from "./routes/agent.routes.js";
 import googleAgentRoutes from "./routes/googleAgent.routes.js";
-import uploadRoutes from "./src/routes/upload.routes.js";
+import uploadRoutes from "./routes/upload.routes.js";
 dotenv.config();
 
 const app = express();
