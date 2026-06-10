@@ -35,8 +35,6 @@ export const uploadAnimalPhoto = async (req, res) => {
       resumable: false,
     });
 
-    await file.makePublic();
-
     const photoUrl = `https://storage.googleapis.com/${GCS_BUCKET_NAME}/${fileName}`;
 
     return res.status(201).json({

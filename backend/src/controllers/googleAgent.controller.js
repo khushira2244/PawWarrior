@@ -159,13 +159,25 @@ export const runGoogleAgentMission = async (req, res) => {
       execution,
       confirmationRequest: needsConfirmation
         ? {
-            confirmed: true,
-            toolName: geminiDecision.selectedTool,
-            arguments: geminiDecision.arguments,
-            warning:
-              "Review the proposed action before confirming. PawWarrior will not execute this write action without human approval.",
-          }
+          confirmed: true,
+          toolName: geminiDecision.selectedTool,
+          arguments: {
+            ...(geminiDecision.arguments || {}),
+
+            // Keep original frontend context values that Gemini may drop
+            ...(context || {}),
+
+            // Important: preserve uploaded GCS image URL
+            photoUrl:
+              context?.photoUrl ||
+              geminiDecision.arguments?.photoUrl ||
+              null,
+          },
+          warning:
+            "Review the proposed action before confirming. PawWarrior will not execute this write action without human approval.",
+        }
         : null,
+
     });
   } catch (error) {
     res.status(500).json({

@@ -140,40 +140,55 @@ function ScanAnimalPage() {
   };
 
   const confirmCreateDog = async () => {
-    if (!confirmation) return;
+  if (!confirmation) return;
 
-    try {
-      setLoading(true);
-      setMessage("");
+  try {
+    setLoading(true);
+    setMessage("");
 
-      const response = await runGeminiMission(confirmation);
+    const response = await runGeminiMission({
+      ...confirmation,
 
-      console.log("CREATE DOG RESPONSE:", response);
+      // Important: keep photoUrl during confirmed execution
+      arguments: {
+        ...(confirmation.arguments || {}),
+        photoUrl: uploadedPhotoUrl,
+      },
 
-      setCreatedResult(response);
-      setConfirmation(null);
+      // Extra safe: some backend flows may read from context
+      context: {
+        ...(confirmation.context || {}),
+        photoUrl: uploadedPhotoUrl,
+      },
+    });
 
-      const newAnimalId =
-        response?.execution?.result?.data?.animal?.id ||
-        response?.execution?.result?.data?.newAnimal?.id ||
-        response?.execution?.result?.data?.createdAnimal?.id ||
-        response?.execution?.result?.data?.createdAnimalProfile?.id ||
-        response?.execution?.result?.data?.animalProfile?.id ||
-        response?.execution?.result?.data?.data?.animal?.id ||
-        response?.data?.animal?.id ||
-        response?.animal?.id;
+    console.log("CREATE DOG RESPONSE:", response);
 
-      setMessage("New dog profile created successfully.");
+    setCreatedResult(response);
+    setConfirmation(null);
 
-      if (newAnimalId) {
-        navigate(`/animals/${newAnimalId}`);
-      }
-    } catch (err) {
-      setMessage(err.message || "Failed to confirm dog creation.");
-    } finally {
-      setLoading(false);
+    const newAnimalId =
+      response?.execution?.result?.data?.animal?.id ||
+      response?.execution?.result?.data?.newAnimal?.id ||
+      response?.execution?.result?.data?.createdAnimal?.id ||
+      response?.execution?.result?.data?.createdAnimalProfile?.id ||
+      response?.execution?.result?.data?.animalProfile?.id ||
+      response?.execution?.result?.data?.data?.animal?.id ||
+      response?.data?.animal?.id ||
+      response?.data?.id ||
+      response?.animal?.id;
+
+    setMessage("New dog profile created successfully.");
+
+    if (newAnimalId) {
+      navigate(`/animals/${newAnimalId}`);
     }
-  };
+  } catch (err) {
+    setMessage(err.message || "Failed to confirm dog creation.");
+  } finally {
+    setLoading(false);
+  }
+};
 
   const possibleMatches =
     nearbyResult?.execution?.result?.data?.possibleMatches ||
