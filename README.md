@@ -150,6 +150,9 @@ The system builds memory over time using:
 
 ## Core Flow
 
+<img width="1278" height="832" alt="Gemini_Generated_Image_lukaowlukaowluka" src="https://github.com/user-attachments/assets/41938bf8-d4f3-453c-9f38-78deebfc66f6" />
+
+
 ```txt
 User scans dog
         ↓
@@ -173,6 +176,9 @@ Dog profile, care logs, helper score, and map status are updated
 ---
 
 ## Architecture
+
+
+<img width="1555" height="688" alt="Gemini_Generated_Image_wdpq19wdpq19wdpq" src="https://github.com/user-attachments/assets/b8986929-d773-4740-80e0-d102439f1ee9" />
 
 ```txt
 User / Helper
@@ -208,6 +214,9 @@ Uploaded animal scan photos
 
 ## Built With
 
+<img width="1147" height="912" alt="Gemini_Generated_Image_zebgl9zebgl9zebg" src="https://github.com/user-attachments/assets/9337da87-28d4-43d8-a910-2b95a1e2458c" />
+
+
 * **Frontend:** React, Vite, JavaScript, CSS
 * **Map:** Leaflet, OpenStreetMap
 * **Backend:** Node.js, Express
@@ -220,6 +229,8 @@ Uploaded animal scan photos
 ---
 
 ## Agent Workflow
+
+
 
 PawWarrior uses a multi-agent workflow instead of a single chatbot response.
 
