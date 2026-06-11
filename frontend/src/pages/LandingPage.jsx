@@ -298,7 +298,7 @@ function Agents() {
     <section className="pw-section">
       <div className="pw-eyebrow">Multi-Agent Care Workflow</div>
       <h2 className="pw-section-title">
-        Not a chatbot — a <span className="accent">Gemini-powered agent system</span>
+         A<span className="accent">Gemini-powered agent system</span>
       </h2>
       <p className="pw-section-sub">
         PawWarrior checks memory, location, visible condition, recent care history, and safety rules
