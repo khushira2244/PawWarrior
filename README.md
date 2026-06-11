@@ -242,7 +242,8 @@ PawWarrior uses a multi-agent workflow instead of a single chatbot response.
 * **Safety Confirmation Agent** — asks for human confirmation before important write actions.
 * **Action Report Agent** — creates an AgentRun timeline for auditability.
 
-  <img width="1555" height="688" alt="Gemini_Generated_Image_wdpq19wdpq19wdpq" src="https://github.com/user-attachments/assets/dcca927b-bc0f-431f-9cfd-30f5d54534c7" />
+<img width="1058" height="975" alt="Gemini_Generated_Image_kwnr9vkwnr9vkwnr" src="https://github.com/user-attachments/assets/7d185739-0bb5-4bd2-8919-f87576d48682" />
+
 
 ## Agent Features
 
