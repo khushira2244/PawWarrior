@@ -244,41 +244,55 @@ PawWarrior uses a multi-agent workflow instead of a single chatbot response.
 
   <img width="1555" height="688" alt="Gemini_Generated_Image_wdpq19wdpq19wdpq" src="https://github.com/user-attachments/assets/dcca927b-bc0f-431f-9cfd-30f5d54534c7" />
 
-
-```md
 ## Agent Features
 
-<img width="1408" height="768" alt="PawWarrior Multi-Agent Workflow" src="YOUR_AGENT_FEATURES_IMAGE_LINK_HERE" />
+<img width="1555" height="688" alt="PawWarrior Multi-Agent AI Workflow" src="YOUR_AGENT_FEATURES_IMAGE_LINK_HERE" />
 
-PawWarrior uses a multi-agent workflow so the system does not just “answer” — it helps coordinate responsible real-world animal care.
+PawWarrior uses a multi-agent workflow instead of a single chatbot response.
 
-### Main agents inside PawWarrior
+The system coordinates map discovery, scan matching, care memory, safety checks, vet escalation, and action reporting so helpers can take responsible real-world action.
 
-- **Map Discovery Agent**  
-  Shows nearby animal profiles, care status, urgency markers, and profile access on the map.
+### Core Agents
 
-- **Scan & Match Agent**  
-  Checks whether the scanned animal already exists in nearby records before creating a new profile, helping reduce duplicate entries.
+* **Map Discovery Agent**
+  Finds nearby dogs and shows their care status, location, urgency marker, and profile access on the map.
 
-- **Health Risk Agent**  
-  Reads visible issues or user-reported concern signals and helps identify whether observation, follow-up, or vet escalation may be needed.
+* **Scan & Match Agent**
+  Checks whether a scanned dog already exists near the user’s GPS location before creating a new profile. This helps reduce duplicate dog records.
 
-- **Care Memory Agent**  
-  Reads past food, water, observation, care logs, cases, and support history from MongoDB-backed memory.
+* **Health Risk Agent**
+  Reads visible issue signals and user-reported concerns to decide whether the dog needs observation, follow-up, or vet escalation.
 
-- **Care Planner Agent**  
-  Suggests the next safe action based on current scan context, past care history, and known issues.
+* **Care Memory Agent**
+  Reads MongoDB-backed food, water, observation, care log, case, vet, and support history.
 
-- **Safety Confirmation Agent**  
+* **Care Planner Agent**
+  Suggests the next safe action based on current scan context, past care history, and known care gaps.
+
+* **Safety Confirmation Agent**
   Keeps humans in control by asking for confirmation before sensitive write actions are saved.
 
-- **Vet Escalation Agent**  
-  Activates when the case may need veterinary support, follow-up, or urgent attention.
+* **Vet Escalation Agent**
+  Activates when a case may need veterinary support, NGO guidance, follow-up, WhatsApp/call support, or urgent attention.
 
-- **Action Report Agent**  
-  Builds a visible timeline of what happened, what was logged, and what should happen next.
+* **Action Report Agent**
+  Builds a visible AgentRun timeline showing what happened, which tool was used, and what should happen next.
+
+### Why this matters
+
+PawWarrior does not only generate advice. It connects AI reasoning with real care actions:
+
+* create or match dog profiles
+* log food, water, and observation support
+* create follow-up cases
+* request vet guidance
+* store care memory in MongoDB
+* upload scan photos to Google Cloud Storage
+* update map status and urgency
+* preserve a transparent agent timeline
 
 Together, these agents turn scattered community help into a coordinated care workflow.
+
 
 ---
 
