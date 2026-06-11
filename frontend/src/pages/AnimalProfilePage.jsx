@@ -4,7 +4,7 @@ import {
   buildPhoneLink,
 } from "../utils/contactLinks";
 import "./AnimalProfilePage.css";
-
+import { useNavigate, useParams } from "react-router-dom";
 import AppBrandHeader from "../components/layout/AppBrandHeader";
 import {
   getAnimalById,
@@ -18,6 +18,7 @@ import {
 } from "../api/pawwarriorApi";
 
 import "./AnimalProfilePage.css";
+import { useEffect, useState } from "react";
 
 const getAnimalLocation = (animal) => {
   return animal?.usualLocations?.[0] || animal?.location || null;
@@ -199,17 +200,30 @@ function AnimalProfilePage() {
 
   const selectedCase = cases?.[0];
 
-const selectedVet =
-  nearbyVets?.find((vet) => vet.partnershipStatus === "demo_partner") ||
-  nearbyVets?.[0];
+  const DEMO_VET = {
+    id: "vet_demo_001",
+    doctorName: "Aman Kumar",
+    name: "Aman Kumar",
+    clinicName: "PawWarrior Demo Vet Guidance",
+    area: "Remote demo guidance",
+    phone: "919570143013",
+    whatsappNumber: "919570143013",
+    chatLink: "https://wa.me/919570143013",
+    partnershipStatus: "demo_partner",
+  };
 
-const whatsappLink = buildWhatsAppVetLink({
-  vet: selectedVet,
-  animal,
-  caseData: selectedCase,
-});
+  const selectedVet =
+    nearbyVets?.find((vet) => vet.partnershipStatus === "demo_partner") ||
+    DEMO_VET;
 
-const phoneLink = buildPhoneLink(selectedVet);
+  const whatsappLink =
+    buildWhatsAppVetLink({
+      vet: selectedVet,
+      animal,
+      caseData: selectedCase,
+    }) || selectedVet.chatLink;
+
+  const phoneLink = buildPhoneLink(selectedVet) || "tel:+919570143013";
 
   return (
     <section className="dog-profile-page">
@@ -227,9 +241,15 @@ const phoneLink = buildPhoneLink(selectedVet);
               }}
             />
 
-            <span className={`dog-status dog-status--${status}`}>
-              {animal?.mapStatus?.statusLabel || animal.currentCondition || status}
-            </span>
+            <a
+              className={`dog-status dog-status--${status}`}
+              href={whatsappLink}
+              target="_blank"
+              rel="noreferrer"
+              title="Open vet guidance on WhatsApp"
+            >
+              {animal?.mapStatus?.statusLabel || "Vet Guidance Needed"}
+            </a>
           </div>
 
           <div className="dog-main-info">
@@ -345,34 +365,35 @@ const phoneLink = buildPhoneLink(selectedVet);
           </div>
         </section>
 
-        <section className="dog-panel">
-          <h2>Nearby vet</h2>
+        <section className="dog-panel dog-vet-escalation">
+          <h2>Vet guidance</h2>
 
-          {nearbyVets?.length ? (
-            nearbyVets.slice(0, 2).map((vet) => (
-              <div key={vet.id} className="dog-list-item">
-                <strong>{vet.name}</strong>
-                <span>{vet.area || vet.location?.label || "Nearby clinic"}</span>
+          <p>
+            PawWarrior prepares a safe case summary and connects the helper to vet
+            guidance. It does not diagnose or suggest medicine by itself.
+          </p>
 
-                {vet.chatLink || vet.videoCallLink || vet.googleMapsLink ? (
-                  <button
-                    onClick={() =>
-                      window.open(
-                        vet.chatLink || vet.videoCallLink || vet.googleMapsLink,
-                        "_blank"
-                      )
-                    }
-                  >
-                    Connect vet
-                  </button>
-                ) : (
-                  <small>Link not added yet</small>
-                )}
-              </div>
-            ))
-          ) : (
-            <p>No nearby vets loaded.</p>
-          )}
+          <div className="dog-list-item dog-vet-card">
+            <strong>
+              {selectedVet?.doctorName || selectedVet?.name || "Aman Kumar"}
+            </strong>
+
+            <span>
+              {selectedVet?.clinicName || "PawWarrior Demo Vet Guidance"}
+            </span>
+
+            <span>{selectedVet?.area || "Remote demo guidance"}</span>
+
+            <div className="vet-actions">
+              <a href={whatsappLink} target="_blank" rel="noreferrer">
+                WhatsApp Vet
+              </a>
+
+              <a href={phoneLink}>
+                Call Vet
+              </a>
+            </div>
+          </div>
         </section>
 
         <section className="dog-panel">
