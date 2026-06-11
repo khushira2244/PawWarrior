@@ -12,7 +12,7 @@ PawWarrior is **not a chatbot**. It is designed to help people take **responsibl
 
 * **Frontend:** https://pawwarriorai.netlify.app
 * **Backend API:** https://pawwarrior-api-457006001927.asia-south1.run.app
-* **Demo Video:** ADD_VIDEO_LINK_HERE
+* **Demo Video:** https://youtu.be/C3VR3CEwinM
 
 For judge/private demo access, please contact: **[khushira2244@gmail.com](mailto:khushira2244@gmail.com)**
 
