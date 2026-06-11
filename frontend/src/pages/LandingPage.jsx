@@ -153,7 +153,14 @@ function Hero() {
         Find nearby animals, scan new ones, log real care, request vet guidance, and coordinate
         helpers through an action-based agent workflow.
       </p>
-      <button className="pw-btn-primary">Watch Demo Video</button>
+      <button
+        className="pw-btn-primary"
+        onClick={() =>
+          window.open("https://www.youtube.com/watch?v=C3VR3CEwinM", "_blank")
+        }
+      >
+        Watch Demo Video
+      </button>
     </section>
   );
 }
