@@ -537,5 +537,42 @@
     "source": "Google Maps public listing",
     "partnershipStatus": "not_contacted_yet",
     "notes": "Primary local vet option for the Kothaguda / Botanical Garden / Google Office / Anjaiah Nagar extension of cluster_001. Covers Botanical Garden (dog_014), Aditya Windsor (dog_015), Google Office (dog_016), broken hind leg case (dog_017), and new Anjaiah Nagar / Raju Gari Biryani cases: dog_029 (Raju), dog_030 (Anji), dog_031 (Patchu), and dog_032 (Tiklu). Useful for skin-condition guidance, low-cost guidance possibility, and street-animal-friendly support."
-  }
+  },
+  {
+  "id": "vet_demo_001",
+  "clinicName": "PawWarrior Demo Vet Guidance",
+  "doctorName": "Aman Kumar",
+  "clusterId": "demo_all",
+  "servesDogIds": [
+    "dog_001",
+    "dog_002",
+    "dog_003",
+    "dog_004",
+    "dog_005",
+    "dog_006",
+    "dog_007",
+    "dog_008",
+    "dog_009",
+    "dog_010"
+  ],
+  "area": "Remote demo guidance",
+  "addressHint": "Available for PawWarrior demo guidance",
+  "location": {
+    "lat": 17.4506,
+    "lng": 78.3651
+  },
+  "rating": 5,
+  "hours": "Demo available",
+  "phone": "919570143013",
+  "whatsappNumber": "919570143013",
+  "chatLink": "https://wa.me/919570143013",
+  "videoCallLink": "",
+  "availableForGuidance": true,
+  "emergencySupport": true,
+  "lowCostGuidance": "available",
+  "streetAnimalSupport": "demo_partner",
+  "source": "PawWarrior demo contact",
+  "partnershipStatus": "demo_partner",
+  "notes": "Demo vet guidance contact for PawWarrior judging flow. Used to show WhatsApp/call guidance for any demo dog profile."
+}
 ]

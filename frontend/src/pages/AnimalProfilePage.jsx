@@ -1,5 +1,9 @@
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { getDogImagePath } from "../utils/imagePath";
+import {
+  buildWhatsAppVetLink,
+  buildPhoneLink,
+} from "../utils/contactLinks";
+import "./AnimalProfilePage.css";
 
 import AppBrandHeader from "../components/layout/AppBrandHeader";
 import {
@@ -12,7 +16,7 @@ import {
   getNearbyVets,
   runGeminiMission,
 } from "../api/pawwarriorApi";
-import { getDogImagePath } from "../utils/imagePath";
+
 import "./AnimalProfilePage.css";
 
 const getAnimalLocation = (animal) => {
@@ -192,6 +196,20 @@ function AnimalProfilePage() {
   const status = getStatus(animal);
   const needs = animal?.mapStatus?.primaryNeed || animal?.careTags || [];
   const latestRun = agentRuns?.[0];
+
+  const selectedCase = cases?.[0];
+
+const selectedVet =
+  nearbyVets?.find((vet) => vet.partnershipStatus === "demo_partner") ||
+  nearbyVets?.[0];
+
+const whatsappLink = buildWhatsAppVetLink({
+  vet: selectedVet,
+  animal,
+  caseData: selectedCase,
+});
+
+const phoneLink = buildPhoneLink(selectedVet);
 
   return (
     <section className="dog-profile-page">

@@ -44,7 +44,6 @@ export const getVetById = async (req, res) => {
     });
   }
 };
-
 export const getNearbyVets = async (req, res) => {
   try {
     const lat = Number(req.query.lat);
@@ -64,7 +63,17 @@ export const getNearbyVets = async (req, res) => {
       .map((vet) => {
         const vetLocation = vet.location;
 
+        const isDemoPartner = vet.partnershipStatus === "demo_partner";
+
         if (!vetLocation?.lat || !vetLocation?.lng) {
+          if (isDemoPartner) {
+            return {
+              ...vet,
+              distanceMeters: 0,
+              isDemoPartner: true,
+            };
+          }
+
           return null;
         }
 
@@ -78,11 +87,19 @@ export const getNearbyVets = async (req, res) => {
         return {
           ...vet,
           distanceMeters,
+          isDemoPartner,
         };
       })
       .filter(Boolean)
-      .filter((vet) => vet.distanceMeters <= radius)
+      .filter((vet) => {
+        if (vet.partnershipStatus === "demo_partner") return true;
+        return vet.distanceMeters <= radius;
+      })
       .sort((a, b) => {
+        // Always show PawWarrior demo vet first
+        if (a.partnershipStatus === "demo_partner") return -1;
+        if (b.partnershipStatus === "demo_partner") return 1;
+
         const availabilityRank = {
           available: 3,
           limited: 2,
