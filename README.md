@@ -246,7 +246,7 @@ PawWarrior uses a multi-agent workflow instead of a single chatbot response.
 
 ## Agent Features
 
-<img width="1555" height="688" alt="PawWarrior Multi-Agent AI Workflow" src="YOUR_AGENT_FEATURES_IMAGE_LINK_HERE" />
+
 
 PawWarrior uses a multi-agent workflow instead of a single chatbot response.
 
