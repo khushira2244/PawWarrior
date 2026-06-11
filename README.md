@@ -242,6 +242,44 @@ PawWarrior uses a multi-agent workflow instead of a single chatbot response.
 * **Safety Confirmation Agent** — asks for human confirmation before important write actions.
 * **Action Report Agent** — creates an AgentRun timeline for auditability.
 
+  <img width="1555" height="688" alt="Gemini_Generated_Image_wdpq19wdpq19wdpq" src="https://github.com/user-attachments/assets/dcca927b-bc0f-431f-9cfd-30f5d54534c7" />
+
+
+```md
+## Agent Features
+
+<img width="1408" height="768" alt="PawWarrior Multi-Agent Workflow" src="YOUR_AGENT_FEATURES_IMAGE_LINK_HERE" />
+
+PawWarrior uses a multi-agent workflow so the system does not just “answer” — it helps coordinate responsible real-world animal care.
+
+### Main agents inside PawWarrior
+
+- **Map Discovery Agent**  
+  Shows nearby animal profiles, care status, urgency markers, and profile access on the map.
+
+- **Scan & Match Agent**  
+  Checks whether the scanned animal already exists in nearby records before creating a new profile, helping reduce duplicate entries.
+
+- **Health Risk Agent**  
+  Reads visible issues or user-reported concern signals and helps identify whether observation, follow-up, or vet escalation may be needed.
+
+- **Care Memory Agent**  
+  Reads past food, water, observation, care logs, cases, and support history from MongoDB-backed memory.
+
+- **Care Planner Agent**  
+  Suggests the next safe action based on current scan context, past care history, and known issues.
+
+- **Safety Confirmation Agent**  
+  Keeps humans in control by asking for confirmation before sensitive write actions are saved.
+
+- **Vet Escalation Agent**  
+  Activates when the case may need veterinary support, follow-up, or urgent attention.
+
+- **Action Report Agent**  
+  Builds a visible timeline of what happened, what was logged, and what should happen next.
+
+Together, these agents turn scattered community help into a coordinated care workflow.
+
 ---
 
 ## Human-in-the-Loop Safety
