@@ -156,7 +156,7 @@ function Hero() {
       <button
         className="pw-btn-primary"
         onClick={() =>
-          window.open("https://youtu.be/dZqmRmkRkyI", "_blank")
+          window.open("https://youtube.com/shorts/u6A6avJG_cs", "_blank")
         }
       >
         Watch Demo Video
